@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.views.generic.detail import DetailView
-import tables
+import django_tables2 as tables
 
-from models import Konto
+from .models import Konto
 
 
 # Create your views here.
@@ -21,7 +21,8 @@ class KontoView(DetailView):
     def get_context_data(self, *args, **kwargs):
         context = super(DetailView, self).get_context_data(*args, **kwargs)
     
-        knt = self.get_object()
+        print (self.request)
+        knt = self.object
         
         sb = knt.soll_buchungen.all()
         hb = knt.haben_buchungen.all()
@@ -40,12 +41,16 @@ class KontoView(DetailView):
         
         data = []
         for d in sorted(bctime.keys()):
-            data.append (
-             { 'datum' : d,
-               'soll'  :
-              
-              }   
-            )
-            
-        }
+            for b in bctime[d]:
+                if b in knt.soll_buchungen.all():
+                    data.append (
+                            { 'datum' : d,
+                             'soll'  : b.wert} )
+                else:
+                    data.append({
+                        'datum' : d,
+                             'haben'  : b.wert}
+                    )
+        tab = KontoView.KontoTable( data )
+        context.update( {'tab' : tab } )
         return context

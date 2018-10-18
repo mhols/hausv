@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls.conf import include
+
+from booking.views import KontoView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('<int:pk>', KontoView.as_view(), name = 'konto')
 ]

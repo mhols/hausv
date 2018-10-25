@@ -276,7 +276,10 @@ def generate_buchung(buchungstext):
         sk = Konto.objects.get( kurz = sk)
     except:
         raise Exception( sk )
-    hk = Konto.objects.get( kurz = hk)
+    try:
+        hk = Konto.objects.get( kurz = hk)
+    except:
+        raise Exception('Konto does not exist'+hk)
     w=w.replace('.','')
     w = int( w )
     

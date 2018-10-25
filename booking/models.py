@@ -1,6 +1,6 @@
 from django.db import models
 from django.core.validators import int_list_validator
-
+from django.db.models import Sum
 
 from datetime import date
 # Create your models here.
@@ -14,22 +14,43 @@ class Konto(models.Model):
     passiv_aufwand = 'pa'
     passiv_eigenk  = 'pk'
     passiv_eigenkmain = 'em'
+    bilanzkonto = 'bk'
     arten = ((aktiv_bestand,'aktiv'), 
              (passiv_bestand,'passiv bestand'),
              (passiv_eigenkmain,'passiv eigenkapital hauptkonto'),
              (passiv_eigenk,'passiv eigenkapital'),
              (passiv_ertrag, 'passiv ertrag'), 
-             (passiv_aufwand, 'passiv aufwand'))
+             (passiv_aufwand, 'passiv aufwand'),
+             (bilanzkonto, 'bilanzkonto'))
 
     art = models.CharField(max_length=2, choices=arten, default=aktiv_bestand)
     
     kurz = models.CharField(max_length=20, unique=True)
     lang = models.TextField()
     
+    #anfangssoll  = models.IntegerField(default=0)
+    #anfangshaben = models.IntegerField(default=0)
+    
     oberkonto = models.ForeignKey('Konto', null=True, on_delete = models.PROTECT, related_name='unterkontos')
+    #lastsaldo = models.OneToOneField('Saldo', null=True, on_delete = models.PROTECT, 
+    #                                 related_name='last_saldo_of')
 
+
+    @classmethod
+    def create(cls, art,  kurz, lang):
+        k = Konto(art=art,kurz=kurz,lang=lang)
+        k.save()
+        return k
+    
+    def last_saldo(self): 
+        s = self.salden.exclude(in_bilanz__isnull=True).latest('in_bilanz__datum')
+        return s
+    
     def is_active(self):
         return self.art == Konto.aktiv_bestand
+    
+    def is_passive(self):
+        return not (self.is_active() or self.art == Konto.bilanzkonto)
     
     def is_bestand(self):
         return self.art == Konto.aktiv_bestand |\
@@ -52,11 +73,27 @@ class Konto(models.Model):
     def is_erfolg(self):
         return (self.is_aufwand() | self.is_ertrag())
 
+    def is_bilanz(self):
+        return self.art == Konto.bilanzkonto
+    
+    def saldiere(self):
+        soll  = self.soll_buchungen.all().aggregate(Sum('wert'))['wert__sum']
+        haben = self.haben_buchungen.all().aggregate(Sum('wert'))['wert__sum']
+    
+        if soll==None:
+            soll = 0
+        if haben==None:
+            haben=0
+        return (soll, haben)
+    
 class Saldo(models.Model):
     
     konto = models.ForeignKey( Konto, 
                                related_name='salden', 
                                on_delete=models.PROTECT )
+    
+    in_bilanz = models.ForeignKey('Bilanz', on_delete=models.PROTECT, 
+                                  null=True, related_name='salden')
     
     soll   = models.IntegerField()
     haben  = models.IntegerField()
@@ -75,19 +112,26 @@ class Saldo(models.Model):
         if wert >=0:
             if konto.is_active():
                 return Saldo.create(konto, wert, 0)
-            else:
+            elif konto.is_passive():
                 return Saldo.create(konto, 0, wert)
+            else:
+                raise Exception('Bilanz konto...')
         else:
             if konto.is_active():
                 return Saldo.create(konto, 0, -wert)
-            else:
+            elif konto.is_passive():
                 return Saldo.create(konto, -wert, 0)
+            else:
+                raise Exception('Bilanz konto...')
+
     @classmethod
     def create_signd(cls, konto, wert):
         if konto.is_active():
             return Saldo.create(konto, wert, 0)
-        else:
+        elif konto.is_passive():
             return Saldo.create(konto, 0, wert)
+        else:
+            raise Exception('Bilanz konto...')
 
     def wert(self):
         if self.konto.is_active():
@@ -128,10 +172,13 @@ class Saldo(models.Model):
         return self.konto.is_eigenkmain()
     
     def is_bilanz_passive(self):
-        return (not self.is_bilanz_active()) \
+        return ( self.wert()>=0 and self.konto.is_passive()) \
                 and ( not self.is_erfolg() ) \
                 and ( not self.is_eigenk()) 
 
+    def __str__(self):
+        return "%s %d %d"%(self.konto.kurz, self.soll, self.haben)
+    
 class Buchung(models.Model):
     datum  = models.DateField()
     beschreibung = models.CharField(max_length=120)
@@ -161,15 +208,15 @@ class Bilanz(models.Model):
     """
     kurz = models.CharField(max_length=20)
     datum = models.DateField()
-    salden = models.ManyToManyField ( Saldo, related_name='aktivebilanzen')
+    #salden = models.ManyToManyField ( Saldo, related_name='bilanzen')
    
     @classmethod
     def create(cls, datum, kurz, salden):
         B = Bilanz(datum=datum, kurz=kurz)
         B.save()
         for s in salden:
-            B.salden.add(s)
-        B.save()
+            s.in_bilanz=B
+            s.save()
         return B 
 
     @classmethod
@@ -267,9 +314,9 @@ def make_bilanz(ausgangsbilanz, buchungen, datum, name):
         
 def generate_buchung(buchungstext):
     
-    buchungstext = buchungstext.replace(' ','')
+    #buchungstext = buchungstext.replace(' ','')
     d, sk, hk, w, bsr, bel = buchungstext.split(':')
-    
+    d, sk, hk, w, bel = [ s.replace(' ','') for s in [d, sk, hk, w, bel]]
     d,m,y = d.split('.')
     d = date(int(y), int(m), int(d))
     try:
@@ -279,11 +326,13 @@ def generate_buchung(buchungstext):
     try:
         hk = Konto.objects.get( kurz = hk)
     except:
-        raise Exception('Konto does not exist'+hk)
+        raise Exception( "---%s---"%(hk) )
     w=w.replace('.','')
     w = int( w )
     
     b = Buchung.create( d, sk, hk, w, bsr, bel )
-    b.save()
-
+    try:
+        b.save()
+    except:
+        raise Exception('could not save ' + str(b))
 

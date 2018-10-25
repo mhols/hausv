@@ -21,5 +21,5 @@ from booking.views import KontoView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('<int:pk>', KontoView.as_view(), name = 'konto')
+    path('konto/<str:pk>', KontoView.as_view(), name = 'konto')
 ]

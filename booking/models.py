@@ -315,7 +315,10 @@ def make_bilanz(ausgangsbilanz, buchungen, datum, name):
 def generate_buchung(buchungstext):
     
     #buchungstext = buchungstext.replace(' ','')
-    d, sk, hk, w, bsr, bel = buchungstext.split(':')
+    try:
+        d, sk, hk, w, bsr, bel = buchungstext.split(':')
+    except:
+        raise Exception('could not split '+buchungstext)
     d, sk, hk, w, bel = [ s.replace(' ','') for s in [d, sk, hk, w, bel]]
     d,m,y = d.split('.')
     d = date(int(y), int(m), int(d))

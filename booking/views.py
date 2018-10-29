@@ -1,4 +1,7 @@
+from datetime import date
+
 from django.shortcuts import render
+from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 
@@ -22,27 +25,55 @@ class KontenView(ListView):
     model = Konto
     
     class KontenTable(tables.Table):
-        kurz = tables.Column()
-        lang  = tables.Column()
-        art   = tables.Column()
-        soll  = tables.Column()
-        haben = tables.Column()
-        delta = tables.Column()
-        url   = tables.Column()
+        kurz = tables.Column(attrs={'td' : { 'style' : "text-align:left"} })
+        lang  = tables.TemplateColumn('<a href="{% url \'konto\' record.year record.lang.kurz %}">\
+                                      {{record.lang.lang}}</a>', \
+                                      attrs={'td' : { 'style' : "text-align:left"} })
+        art   = tables.Column(attrs={'td' : { 'style' : "text-align:left"} })
+        #soll  = tables.Column(attrs={'td' : { 'style' : "text-align:right"} })
+        #haben = tables.Column(attrs={'td' : { 'style' : "text-align:right"} })
+        saldo = tables.Column(attrs={'td' : { 'style' : "text-align:right"} })
+    
+        class Meta:
+                attrs = {'id' : 'example',
+                             'class' : 'display',
+                             'style' : 'width:100%',
+                #             'cellspacing' : '0'
+                }
+    
+    def get_queryset(self):
+        return Konto.objects.exclude(art=Konto.bilanzkonto).order_by('id').all()
 
     def get_context_data(self, *args, **kwargs):
-        context = super(DetailView, self).get_context_data(*args, **kwargs)
+        context = super(ListView, self).get_context_data(*args, **kwargs)
+
+        year = self.kwargs['year']
     
-        data = {}
+        data = []
         for k in self.object_list:
-            data.update(
-            {
-                'kurz' : k.kurz,
-                'lang' : k.lang,
-                'soll' : sum ([b.wert for b in k.soll_buchungen.all() ])
-            }    
+            so, ha = k.saldiere((date(year,1,1),date(year,12,31)))
+                # = sum ([b.wert for b in k.soll_buchungen.all()])
+            #ha = sum ([b.wert for b in k.haben_buchungen.all()])
+            de = abs(so-ha)
+            if k.is_active():
+                de = so-ha
+            else:
+                de = ha-so
+            kurz = k.level()*" "+k.kurz
+            data.append(
+                {
+                    'kurz' : kurz,
+                    'lang' : k,
+                    'art'  : Konto.artendic[k.art],
+                    'soll' : "%10.2f"%(so/100),
+                    'haben' :"%10.2f"%(ha/100),
+                    'saldo' : "%10.2f"%(de/100),
+                    'year'  : year
+                }
             )
-    
+        
+        ktb = KontenView.KontenTable(data)
+        context.update({'ktb' : ktb})
         return context
     
     
@@ -55,7 +86,7 @@ class KontoView(DetailView):
         datum = tables.Column(attrs={'td' : { 'style' : "text-align:right"} })
         soll  = tables.Column(attrs={'td' : { 'style' : "text-align:right"} })
         haben = tables.Column(attrs={'td' : { 'style' : "text-align:right"} })
-        gegenk = tables.TemplateColumn('<a href="{% url \'konto\' record.gegenk.kurz %}">\
+        gegenk = tables.TemplateColumn('<a href="{% url \'konto\' record.year record.gegenk.kurz %}">\
                                       {{record.gegenk.lang}}</a>', \
                                       attrs={'td' : { 'style' : "text-align:right"} })
         erkl  = tables.Column(attrs= {'td' : { 'style' : "text-align:right"} })
@@ -74,12 +105,12 @@ class KontoView(DetailView):
     def get_context_data(self, *args, **kwargs):
         context = super(DetailView, self).get_context_data(*args, **kwargs)
     
-        print (self.request)
+        year = self.kwargs['year']
         knt = self.object
         
         #print ('last saldo ', knt.last_saldo())
-        sb = knt.soll_buchungen.all()
-        hb = knt.haben_buchungen.all()
+        sb = knt.soll_buchungen.filter(datum__year=year).all()
+        hb = knt.haben_buchungen.filter(datum__year=year).all()
         
         bctime = {}
         for b in sb:
@@ -94,6 +125,8 @@ class KontoView(DetailView):
                 bctime[b.datum] = [b]
         
         data = []
+        d=date.today()
+        year = self.kwargs['year']
         for d in sorted(bctime.keys()):
             for b in bctime[d]:
                 if b in knt.soll_buchungen.all():
@@ -101,13 +134,15 @@ class KontoView(DetailView):
                             { 'datum' : date_to_str(d),
                              'soll'  : "%10.2f"%(b.wert/100),
                              'erkl' : b.beschreibung,
-                             'gegenk' : b.habenkonto } )
+                             'gegenk' : b.habenkonto,
+                             'year' : year  } )
                 else:
                     data.append({
                         'datum' : date_to_str(d),
                              'haben'  : "%10.2f"%(b.wert/100),
                             'erkl' : b.beschreibung,
-                            'gegenk' : b.sollkonto
+                            'gegenk' : b.sollkonto,
+                             'year' : year  
                             }
                         )
         soll, haben = knt.saldiere()
@@ -115,23 +150,31 @@ class KontoView(DetailView):
         data.append({'datum' : date_to_str(d),
                      'soll'  : "%10.2f"%(soll/100),
                      'erkl' : 'SUMME soll',
-                     'gegenk' : knt})
+                     'gegenk' : knt,
+                     'year' : year  
+                     })
         
         data.append({'datum' : date_to_str(d),
                      'haben'  : "%10.2f"%(haben/100),
                      'erkl' : 'SUMME haben',
-                     'gegenk' : knt})
+                     'gegenk' : knt,
+                     'year' : year  
+                     })
         
         if soll >= haben:
             data.append({'datum' : date_to_str(d),
                      'haben'  : "%10.2f"%((soll-haben)/100),
                      'erkl' : 'SALDO',
-                     'gegenk' : knt})
+                     'gegenk' : knt,
+                     'year' : year  
+                     })
         else:
             data.append({'datum' : date_to_str(d),
                      'soll'  : "%10.2f"%(haben/100),
                      'erkl' : 'SALDO',
-                     'gegenk' : knt})
+                     'gegenk' : knt,
+                    'year' : year  
+                    })
         
         
         
@@ -140,3 +183,29 @@ class KontoView(DetailView):
         context.update( {'tab' : tab, 
                          'konto' : knt.lang } )
         return context
+
+class BilanzView(TemplateView):
+    
+    tempmplate_name = 'bilanz.html'
+    
+    class BilanzTable(tables.Table):
+        Konto = tables.Column()
+        Saldo = tables.Column()
+    
+    def get_context_data(self, **kwargs):
+        context = TemplateView.get_context_data(self, **kwargs)
+    
+        datum = date(
+            self.kwargs['year'], 
+            self.kwargs['month'], 
+            self.kwargs['day']
+        )
+        
+        return context
+    
+class GuVView(TemplateView): 
+    pass
+
+class NKView(TemplateView):
+    pass
+

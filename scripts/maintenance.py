@@ -33,17 +33,19 @@ def run():
         Konto.create(art=Konto.passiv_eigenk, kurz='EK.Peter',   lang='Gesellschafter Konto Peter'),
         Konto.create(art=Konto.passiv_eigenk, kurz='EK.Alex',    lang='Gesellschafter Konto Alex'),
         Konto.create(art=Konto.passiv_bestand, kurz='V',         lang='Verbindlichkeiten'),
-        Konto.create(art=Konto.passiv_bestand, kurz='V.H',       lang='Verpflichtungen Handwerker'),
+        Konto.create(art=Konto.passiv_bestand, kurz='V.H',       lang='Verbindlichkeiten Handwerker'),
         Konto.create(art=Konto.passiv_bestand, kurz='V.H.Kadel', lang='Verbindl Handwerker Kadel'),
         Konto.create(art=Konto.passiv_bestand, kurz='V.H.Schmid', lang='Verbindl Handwerker Schmid'),        
-        Konto(art=Konto.passiv_bestand, kurz='V.H.Ruttkowski', lang='Verbindl Handwerker Ruttkowski'),
-        Konto.create(art=Konto.passiv_ertrag,  kurz='ER',        lang='Allgemeines Gegenkonto fuer Ertraege'),
+        Konto.create(art=Konto.passiv_bestand, kurz='V.H.Ruttkowski', lang='Verbindl Handwerker Ruttkowski'),
+        Konto.create(art=Konto.passiv_ertrag,  kurz='ER',        lang='Allgemeine Ertraege'),
+        Konto.create(art=Konto.passiv_ertrag,  kurz='ER.VER',    lang='Versicherungs Entschaedigung'),
         Konto.create(art=Konto.passiv_aufwand, kurz='RE',        lang='Instandhaltung, Reparaturen'),
         Konto.create(art=Konto.passiv_aufwand, kurz='RE.UG',     lang='Instandhaltung, Reparaturen UG'),
         Konto.create(art=Konto.passiv_aufwand, kurz='RE.1OG',    lang='Instandhaltung, Reparaturen 1OG'),
         Konto.create(art=Konto.passiv_aufwand, kurz='RE.2OG',    lang='Instandhaltung, Reparaturen 2OG'),
         Konto.create(art=Konto.passiv_aufwand, kurz='VERW',      lang='Verwaltungskosten'),
         Konto.create(art=Konto.passiv_aufwand, kurz='NK',        lang='Nebenkosten'),
+        Konto.create(art=Konto.passiv_aufwand, kurz='NK.DK',     lang='Dachkanel Reinigung'),
         Konto.create(art=Konto.passiv_aufwand, kurz='NK.GS',     lang='Grundsteuer'),
         Konto.create(art=Konto.passiv_aufwand, kurz='NK.VS',     lang='Versicherungen'),
         Konto.create(art=Konto.passiv_aufwand, kurz='NK.ML',     lang='Hausmuell'),
@@ -64,25 +66,6 @@ def run():
             K.save()
         except:
             print('ooops')
-    
-    # Anfangsbilanz
-    Anfangsbilanz = {'B' :  558585, 'EK' : 558585}
-    
-    Anfangssalden = []
-    for K in Kontenplan:
-        if not (K.art == Konto.bilanzkonto):
-            if K.kurz in Anfangsbilanz:
-                S = Saldo.create_unsigned(K, Anfangsbilanz[K.kurz])
-            else:
-                S = Saldo.create_unsigned(K, 0)
-            S.save()
-            Anfangssalden.append(S)
-    
-    Banfang = Bilanz.create( date(2018,1,1), 'H22-2018', Anfangssalden )
-    
-    
-    
-    print (Banfang)
     
     
     
@@ -124,13 +107,16 @@ def run():
 "1.12.2017 : F.Peter : ER : 22000 : Nebenkosten Pauschale Peter : None",
 "1.12.2017 : F.Roeder : ER : 14000 : Nebenkosten Pauschale Roeder : None",
 
+" 1.1.2017 : B : BILANZ : 590677 : Anfangsbilanz: None ",
+" 1.1.2017 : BILANZ : EK :590677 : Anfangsbilanz: None ",
 " 29.12.2017 : VERW : B : 2397 : Kontofuehrung : None ",
 " 12.12.2017 : RE : V.H.Ruttkowski : 12281 : Dachkaenel : None ",
+" 12.12.2017 : NK.DK : RE : 12281 : Dachkaenel als NKs: None ",
 " 12.12.2017 : V.H.Ruttkowski : B : 12281 : bez. Rechnung Dachkaenel : None ",
 " 15.12.2017 : VERW : B : 4000 : Verwaltung : None ",
 " 15.12.2017 : NK.GARTEN : B : 10520 : Gartenpflege : None ",
 " 28.12.2017 : NK.HZ.GAS : B : 15500 : Gas Stadtwerke Waldkirch : None ",
-" 29.12.2017 : B : NK.VS : 373042 : Alte Leipziger Wasserschaden: None ",
+" 29.12.2017 : B : F : 373042 : Alte Leipziger Wasserschaden: None ",
 " 24.11.2017 : RE : B : 5474 : Handwerker Lerner : None ",
 " 30.11.2017 : NK.STR : B : 2100 : Hausstrom : None ",
 " 30.11.2017 : NK.KW : B : 7400 : Kaltwasser bNetze : None ",
@@ -142,11 +128,15 @@ def run():
 " 4.12.2017 : B : F.Holger : 20000 : Bezahlung NK Holger : None ",
 " 17.11.2017 : VERW : B : 400 : Kontofuehrung : None ",
 " 13.11.2017 : B : NK.VS : 19500 : Alte Leipziger : None ",
-" 14.11.2017 : EK : B : 13240 : EPRIMO : None ",
+" 14.11.2017 : RE : B : 13240 : EPRIMO Wasserschaden : None ",
+" 14.11.2017 : F  : ER.VER : 13240 : EPRIMO Wasserschaden : None ",
 " 15.11.2017 : VERW : B : 4000 : Verwaltung : None ",
 " 15.11.2017 : NK.GARTEN : B : 10520 : Gartenpflege : None ",
+" 17.11.2017 : RE : V.H.Schmid  : 126309 : Wasserschaden : None ",
 " 17.11.2017 : V.H.Schmid : B : 126309 : Wasserschaden: None ",
-" 3.11.2017 : EK : B : 73950 : WASSERSCHADEN : None ",
+" 17.11.2017 : F : ER.VER : 126309 : Schmid Wasserschaden F an ALTELEIPZIGER: None ",
+" 3.11.2017 : RE : B : 73950 : Wassersch. die Kueche: None ",
+" 3.11.2017 : F : ER.VER : 73950 : Wassersch. die Kueche F an ALTELEIPZIG: None ",
 " 6.11.2017 : B : F.Holger : 20000 : Bezahlung NK Holger : None ",
 " 30.10.2017 : NK.VS : B : 19500 : Alte Leipziger : None ",
 " 30.10.2017 : NK.VS : B : 19500 : Alte Leipziger II: None ",
@@ -156,7 +146,8 @@ def run():
 " 30.10.2017 : NK.STR : B : 2100 : Hausstrom : None ",
 " 30.10.2017 : NK.KW : B : 7400 : Kaltwasser bNetze : None ",
 " 30.10.2017 : NK.HZ.GAS : B : 15500 : Gas Stadtwerke Waldkirch : None ",
-" 25.10.2017 : EK : B : 88227 : Drytec : None ",
+" 25.10.2017 : RE : B : 88227 : Drytec Rep Wassersch: None ",
+" 25.10.2017 : F : ER.VER : 88227 : Drytec Rep Wassersch: None ",
 " 16.10.2017 : VERW : B : 4000 : Verwaltung II : None ",
 " 16.10.2017 : NK.GARTEN : B : 10520 : Gartenpflege : None ",
 " 2.10.2017 : NK.STR : B : 2100 : Hausstrom : None ",
@@ -165,11 +156,13 @@ def run():
 " 4.10.2017 : B : F.Holger : 20000 : Bezahlung NK Holger : None ",
 " 29.9.2017 : VERW : B : 2397 : Kontofuehrung : None ",
 " 29.9.2017 : NK.HZ.GAS : B : 15500 : Gas Stadtwerke Waldkirch : None ",
-" 29.9.2017 : V.H.Kadel : B : 106916 : Bezahlung Rechnung Kadel Kueche: None ",
-" 29.9.2017 : NK.HZ.WART : V.H.Kadel : 106916 : Wartung Heizung : None ",
+" 29.9.2017 : V.H.Kadel : B : 106916 :  Rechnung Kadel WASSERS: None ",
+" 29.9.2017 : RE : V.H.Kadel : 106916 : Bezahlung Rechnung Kadel WASSERS: None ",
+" 29.9.2017 : F : ER.VER : 106916 : Ford. Rueckerstattung Kadel WASSERS: None ",
 " 2.10.2017 : B : F.Roeder : 14000 : bez NK Pauschale Roeder : None ",
 " 2.10.2017 : B : F.Peter : 22000 : bez NK Pauschale Peter : None ",
 " 26.9.2017 : RE : V.H.Ruttkowski : 17993 : Dachkaenel : None ",
+" 26.9.2017 : NK.DK : RE : 17993 : Dachkaenel als NK : None ",
 " 26.9.2017 : V.H.Ruttkowski : B : 17993 : bez. Rechnung Dachkaenel : None ",
 " 27.9.2017 : NK.VS : B : 6415 : Helvetia Versicherung : None ",
 " 12.9.2017 : NK.GARTEN : B : 10500 : Buesche Vorgarten : None ",
@@ -286,8 +279,6 @@ def run():
 " 1.8.2017 : ER : F.Peter : 57394  : Rueckzahlung NK Ausgleich : None",
 #
 " 1.10.2018 : NK.ML : EK.Peter : 13400 : Muell Gebuehren gezahlt von Peter: None ",        
-" 1.1.2017 : B : BILANZ : 590677 : Anfangsbilanz: None ",        
-" 30.1.2018 : BILANZ : EK : 558585 : Anfangsbilanz: None ",        
 " 1.1.2018 : NK.ML : EK.Peter : 13400 : Muell Gebuehren gezahlt von Peter: None ",        
 " 1.10.2018 : B : F.Peter : 22000 : NK Voraus Peter: None ",
 " 1.10.2018 : B : F.Roeder : 14000 : NK Voraus Roeder: None ",
@@ -343,13 +334,13 @@ def run():
 " 28.2.2018 : NK.KW : B : 7400 : Kaltwasser bnNETZE: None ",
 " 28.9.2018 : VERW : B : 2547 : Konto Fuehrung : None ",
 " 29.3.2018 : NK.HZ.GAS : B : 15500 : Stadtwerke Waldkirch Gas: None ",
-" 29.3.2018 : VERW : B : 2397 : Konto Fuehrung : None ",
+" 29.3.2018 : VERW : B : 2397 : Kontofuehrung : None ",
 " 29.6.2018 : NK.HZ.GAS : B : 14200 : Stadtwerke Waldkirch Gas: None ",
-" 29.6.2018 : VERW : B : 2397 : Konto Fuehrung : None ",
+" 29.6.2018 : VERW : B : 2397 : Kontofuehrung : None ",
 " 3.4.2018 : B : F.Peter : 22000 : NK Voraus Peter: None ",
 " 3.4.2018 : B : F.Roeder : 14000 : NK Voraus Roeder: None ",
 " 3.5.2018 : B : EK.Alex : 7000 : EK Beitrag Alex: None ",
-" 3.7.2018 : B : EK : 9 : STORNO : None ",
+" 3.7.2018 : B : VERW : 9 : STORNO : None ",
 " 3.7.2018 : B : EK.Alex : 7000 : EK Beitrag Alex: None ",
 " 3.9.2018 : B : F.Peter : 22000 : NK Voraus Peter: None ",
 " 3.9.2018 : B : F.Roeder : 14000 : NK Voraus Roeder: None ",
@@ -412,9 +403,4 @@ def run():
     for b in Buchungen:
         generate_buchung(b)
         
-    Bende = make_bilanz(Banfang, Buchung.objects.all(), date(2018,12,31), 'H22-2019')
-
-
-    
-    print (Bende)
     

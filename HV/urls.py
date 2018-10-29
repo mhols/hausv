@@ -17,9 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
 
-from booking.views import KontoView
+from booking.views import KontoView, KontenView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('konto/<str:pk>', KontoView.as_view(), name = 'konto')
+    path('konto/<int:year>/<str:pk>', KontoView.as_view(), name = 'konto'),
+    path('konten/<int:year>', KontenView.as_view(), name = 'konten')
 ]

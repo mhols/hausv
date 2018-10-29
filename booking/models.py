@@ -23,6 +23,7 @@ class Konto(models.Model):
              (passiv_aufwand, 'passiv aufwand'),
              (bilanzkonto, 'bilanzkonto'))
 
+    artendic = { a:b for a, b in arten}
     art = models.CharField(max_length=2, choices=arten, default=aktiv_bestand)
     
     kurz = models.CharField(max_length=20, unique=True)
@@ -53,8 +54,8 @@ class Konto(models.Model):
         return not (self.is_active() or self.art == Konto.bilanzkonto)
     
     def is_bestand(self):
-        return self.art == Konto.aktiv_bestand |\
-               self.art == Konto.passiv_bestand | \
+        return self.art == Konto.aktiv_bestand or \
+               self.art == Konto.passiv_bestand or \
                self.art == Konto.passiv_eigenk 
     
     def is_eigenk(self):
@@ -62,7 +63,6 @@ class Konto(models.Model):
     
     def is_eigenkmain(self):
         return self.art == Konto.passiv_eigenkmain
-    
     
     def is_aufwand(self):
         return self.art == Konto.passiv_aufwand
@@ -76,9 +76,25 @@ class Konto(models.Model):
     def is_bilanz(self):
         return self.art == Konto.bilanzkonto
     
-    def saldiere(self):
-        soll  = self.soll_buchungen.all().aggregate(Sum('wert'))['wert__sum']
-        haben = self.haben_buchungen.all().aggregate(Sum('wert'))['wert__sum']
+    def level(self):
+        count=0
+        k = self
+        while not (k.oberkonto is None):
+            count += 1
+            k = k.oberkonto
+        return count
+    
+    def saldiere(self, dates = (date(2017,1,1), date(2017,12,31))):
+        if self.is_bestand():
+            sb = self.soll_buchungen.filter(datum__lte=dates[1])
+            hb = self.haben_buchungen.filter(datum__lte=dates[1])
+        else:
+            sb = self.soll_buchungen.filter(datum__range=dates)
+            hb = self.haben_buchungen.filter(datum__range=dates)
+        
+          
+        soll  = sb.aggregate(Sum('wert'))['wert__sum']
+        haben = hb.aggregate(Sum('wert'))['wert__sum']
     
         if soll==None:
             soll = 0
@@ -145,20 +161,6 @@ class Saldo(models.Model):
         """
         return abs(self.haben-self.soll)
     
-    def saldiere(self):
-        """
-        fuer Bestandskonten erzeuge ein saldo mit der gleichen
-        differenz (i.e. Bestand)
-        """
-        wert = self.soll-self.haben
-        if wert >=0:
-            self.soll = wert
-            self.haben  = 0
-        else:
-            self.haben  = -wert
-            self.soll = 0
-        self.save()
-    
     def is_bilanz_active(self):
         return ( self.wert()>=0 and self.konto.is_active())
 
@@ -199,7 +201,43 @@ class Buchung(models.Model):
     
     class Meta:
         unique_together = ('datum', 'beschreibung', 'beleg', 'sollkonto', 'habenkonto', 'wert')
+
+class NK(models.Model):
+
+    QM = 'qm'
+    PZ = 'pz'
+    IN = 'in'
+    dist = (
+        ('qm', 'Flaeche X Zeit'), 
+        ('pz', 'Personen X Zeit'),
+        ('in', 'Individuel')
+    )
+    nk  =  models.ForeignKey(Konto, on_delete=models.PROTECT, null=True)
+    key = models.CharField(max_length=2, choices=dist)
+
+
+def distribute_keys(tot, keys):
+    totk = float(sum(keys))
+    res = [ int(k * tot / totk)  for k in keys ]
+    res[-1] = tot - sum(res[:-1])
+
+    return res
+
+def distribute(period, nks, keys):
+    """
+    keys is associative array
+    """
+    res = {}
+    for nk in nks:
+        tot = nk.nk.saldiere(period)
+        tot = tot[0]-tot[1]
+        print(tot)
+        li = distribute_keys(tot, keys[nk.key])
+        res[nk] = [tot, li]
+    return res
     
+
+
 class Bilanz(models.Model):
     """
     Bianz and GuV
@@ -338,4 +376,3 @@ def generate_buchung(buchungstext):
         b.save()
     except:
         raise Exception('could not save ' + str(b))
-

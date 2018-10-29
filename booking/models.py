@@ -3,6 +3,7 @@ from django.core.validators import int_list_validator
 from django.db.models import Sum
 
 from datetime import date
+import numpy as np
 # Create your models here.
 
 
@@ -228,15 +229,27 @@ def distribute(period, nks, keys):
     keys is associative array
     """
     res = {}
+    sunk = np.zeros(len(keys))
     for nk in nks:
         tot = nk.nk.saldiere(period)
         tot = tot[0]-tot[1]
-        print(tot)
         li = distribute_keys(tot, keys[nk.key])
-        res[nk] = [tot, li]
+        res[nk] = [tot, np.array(li)]
     return res
     
+def compute_sums(nk):
+    
+    anteil = {}
+    sumnk = 0
+    
+    for i, li in enumerate(nk.keys()):
+        sumnk += li
 
+    for i, li in enumerate(nk.keys()):
+        anteil[li] = nk[li] / sumnk
+
+
+    return sumnk, anteil
 
 class Bilanz(models.Model):
     """

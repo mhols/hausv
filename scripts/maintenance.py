@@ -59,7 +59,6 @@ def run():
         Konto.create(art=Konto.passiv_aufwand, kurz='NK.HZ.ABR', lang='Abrechnungsservice'),
         Konto.create(art=Konto.passiv_aufwand, kurz='NK.STR',    lang='Hausstrom'),        
         Konto.create(art=Konto.passiv_aufwand, kurz='NK.GARTEN', lang='Gartenarbeiten'),
-        Konto.create(art=Konto.passiv_aufwand, kurz='NK.TECHEM', lang='Abrechnung NK'),
     ]
     for K in Kontenplan:
         try:

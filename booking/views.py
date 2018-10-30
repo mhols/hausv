@@ -7,7 +7,7 @@ from django.views.generic.list import ListView
 
 import django_tables2 as tables
 
-from .models import Konto
+from .models import Konto, Buchung
 
 
 def date_to_str(da):
@@ -184,6 +184,77 @@ class KontoView(DetailView):
                          'konto' : knt.lang } )
         return context
 
+class NKView(TemplateView):
+    
+    template_name = 'booking/nk.html'
+    
+    class NK_table(tables.Table):
+        nk = tables.Column()
+        Summe = tables.Column()
+        
+        class Meta:
+                attrs = {'id' : 'example',
+                             'class' : 'display',
+                             'style' : 'width:100%',
+                #             'cellspacing' : '0'
+                }
+        
+    def get_context_data(self, **kwargs):
+        context = TemplateView.get_context_data(self, **kwargs)
+        
+        nkbs = Buchung.objects.filter(sollkonto__kurz = 'NK')
+        
+        res = {}
+        loc = []
+        
+        lomtr = []
+        lonks = []
+        for nk in nkbs.all():
+            mtr = nk.beschreibung.split('#')[-1]
+            nkn = nk.habenkonto.nicename()
+            val = nk.wert
+
+            if not mtr in lomtr:
+                lomtr.append(mtr)
+            if not nkn in lonks:
+                lonks.append(nkn) 
+            if not mtr in res:
+                res[mtr] = {}
+            res[mtr][nkn] = val
+
+
+        print(res)
+        
+        print(lomtr)
+        
+        print(lonks)
+                
+        for mt in lomtr:
+            loc.append((mt, tables.Column(
+                attrs={'td' : { 'style' : "text-align:right"} })
+            ))
+
+        data = []
+        for nk in lonks:
+            line = { 'nk' : nk, 
+                     'Summe' : "%10.2f"%(sum ([ res[mt][nk]  for mt in lomtr ])/100)
+            }
+            line.update({
+                mt : "%10.2f"%(res[mt][nk]/100) for mt in lomtr
+            } 
+            )
+            data.append (line)
+        
+        line = { 'nk' : 'SUMME',
+                'Summe' : "%10.7f"%(sum([res[mt][nk] for mt in lomtr for nk in lonks])/100)}
+        line.update({ mt : "%10.2f"%(sum ( [res[mt][nk] for nk in lonks ])/100) for mt in lomtr})
+        data.append( line )
+           
+        ta = NKView.NK_table ( data, extra_columns = loc)
+        
+        context.update({ 'nktable' : ta })
+        return context
+
 class BilanzView(TemplateView):
     
     tempmplate_name = 'bilanz.html'
@@ -206,6 +277,4 @@ class BilanzView(TemplateView):
 class GuVView(TemplateView): 
     pass
 
-class NKView(TemplateView):
-    pass
 

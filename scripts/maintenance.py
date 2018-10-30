@@ -4,12 +4,14 @@ Created on 15.10.2018
 @author: hols
 '''
 from booking.models import Konto, Buchung, Bilanz, Saldo, generate_buchung,\
-    make_bilanz, saldiere_buchungen
+    make_bilanz, saldiere_buchungen, NK
 from datetime import date
 
 def run():
     print('we are up and runing')
-    
+
+    for nk in NK.objects.all():
+        nk.delete()
     
     for B in Buchung.objects.all():
         B.delete()

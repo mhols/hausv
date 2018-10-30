@@ -5,12 +5,20 @@ Created on Oct 28, 2018
 '''
 import numpy as np
 
-from booking.models import NK, Konto, distribute, compute_sums
+from booking.models import NK, Konto, Buchung, distribute, compute_sums,\
+    generate_buchung
+generate_buchung
     
 from datetime import date
-from zope.component.tests.examples import comp
 
 def run():
+    year = 2018
+    nktag = "Nebenkkosten-%d"%year
+    
+    
+    for b in Buchung.objects.filter(beschreibung__contains=nktag).all():
+        b.delete()
+    
     for nk in NK.objects.all():
         nk.delete()
     
@@ -22,7 +30,8 @@ def run():
     
     #nk = NK(nk = Konto.objects.get(kurz='NK.HZ'), key = NK.IN); nk.save()
     
-    period = (date(2017,4,1), date(2018,3,31))
+    
+    period = (date(year-1,4,1), date(year,3,31))
     
     knk = {}
     mtrkonto = ['F.Holger', 'F.Peter', 'F.Roeder']
@@ -32,13 +41,21 @@ def run():
     
     res = distribute(period, NK.objects.all(), knk)
     
-    hzg = np.array([99999, 32221, 34322])
+    hzg = [89898, np.array([99999, 32221, 34322])]
     res[nkhz] = hzg
     
-    sumnk, summt, anteil = compute_sums(res)
-    for nk in res.keys():
+    sumnk = compute_sums(res)
+    for i, mtr in enumerate(mtrkonto):
+        f, nmtr = mtr.split('.')
+        nmtr = "#"+nmtr
+        for nk in res.keys():
         
-        booking = "%s : "
+            booking = "%s : NK : %s : %d : %s : None"\
+                %(period[1], nk.nk.kurz, res[nk][1][i], nktag+nmtr)
     
-    print (res, anteil)
-    
+            print (booking)
+            generate_buchung(booking)
+        booking = "%s :  %s : NK : %d : %s : None"\
+                %(period[1], mtr, sumnk[i], nktag+nmtr)
+        generate_buchung(booking)
+        print(booking)

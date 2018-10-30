@@ -28,6 +28,7 @@ class Konto(models.Model):
     art = models.CharField(max_length=2, choices=arten, default=aktiv_bestand)
     
     kurz = models.CharField(max_length=20, unique=True)
+    nice = models.CharField(max_length=30, default="")
     lang = models.TextField()
     
     #anfangssoll  = models.IntegerField(default=0)
@@ -44,6 +45,11 @@ class Konto(models.Model):
         k.save()
         return k
     
+    def nicename(self):
+        if self.nice is "":
+            return self.kurz
+        else:
+            return self.nice
     def last_saldo(self): 
         s = self.salden.exclude(in_bilanz__isnull=True).latest('in_bilanz__datum')
         return s
@@ -200,8 +206,8 @@ class Buchung(models.Model):
         return "%s : %s : %s : %d : %s : %s" %(str(self.datum), self.sollkonto.kurz, self.habenkonto.kurz, self.wert, 
                                                    self.beschreibung, self.beleg)
     
-    class Meta:
-        unique_together = ('datum', 'beschreibung', 'beleg', 'sollkonto', 'habenkonto', 'wert')
+    #class Meta:
+    #    unique_together = ('datum', 'beschreibung', 'beleg', 'sollkonto', 'habenkonto', 'wert')
 
 class NK(models.Model):
 
@@ -240,16 +246,12 @@ def distribute(period, nks, keys):
 def compute_sums(nk):
     
     anteil = {}
-    sumnk = 0
+    sumnk = 0.0
     
     for i, li in enumerate(nk.keys()):
-        sumnk += li
+        sumnk += nk[li][1]
 
-    for i, li in enumerate(nk.keys()):
-        anteil[li] = nk[li] / sumnk
-
-
-    return sumnk, anteil
+    return sumnk
 
 class Bilanz(models.Model):
     """
@@ -371,7 +373,8 @@ def generate_buchung(buchungstext):
     except:
         raise Exception('could not split '+buchungstext)
     d, sk, hk, w, bel = [ s.replace(' ','') for s in [d, sk, hk, w, bel]]
-    d,m,y = d.split('.')
+    #d,m,y = d.split('.')
+    y,m,d = d.split('-')
     d = date(int(y), int(m), int(d))
     try:
         sk = Konto.objects.get( kurz = sk)
@@ -387,5 +390,5 @@ def generate_buchung(buchungstext):
     b = Buchung.create( d, sk, hk, w, bsr, bel )
     try:
         b.save()
-    except:
-        raise Exception('could not save ' + str(b))
+    except Exception as ex:
+        raise Exception('could not save ' + str(b) + str(ex))

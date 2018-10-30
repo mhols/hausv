@@ -14,5 +14,5 @@ def run():
     
     res = ""
     for b in Buchung.objects.order_by('datum').all():
-        res += "\"%s\",\n"%str(b)
+        res += "%s\n"%str(b)
     print (res)

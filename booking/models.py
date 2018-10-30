@@ -47,7 +47,7 @@ class Konto(models.Model):
     
     def nicename(self):
         if self.nice is "":
-            return self.kurz
+            return self.lang
         else:
             return self.nice
     def last_saldo(self): 
@@ -368,6 +368,7 @@ def make_bilanz(ausgangsbilanz, buchungen, datum, name):
 def generate_buchung(buchungstext):
     
     #buchungstext = buchungstext.replace(' ','')
+    #print ('line ', buchungstext)
     try:
         d, sk, hk, w, bsr, bel = buchungstext.split(':')
     except:

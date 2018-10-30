@@ -106,6 +106,8 @@ class KontoView(DetailView):
         context = super(DetailView, self).get_context_data(*args, **kwargs)
     
         year = self.kwargs['year']
+        period = (date(year,1,1), date(year,12,31))
+        
         knt = self.object
         
         #print ('last saldo ', knt.last_saldo())
@@ -145,7 +147,7 @@ class KontoView(DetailView):
                              'year' : year  
                             }
                         )
-        soll, haben = knt.saldiere()
+        soll, haben = knt.saldiere(period)
         
         data.append({'datum' : date_to_str(d),
                      'soll'  : "%10.2f"%(soll/100),
@@ -170,7 +172,7 @@ class KontoView(DetailView):
                      })
         else:
             data.append({'datum' : date_to_str(d),
-                     'soll'  : "%10.2f"%(haben/100),
+                     'soll'  : "%10.2f"%((haben-soll)/100),
                      'erkl' : 'SALDO',
                      'gegenk' : knt,
                     'year' : year  
@@ -189,26 +191,34 @@ class NKView(TemplateView):
     template_name = 'booking/nk.html'
     
     class NK_table(tables.Table):
-        nk = tables.Column()
-        Summe = tables.Column()
+        nk = tables.Column(attrs={'td' : { 'style' : "text-align:left"} })
+        Summe = tables.Column(attrs={'td' : { 'style' : "text-align:right"} })
         
         class Meta:
                 attrs = {'id' : 'example',
                              'class' : 'display',
                              'style' : 'width:100%',
-                #             'cellspacing' : '0'
+                             'orderalbe' : 'False'
                 }
         
     def get_context_data(self, **kwargs):
         context = TemplateView.get_context_data(self, **kwargs)
         
-        nkbs = Buchung.objects.filter(sollkonto__kurz = 'NK')
+        
+        year = self.kwargs['year']
+        
+        d1 = date(year-1,4,1)
+        d2 = date(year,3,31)
+        
+        nkbs = Buchung.objects.filter(sollkonto__kurz = 'NK', 
+                    beschreibung__contains="#Nebenkkosten-%d#"%year) #TODO better filtering...
         
         res = {}
         loc = []
         
         lomtr = []
         lonks = []
+        payd = {}
         for nk in nkbs.all():
             mtr = nk.beschreibung.split('#')[-1]
             nkn = nk.habenkonto.nicename()
@@ -221,14 +231,14 @@ class NKView(TemplateView):
             if not mtr in res:
                 res[mtr] = {}
             res[mtr][nkn] = val
-
-
-        print(res)
         
-        print(lomtr)
+        rueckb = Buchung.objects.filter(habenkonto__kurz = 'ER', 
+                    beschreibung__contains="#Rueckb.Pausch-%d#"%year)
         
-        print(lonks)
-                
+        for b in rueckb.all():
+            mtr = b.beschreibung.split('#')[-1]
+            payd[mtr] = -b.wert
+        
         for mt in lomtr:
             loc.append((mt, tables.Column(
                 attrs={'td' : { 'style' : "text-align:right"} })
@@ -245,14 +255,28 @@ class NKView(TemplateView):
             )
             data.append (line)
         
+        totf = {mt : sum ( [res[mt][nk] for nk in lonks ]) for mt in lomtr}
+        
         line = { 'nk' : 'SUMME',
-                'Summe' : "%10.7f"%(sum([res[mt][nk] for mt in lomtr for nk in lonks])/100)}
-        line.update({ mt : "%10.2f"%(sum ( [res[mt][nk] for nk in lonks ])/100) for mt in lomtr})
+                'Summe' : "%10.2f"%(sum([res[mt][nk] for mt in lomtr for nk in lonks])/100)}
+        line.update({ mt : "%10.2f"%(totf[mt]/100) for mt in lomtr})
         data.append( line )
-           
+        
+        # payed NK...
+        line = {'nk' : 'Voraus', 'Summe' : "%10.2f"%(sum([ payd[mt] for mt in lomtr]) / 100)}
+        line.update(
+            { mt : "%10.2f"%(payd[mt]/100) for mt in lomtr }
+        )
+        data.append(line)
+        
+        line = {'nk' : '+Guth/-Ford', 'Summe' : "%10.2f"%(sum([ payd[mt] - totf[mt] for mt in lomtr]) / 100)}
+        line.update(
+            { mt : "%10.2f"%((payd[mt]-totf[mt])/100) for mt in lomtr}
+        )
+        data.append(line)
         ta = NKView.NK_table ( data, extra_columns = loc)
         
-        context.update({ 'nktable' : ta })
+        context.update({ 'nktable' : ta, 'year' : year, 'pyear' : year-1})
         return context
 
 class BilanzView(TemplateView):

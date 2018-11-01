@@ -12,14 +12,12 @@ oneday = date(2018,2,2)-date(2018,2,1)
 
 def run():
     
+    d0 = date(2017,1,1)
     B = Konto.objects.get(kurz='B')
-    for d in [date(2017,4,4), date(2017,5,15), date(2017,7,4), date(2017,9,4),
-              date(2017,9,15), date(2017, 9,27), date(2017,10,6), 
-              date(2017,10,27), date(2017,11,2), date(2017,11,6),
-              date(2017,11,17), date(2017,11,21), date(2017,12,4),
-              date(2017,12,6), date(2017,12,29)]:
-        salden = saldiere_buchungen(Buchung.objects.filter(datum__lte=d))
-        print ( d, salden[B][0]-salden[B][1] )
-
+    for d in [date(2018,10,4)]:
+        salden = saldiere_buchungen(Buchung.objects.filter(datum__range=(d0,d)))
+        print ( d,  salden[B][0]-salden[B][1] )
+582654
+558585
 if __name__ == '__main__':
     pass

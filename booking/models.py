@@ -34,7 +34,7 @@ class Konto(models.Model):
     #anfangssoll  = models.IntegerField(default=0)
     #anfangshaben = models.IntegerField(default=0)
     
-    oberkonto = models.ForeignKey('Konto', null=True, on_delete = models.PROTECT, related_name='unterkontos')
+    oberkonto = models.ForeignKey('Konto', null=True, on_delete = models.SET_NULL, related_name='unterkonten')
     #lastsaldo = models.OneToOneField('Saldo', null=True, on_delete = models.PROTECT, 
     #                                 related_name='last_saldo_of')
 
@@ -42,6 +42,12 @@ class Konto(models.Model):
     @classmethod
     def create(cls, art,  kurz, lang):
         k = Konto(art=art,kurz=kurz,lang=lang)
+        oberk = ".".join( kurz.split('.')[:-1])
+        try:
+            obk = Konto.objects.get(kurz=oberk)
+            k.oberkonto = obk
+        except:
+            print (kurz + " does not seem to have an oberkonto")
         k.save()
         return k
     
@@ -99,7 +105,6 @@ class Konto(models.Model):
             sb = self.soll_buchungen.filter(datum__range=dates)
             hb = self.haben_buchungen.filter(datum__range=dates)
         
-          
         soll  = sb.aggregate(Sum('wert'))['wert__sum']
         haben = hb.aggregate(Sum('wert'))['wert__sum']
     
@@ -108,6 +113,67 @@ class Konto(models.Model):
         if haben==None:
             haben=0
         return (soll, haben)
+    
+    def has_unterkonten(self):
+        try:
+            return len(self.unterkonten.all()) > 0
+        except:
+            return False
+    
+    def saldiere_incl_unterkonten(self, dates = ( date(2017,1,1), date(2017,12,31))):
+        
+        def _saldiere(konto, dates, los):
+            
+            los.append(konto.saldiere(dates))
+            if konto.has_unterkonten():
+                for k in konto.unterkonten.all():
+                    _saldiere(k,dates, los)
+        
+        los = [ ]
+        _saldiere(self, dates, los)
+        
+        soll, haben = 0,0
+        for so, ha in los:
+            soll += so
+            haben += ha
+        return soll, haben
+    
+    def get_soll_buchungen(self, period=(date(2017,1,1), date(2017,1,31))):
+        return self.soll_buchungen.filter(datum__range=period)
+    
+    def get_haben_buchungen(self, period=(date(2017,1,1), date(2017,1,31))):
+        return self.haben_buchungen.filter(datum__range=period)
+    
+    def get_all_sollbuchungen(self, period=(date(2017,1,1), date(2017,1,31))):
+        
+        
+        def _get_bookings(konto, sbs, period):
+            sbs.append( konto.soll_buchungen.filter(datum__range=period))
+            for k in konto.unterkonten.all():
+                _get_bookings(k, sbs, period)
+        sbs = []
+        _get_bookings(self, sbs, period)
+        res = Buchung.objects.none()
+        for b in sbs:
+            res = res | b
+        return res
+    
+    def get_all_habenbuchungen(self, period=(date(2017,1,1), date(2017,1,31))):
+        
+        
+        def _get_bookings(konto, sbs, period):
+            sbs.append( konto.haben_buchungen.filter(datum__range=period))
+            for k in konto.unterkonten.all():
+                _get_bookings(k, sbs, period)
+        
+        sbs = []
+        _get_bookings(self, sbs, period)
+        print (sbs)
+        res = sbs[0]#Buchung.objects.none()
+        for b in sbs:
+            print (b)
+            res = b | res
+        return res
     
 class Saldo(models.Model):
     

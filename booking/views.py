@@ -9,6 +9,7 @@ import django_tables2 as tables
 
 from .models import Konto, Buchung
 
+oneday = date(2000,1,2)-date(2000,1,1)
 
 def date_to_str(da):
     def pretty(i):
@@ -35,8 +36,6 @@ class KontenView(ListView):
                                       {{record.lang.lang}}</a>', \
                                       attrs={'td' : { 'style' : "text-align:left"} })
         art   = tables.Column(attrs={'td' : { 'style' : "text-align:left"} })
-        #soll  = tables.Column(attrs={'td' : { 'style' : "text-align:right"} })
-        #haben = tables.Column(attrs={'td' : { 'style' : "text-align:right"} })
         saldo = tables.Column(attrs={'td' : { 'style' : "text-align:right"} })
     
         class Meta:
@@ -93,7 +92,7 @@ class KontoView(DetailView):
         datum = tables.Column(attrs={'td' : { 'style' : "text-align:right"} })
         soll  = tables.Column(attrs={'td' : { 'style' : "text-align:right"} })
         haben = tables.Column(attrs={'td' : { 'style' : "text-align:right"} })
-        gegenk = tables.TemplateColumn('<a href="{% url \'konto\'  record.d1 record.d2 record.gegenk.kurz %}" class="not-active">\
+        gegenk = tables.TemplateColumn('<a href="{% url \'konto\'  record.d1 record.d2 record.gegenk.kurz %}">\
                                       {{record.gegenk.lang}}</a>', \
                                       attrs={'td' : { 'style' : "text-align:right"} })
         erkl  = tables.Column(attrs= {'td' : { 'style' : "text-align:right"} })
@@ -122,45 +121,51 @@ class KontoView(DetailView):
         period = (d1, d2)
         knt = self.object
         
-        #print ('last saldo ', knt.last_saldo())
-        data = []
+        data = [] # container list of dictionaries for the table
         
+        delta = 0
         if knt.is_bestand():
-            soll, habe = knt.saldiere((d1,d1))
-            sol = "%10.2f"%(soll/100)
-            hab = "%10.2f"%(habe/100)
-        
-            data.append({'datum' : date_to_str(d1),
-                         'soll'  : sol,
-                         'haben'  : hab,
-                         'erkl' : 'bestand am %s'%date_to_str(d1),
-                         'gegenk' : knt
-                         })
-            
-            sol =  hab = "%10.2f"%(abs(soll-habe)/100)
-            if soll >= habe:
-                hab='--'
+            soll_a, habe_a = knt.saldiere_incl_unterkonten((d1-oneday,d1-oneday))
+            delta = min(soll_a, habe_a)
+            hab = habe_a - delta
+            sol = soll_a - delta
+            sol = "%10.2f"%(soll_a/100)
+            hab = "%10.2f"%(habe_a/100)
+#         
+#             data.append({'datum' : date_to_str(d1),
+#                          'soll'  : sol,
+#                          'haben'  : hab,
+#                          'erkl' : 'bestand am %s'%date_to_str(d1),
+#                          'gegenk' : knt
+#                          })
+#             
+#             sol =  hab = "%10.2f"%(abs(soll_a-habe_a)/100)
+            if soll_a >= habe_a:
+                hab ='--'
             else:
                 sol='--'
             data.append({'datum' : date_to_str(d1),
                          'soll'  : sol,
                          'haben'  : hab,
-                         'erkl' : 'saldo am %s'%date_to_str(d1),
+                         'erkl' : 'saldo am %s'%date_to_str(d1-oneday),
                          'gegenk' : knt
                          })
             
             
         
-        sb = knt.soll_buchungen.filter(datum__range=period).all()
-        hb = knt.haben_buchungen.filter(datum__range=period).all()
+        sb = knt.get_soll_buchungen(period).all()
+        hb = knt.get_haben_buchungen(period).all()
+        
+        #sb = knt.get_all_sollbuchungen(period)
+        #hb = knt.get_all_habenbuchungen(period)
         
         bctime = {}
-        for b in sb:
+        for b in sb.all():
             if b.datum in bctime:
                 bctime[b.datum].append(b)
             else:
                 bctime[b.datum] = [b]
-        for b in hb:
+        for b in hb.all():
             if b.datum in bctime:
                 bctime[b.datum].append(b)
             else:
@@ -184,11 +189,29 @@ class KontoView(DetailView):
                          'erkl' : b.beschreibung,
                          'gegenk' : genk
                         } )
-        soll, habe = knt.saldiere(period)
+        
+        # adding one level of Unterkonten
+        if knt.has_unterkonten():
+            for k in knt.unterkonten.all():
+                soll, habe = k.saldiere_incl_unterkonten(period)
+                sol = "%10.2f"%(soll/100)
+                hab = "%10.2f"%(habe/100)
+                
+                data.append({'datum' : date_to_str(d2),
+                         'soll'  : sol,
+                         'haben'  : hab,
+                         'erkl' : 'saldo am %s'%date_to_str(d2),
+                         'gegenk' : k
+                         })
+        
+        soll, habe = knt.saldiere_incl_unterkonten(period)
+        soll -= delta
+        habe -= delta
+        
         sol = "%10.2f"%(soll/100)
         hab = "%10.2f"%(habe/100)
         
-        data.append({'datum' : date_to_str(d),
+        data.append({'datum' : date_to_str(d2),
                      'soll'  : sol,
                      'haben'  : hab,
                      'erkl' : 'SUMME soll/haben',
@@ -201,7 +224,7 @@ class KontoView(DetailView):
             sol = ''
         else:
             hab = ''
-        data.append({'datum' : date_to_str(d),
+        data.append({'datum' : date_to_str(d2),
                      'haben'  : hab,
                      'soll'  : sol,
                      'erkl' : 'SALDO',
@@ -222,7 +245,7 @@ class NKView(TemplateView):
     
     class NK_table(tables.Table):
         nk = tables.Column(attrs={'td' : { 'style' : "text-align:left"} })
-        nk = tables.TemplateColumn('<a href="{% url \'konto\' record.d1 record.d2 record.kurz %}">\
+        nk = tables.TemplateColumn('<a href="{% url \'konto\' record.d1 record.d2 record.kurz %}" class="{{record.class}}">\
                                       {{record.lang}}</a>', \
                                       attrs={'td' : { 'style' : "text-align:right"} })
 
@@ -308,19 +331,19 @@ class NKView(TemplateView):
         
         totf = {mt : sum ( [res[mt][nk] for nk in lonks ]) for mt in lomtr}
         
-        line = { 'nk' : 'SUMME', 'kurz' : 'B',
+        line = { 'nk' : 'SUMME', 'kurz' : 'B', 'lang' : "SUMME", 'class' : "not-active", 
                 'Summe' : "%10.2f"%(summ/100)}
         line.update({ mt : "%10.2f"%(sumnks[mt]/100) for mt in lomtr})
         data.append( line )
         
         # payed NK...
-        line = {'nk' : 'Voraus', 'kurz' : 'B', 'Summe' : "%10.2f"%(sum(payd.values()) / 100)}
+        line = {'nk' : 'Voraus', 'kurz' : 'B', 'lang' : 'Vorauszahlung', 'class' : "not-active", 'Summe' : "%10.2f"%(sum(payd.values()) / 100)}
         line.update(
             { mt : "%10.2f"%(payd[mt]/100) for mt in lomtr }
         )
         data.append(line)
         
-        line = {'nk' : '+Guth/-Ford', 'kurz' : 'B', 'Summe' : "%10.2f"%(sum([ payd[mt] - totf[mt] for mt in lomtr]) / 100)}
+        line = {'nk' : '+Guth/-Ford', 'kurz' : 'B', 'lang' : 'Guthaben(+)/Nachz(-)', 'class' : "not-active", 'Summe' : "%10.2f"%(sum([ payd[mt] - totf[mt] for mt in lomtr]) / 100)}
         line.update(
             { mt : "%10.2f"%((payd[mt]-totf[mt])/100) for mt in lomtr}
         )

@@ -5,8 +5,7 @@ Created on Oct 26, 2018
 '''
 
 
-from booking.models import Konto, Buchung, Bilanz, Saldo, generate_buchung,\
-    make_bilanz, saldiere_buchungen
+from booking.models import Konto, Buchung, generate_buchung
 from datetime import date
 
 

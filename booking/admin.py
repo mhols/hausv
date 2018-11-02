@@ -2,8 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import Konto, Buchung, Bilanz
+from .models import Konto, Buchung
 
 admin.site.register(Konto)
 admin.site.register(Buchung)
-admin.site.register(Bilanz)

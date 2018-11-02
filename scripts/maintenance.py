@@ -3,8 +3,7 @@ Created on 15.10.2018
 
 @author: hols
 '''
-from booking.models import Konto, Buchung, Bilanz, Saldo, generate_buchung,\
-    make_bilanz, saldiere_buchungen, NK
+from booking.models import Konto, Buchung,generate_buchung,NK
 from datetime import date
 import os
 
@@ -20,9 +19,6 @@ def run():
     
     for B in Buchung.objects.all():
         B.delete()
-    
-    for S in Saldo.objects.all():
-        S.delete()
     
     for K in Konto.objects.all():
         K.delete()

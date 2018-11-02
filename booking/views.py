@@ -124,22 +124,19 @@ class KontoView(DetailView):
         data = [] # container list of dictionaries for the table
         
         delta = 0
+        habe_a = 0
+        soll_a = 0
+        soll_e = 0
+        habe_e = 0
         if knt.is_bestand():
             soll_a, habe_a = knt.saldiere_incl_unterkonten((d1-oneday,d1-oneday))
+            
+            print (soll_a, habe_a)
             delta = min(soll_a, habe_a)
             hab = habe_a - delta
             sol = soll_a - delta
-            sol = "%10.2f"%(soll_a/100)
-            hab = "%10.2f"%(habe_a/100)
-#         
-#             data.append({'datum' : date_to_str(d1),
-#                          'soll'  : sol,
-#                          'haben'  : hab,
-#                          'erkl' : 'bestand am %s'%date_to_str(d1),
-#                          'gegenk' : knt
-#                          })
-#             
-#             sol =  hab = "%10.2f"%(abs(soll_a-habe_a)/100)
+            hab = "%10.2f"%(hab/100)
+            sol = "%10.2f"%(sol/100)
             if soll_a >= habe_a:
                 hab ='--'
             else:
@@ -152,7 +149,8 @@ class KontoView(DetailView):
                          })
             
             
-        
+        soll_e = soll_a-delta
+        habe_e = habe_a-delta
         sb = knt.get_soll_buchungen(period).all()
         hb = knt.get_haben_buchungen(period).all()
         
@@ -175,11 +173,13 @@ class KontoView(DetailView):
         for d in sorted(bctime.keys()):
             for b in bctime[d]:
                 if b in knt.soll_buchungen.all():
+                    soll_e += b.wert
                     soll = "%10.2f"%(b.wert/100)
                     habe = ''
                     genk = b.habenkonto
                 else:
                     soll = ''
+                    habe_e += b.wert
                     habe = "%10.2f"%(b.wert/100)
                     genk = b.sollkonto
                 data.append (
@@ -189,14 +189,20 @@ class KontoView(DetailView):
                          'erkl' : b.beschreibung,
                          'gegenk' : genk
                         } )
+
+        soll, habe = knt.saldiere(period) # ohne unterkonten
         
         # adding one level of Unterkonten
         if knt.has_unterkonten():
             for k in knt.unterkonten.all():
-                soll, habe = k.saldiere_incl_unterkonten(period)
-                sol = "%10.2f"%(soll/100)
-                hab = "%10.2f"%(habe/100)
-                
+                sol, hab = k.saldiere_incl_unterkonten(period)
+                delt = min(sol, hab)
+                sol-=delt
+                hab-=delt
+                soll_e+=sol
+                habe_e+=hab
+                sol = "%10.2f"%(sol/100)
+                hab = "%10.2f"%(hab/100)
                 data.append({'datum' : date_to_str(d2),
                          'soll'  : sol,
                          'haben'  : hab,
@@ -204,12 +210,11 @@ class KontoView(DetailView):
                          'gegenk' : k
                          })
         
-        soll, habe = knt.saldiere_incl_unterkonten(period)
-        soll -= delta
-        habe -= delta
+        #soll -= delta
+        #habe -= delta
         
-        sol = "%10.2f"%(soll/100)
-        hab = "%10.2f"%(habe/100)
+        sol = "%10.2f"%(soll_e/100)
+        hab = "%10.2f"%(habe_e/100)
         
         data.append({'datum' : date_to_str(d2),
                      'soll'  : sol,
@@ -218,9 +223,9 @@ class KontoView(DetailView):
                      'gegenk' : knt
                      })
         
-        sol = "%10.2f"%(abs(soll-habe)/100)
+        sol = "%10.2f"%(abs(soll_e-habe_e)/100)
         hab = sol
-        if soll >= habe:
+        if soll_e >= habe_e:
             sol = ''
         else:
             hab = ''

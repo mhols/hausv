@@ -32,9 +32,15 @@ def run():
     Konto.create(art=Konto.bilanzkonto,  kurz='BILANZ',    lang='Bilanzkonto'), 
     Konto.create(art=Konto.aktiv_bestand,  kurz='B',         lang='Deutsche Bank Konto'), 
     Konto.create(art=Konto.aktiv_bestand,  kurz='F',         lang='Forderungen'),
-    Konto.create(art=Konto.aktiv_bestand,  kurz='F.Holger',  lang='NK Forderungen Holger'),
-    Konto.create(art=Konto.aktiv_bestand,  kurz='F.Roeder',  lang='NK Forderungen Roeder'),
-    Konto.create(art=Konto.aktiv_bestand,  kurz='F.Peter',   lang='NK Forderungen Peter'),
+    Konto.create(art=Konto.aktiv_bestand,  kurz='F.Holger',  lang='Forderungen Holger'),
+    Konto.create(art=Konto.aktiv_bestand,  kurz='F.Holger.NK',  lang='NK Forderungen Holger'),
+    Konto.create(art=Konto.aktiv_bestand,  kurz='F.Holger.NK.A',  lang='Ausgleich NK Forderungen Holger'),
+    Konto.create(art=Konto.aktiv_bestand,  kurz='F.Roeder',  lang='Forderungen Roeder'),
+    Konto.create(art=Konto.aktiv_bestand,  kurz='F.Roeder.NK',  lang='NK Forderungen Roeder'),
+    Konto.create(art=Konto.aktiv_bestand,  kurz='F.Roeder.NK.A',  lang='Ausgleich NK Forderungen Roeder'),
+    Konto.create(art=Konto.aktiv_bestand,  kurz='F.Peter',   lang='Forderungen Peter'),
+    Konto.create(art=Konto.aktiv_bestand,  kurz='F.Peter.NK',   lang='NK Forderungen Peter'),
+    Konto.create(art=Konto.aktiv_bestand,  kurz='F.Peter.NK.A',   lang='Ausgleich NK Forderungen Peter'),
     Konto.create(art=Konto.passiv_eigenkmain, kurz='EK',     lang='Gesellschafter Kapital'),
     Konto.create(art=Konto.passiv_eigenk, kurz='EK.Peter',   lang='Gesellschafter Konto Peter'),
     Konto.create(art=Konto.passiv_eigenk, kurz='EK.Alex',    lang='Gesellschafter Konto Alex'),
@@ -66,7 +72,7 @@ def run():
     Konto.create(art=Konto.passiv_aufwand, kurz='NK.STR',    lang='Hausstrom'),        
     Konto.create(art=Konto.passiv_aufwand, kurz='NK.GARTEN', lang='Gartenarbeiten'),
     
-    f = open(os.path.join(BASE_DIR, 'exports-db/h22-2018-11-01.txt'), 'r', encoding='latin-1')
+    f = open(os.path.join(BASE_DIR, 'exports-db/h22-2018-11-01b.txt'), 'r', encoding='latin-1')
     Buchungen = f.readlines()
     f.close()
 #     [

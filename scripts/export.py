@@ -5,13 +5,24 @@ Created on Oct 26, 2018
 '''
 
 
-from booking.models import Konto, Buchung, generate_buchung
+from booking.models import Haus, Konto, Buchung, generate_buchung
 from datetime import date
 
 
+H = Haus.objects.get(kurz = 'H22')
+
 def run():
     
+    print ("# generating map for "+H.kurz)
+    
+    print (H.kurz)
+    
     res = ""
+    
+    for k in H.konten.all():
+        res += "%s\n"%str(k)
+    
+    res += "\n------------------\n"
     for b in Buchung.objects.order_by('datum').all():
-        res += "%s\n"%str(b)
+        res += "%s"%str(b)
     print (res)

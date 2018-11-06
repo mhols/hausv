@@ -3,7 +3,7 @@ Created on 15.10.2018
 
 @author: hols
 '''
-from booking.models import Konto, Buchung,generate_buchung,NK
+from booking.models import Konto, Haus, Buchung,generate_buchung,NK
 from datetime import date
 import os
 
@@ -14,6 +14,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 def run():
     print('we are up and runing')
 
+    for H in Haus.objects.all():
+        H.delete()
+
     for nk in NK.objects.all():
         nk.delete()
     
@@ -22,55 +25,63 @@ def run():
     
     for K in Konto.objects.all():
         K.delete()
+#     
+#     # Kontenplan
+# 
+#     H = Haus()
+#     H.kurz = 'H22'
+#     H.save()
+#     
+#     Konto.create(art=Konto.bilanzkonto,  kurz='BILANZ',    lang='Bilanzkonto'), 
+#     Konto.create(art=Konto.aktiv_bestand,  kurz='B',         lang='Deutsche Bank Konto'), 
+#     Konto.create(art=Konto.aktiv_bestand,  kurz='F',         lang='Forderungen'),
+#     Konto.create(art=Konto.aktiv_bestand,  kurz='F.Holger',  lang='Forderungen an Holger'),
+#     Konto.create(art=Konto.aktiv_bestand,  kurz='F.Holger.NK',  lang='NK Forderungen an Holger'),
+#     Konto.create(art=Konto.aktiv_bestand,  kurz='F.Holger.NK.A',  lang='Ausgleich NK Forderungen Holger'),
+#     Konto.create(art=Konto.aktiv_bestand,  kurz='F.Roeder',  lang='Forderungen an Roeder'),
+#     Konto.create(art=Konto.aktiv_bestand,  kurz='F.Roeder.NK',  lang='NK Forderungen an Roeder'),
+#     Konto.create(art=Konto.aktiv_bestand,  kurz='F.Roeder.NK.A',  lang='Ausgleich NK Forderungen Roeder'),
+#     Konto.create(art=Konto.aktiv_bestand,  kurz='F.Peter',   lang='Forderungen Peter'),
+#     Konto.create(art=Konto.aktiv_bestand,  kurz='F.Peter.NK',   lang='NK Forderungen an Peter'),
+#     Konto.create(art=Konto.aktiv_bestand,  kurz='F.Peter.NK.A',   lang='Ausgleich NK Forderungen Peter'),
+#     Konto.create(art=Konto.passiv_eigenkmain, kurz='EK',     lang='Gesellschafter Kapital'),
+#     Konto.create(art=Konto.passiv_eigenk, kurz='EK.Peter',   lang='Gesellschafter Konto Peter'),
+#     Konto.create(art=Konto.passiv_eigenk, kurz='EK.Alex',    lang='Gesellschafter Konto Alex'),
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A',    lang='Aufwendungen'),
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A.RE',        lang='Instandhaltung, Reparaturen'),
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A.RE.UG',     lang='Instandhaltung, Reparaturen UG'),
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A.RE.1OG',    lang='Instandhaltung, Reparaturen 1OG'),
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A.RE.2OG',    lang='Instandhaltung, Reparaturen 2OG'),
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A.VERW',      lang='Verwaltungskosten'),
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A.NK',        lang='Nebenkosten'),
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A.NK.DK',     lang='Dachkanel Reinigung'),
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A.NK.GS',     lang='Grundsteuer'),
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A.NK.VS',     lang='Versicherungen'),
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A.NK.ML',     lang='Hausmuell'),
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A.NK.KW',     lang='Kaltwasser'),
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A.NK.WK',     lang='Reinigung Waschkueche'),
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A.NK.HZ',     lang='Heizung'),
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A.NK.HZ.FL',  lang='Feuerloescher'),
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A.NK.HZ.GAS', lang='Gasverbrauch'),
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A.NK.HZ.WART',lang='Wartung HZ'),
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A.NK.HZ.KAMIN',lang='Kaminfeger'),
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A.NK.HZ.STR', lang='Heizstom'),
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A.NK.HZ.ABR', lang='Abrechnungsservice'),
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A.NK.STR',    lang='Hausstrom'),        
+#     Konto.create(art=Konto.passiv_aufwand, kurz='EK.A.NK.GARTEN', lang='Gartenarbeiten'),
+#     Konto.create(art=Konto.passiv_ertrag,  kurz='EK.ER',        lang='Ertraege'),
+#     Konto.create(art=Konto.passiv_ertrag,  kurz='EK.ER.VER',    lang='Versicherungs Entschaedigung'),
+#     Konto.create(art=Konto.passiv_bestand, kurz='V',         lang='Verbindlichkeiten'),
+#     Konto.create(art=Konto.passiv_bestand, kurz='V.H',       lang='Verbindlichkeiten Handwerker'),
+#     Konto.create(art=Konto.passiv_bestand, kurz='V.H.Kadel', lang='Verbindl Handwerker Kadel'),
+#     Konto.create(art=Konto.passiv_bestand, kurz='V.H.Schmid', lang='Verbindl Handwerker Schmid'),        
+#     Konto.create(art=Konto.passiv_bestand, kurz='V.H.Ruttkowski', lang='Verbindl Handwerker Ruttkowski'),
+#     
+#     for K in Konto.objects.all():
+#         K.haus = H
+#         K.kurz = "H22.%s"%K.kurz
+#         K.save()
     
-    # Kontenplan
-    
-    Konto.create(art=Konto.bilanzkonto,  kurz='BILANZ',    lang='Bilanzkonto'), 
-    Konto.create(art=Konto.aktiv_bestand,  kurz='B',         lang='Deutsche Bank Konto'), 
-    Konto.create(art=Konto.aktiv_bestand,  kurz='F',         lang='Forderungen'),
-    Konto.create(art=Konto.aktiv_bestand,  kurz='F.Holger',  lang='Forderungen Holger'),
-    Konto.create(art=Konto.aktiv_bestand,  kurz='F.Holger.NK',  lang='NK Forderungen Holger'),
-    Konto.create(art=Konto.aktiv_bestand,  kurz='F.Holger.NK.A',  lang='Ausgleich NK Forderungen Holger'),
-    Konto.create(art=Konto.aktiv_bestand,  kurz='F.Roeder',  lang='Forderungen Roeder'),
-    Konto.create(art=Konto.aktiv_bestand,  kurz='F.Roeder.NK',  lang='NK Forderungen Roeder'),
-    Konto.create(art=Konto.aktiv_bestand,  kurz='F.Roeder.NK.A',  lang='Ausgleich NK Forderungen Roeder'),
-    Konto.create(art=Konto.aktiv_bestand,  kurz='F.Peter',   lang='Forderungen Peter'),
-    Konto.create(art=Konto.aktiv_bestand,  kurz='F.Peter.NK',   lang='NK Forderungen Peter'),
-    Konto.create(art=Konto.aktiv_bestand,  kurz='F.Peter.NK.A',   lang='Ausgleich NK Forderungen Peter'),
-    Konto.create(art=Konto.passiv_eigenkmain, kurz='EK',     lang='Gesellschafter Kapital'),
-    Konto.create(art=Konto.passiv_eigenk, kurz='EK.Peter',   lang='Gesellschafter Konto Peter'),
-    Konto.create(art=Konto.passiv_eigenk, kurz='EK.Alex',    lang='Gesellschafter Konto Alex'),
-    Konto.create(art=Konto.passiv_bestand, kurz='V',         lang='Verbindlichkeiten'),
-    Konto.create(art=Konto.passiv_bestand, kurz='V.H',       lang='Verbindlichkeiten Handwerker'),
-    Konto.create(art=Konto.passiv_bestand, kurz='V.H.Kadel', lang='Verbindl Handwerker Kadel'),
-    Konto.create(art=Konto.passiv_bestand, kurz='V.H.Schmid', lang='Verbindl Handwerker Schmid'),        
-    Konto.create(art=Konto.passiv_bestand, kurz='V.H.Ruttkowski', lang='Verbindl Handwerker Ruttkowski'),
-    Konto.create(art=Konto.passiv_ertrag,  kurz='ER',        lang='Allgemeine Ertraege'),
-    Konto.create(art=Konto.passiv_ertrag,  kurz='ER.VER',    lang='Versicherungs Entschaedigung'),
-    Konto.create(art=Konto.passiv_aufwand, kurz='RE',        lang='Instandhaltung, Reparaturen'),
-    Konto.create(art=Konto.passiv_aufwand, kurz='RE.UG',     lang='Instandhaltung, Reparaturen UG'),
-    Konto.create(art=Konto.passiv_aufwand, kurz='RE.1OG',    lang='Instandhaltung, Reparaturen 1OG'),
-    Konto.create(art=Konto.passiv_aufwand, kurz='RE.2OG',    lang='Instandhaltung, Reparaturen 2OG'),
-    Konto.create(art=Konto.passiv_aufwand, kurz='VERW',      lang='Verwaltungskosten'),
-    Konto.create(art=Konto.passiv_aufwand, kurz='NK',        lang='Nebenkosten'),
-    Konto.create(art=Konto.passiv_aufwand, kurz='NK.DK',     lang='Dachkanel Reinigung'),
-    Konto.create(art=Konto.passiv_aufwand, kurz='NK.GS',     lang='Grundsteuer'),
-    Konto.create(art=Konto.passiv_aufwand, kurz='NK.VS',     lang='Versicherungen'),
-    Konto.create(art=Konto.passiv_aufwand, kurz='NK.ML',     lang='Hausmuell'),
-    Konto.create(art=Konto.passiv_aufwand, kurz='NK.KW',     lang='Kaltwasser'),
-    Konto.create(art=Konto.passiv_aufwand, kurz='NK.HZ',     lang='Heizung'),
-    Konto.create(art=Konto.passiv_aufwand, kurz='NK.HZ.FL',  lang='Feuerloescher'),
-    Konto.create(art=Konto.passiv_aufwand, kurz='NK.HZ.GAS', lang='Gasverbrauch'),
-    Konto.create(art=Konto.passiv_aufwand, kurz='NK.HZ.WART',lang='Wartung HZ'),
-    Konto.create(art=Konto.passiv_aufwand, kurz='NK.HZ.KAMIN',lang='Kaminfeger'),
-    Konto.create(art=Konto.passiv_aufwand, kurz='NK.HZ.STR', lang='Heizstom'),
-    Konto.create(art=Konto.passiv_aufwand, kurz='NK.HZ.ABR', lang='Abrechnungsservice'),
-    Konto.create(art=Konto.passiv_aufwand, kurz='NK.STR',    lang='Hausstrom'),        
-    Konto.create(art=Konto.passiv_aufwand, kurz='NK.GARTEN', lang='Gartenarbeiten'),
-    
-    f = open(os.path.join(BASE_DIR, 'exports-db/h22-2018-11-01b.txt'), 'r', encoding='latin-1')
-    Buchungen = f.readlines()
-    f.close()
 #     [
 # "1.1.2017 : F.Holger : ER : 20000 : Nebenkosten Pauschale Holger : None",
 # "1.1.2017 : F.Peter : ER : 22000 : Nebenkosten Pauschale Peter : None",
@@ -402,9 +413,19 @@ def run():
 # "1.9.2018 : F.Roeder : ER : 14000 : Nebenkosten Pauschale Roeder : None",
 # ]
 
-    for n, b in enumerate(Buchungen):
+    #f = open(os.path.join(BASE_DIR, 'exports-db/h22-2018-11-05b.txt'), 'r', encoding='latin-1')
+    f = open(os.path.join(BASE_DIR, 'exports-db/L3-2018-11-05.txt'), 'r', encoding='latin-1')
+    all = f.readlines()
+    f.close()
+
+    for n, b in enumerate(all):
         try:
-            generate_buchung(b)
+            art, kurz, lang = b.split(":")
+            art = Konto.invartdic[art]
+            Konto.create(art, kurz, lang)
         except:
-            print( "problem  with line:", n, " text = ", b)
+            try:
+                generate_buchung(b)
+            except:
+                print( "problem  with line:", n, " text = ", b)
     

@@ -31,6 +31,7 @@ class KontenView(ListView):
     model = Konto
     
     class KontenTable(tables.Table):
+        id = tables.Column()
         kurz = tables.Column(attrs={'td' : { 'style' : "text-align:left"} })
         lang  = tables.TemplateColumn('<a href="{% url \'konto\' record.d1 record.d2 record.lang.kurz %}">\
                                       {{record.lang.lang}}</a>', \
@@ -55,8 +56,12 @@ class KontenView(ListView):
         d2 = str_to_date(self.kwargs['d2'])
     
         data = []
-        for k in self.object_list:
-            so, ha = k.saldiere((d1,d2,))
+        for k in self.object_list.order_by('pk'):
+            if k.is_bestand() or k.is_eigenk():
+                so, ha = k.saldiere_bis_incl_unterkonten(d2)
+            else:
+                so, ha = k.saldiere_incl_unterkonten((d1-oneday, d2))
+            
                 # = sum ([b.wert for b in k.soll_buchungen.all()])
             #ha = sum ([b.wert for b in k.haben_buchungen.all()])
             de = abs(so-ha)
@@ -64,9 +69,10 @@ class KontenView(ListView):
                 de = so-ha
             else:
                 de = ha-so
-            kurz = k.level()*" "+k.kurz
+            kurz = k.level()*"--|"+k.kurz
             data.append(
                 {
+                    'id'   : k.pk,
                     'kurz' : kurz,
                     'lang' : k,
                     'art'  : Konto.artendic[k.art],
@@ -96,6 +102,7 @@ class KontoView(DetailView):
                                       {{record.gegenk.lang}}</a>', \
                                       attrs={'td' : { 'style' : "text-align:right"} })
         erkl  = tables.Column(attrs= {'td' : { 'style' : "text-align:right"} })
+        beleg = tables.Column()
         
         class Meta:
             attrs = {'id' : 'example',
@@ -128,25 +135,22 @@ class KontoView(DetailView):
         soll_a = 0
         soll_e = 0
         habe_e = 0
-        if knt.is_bestand():
-            soll_a, habe_a = knt.saldiere_incl_unterkonten((d1-oneday,d1-oneday))
-            
-            print (soll_a, habe_a)
+        if knt.is_bestand() or knt.is_eigenkmain() or knt.is_bilanz():
+            soll_a, habe_a = knt.saldiere_bis_incl_unterkonten(d1-oneday)
+            line = {'datum' : date_to_str(d1),
+                         'erkl' : 'saldo am %s'%date_to_str(d1),
+                         'gegenk' : knt
+                  }
             delta = min(soll_a, habe_a)
             hab = habe_a - delta
             sol = soll_a - delta
             hab = "%10.2f"%(hab/100)
             sol = "%10.2f"%(sol/100)
             if soll_a >= habe_a:
-                hab ='--'
+                line.update({'soll' : sol})
             else:
-                sol='--'
-            data.append({'datum' : date_to_str(d1),
-                         'soll'  : sol,
-                         'haben'  : hab,
-                         'erkl' : 'saldo am %s'%date_to_str(d1-oneday),
-                         'gegenk' : knt
-                         })
+                line.update({'haben' : hab})
+            data.append(line)
             
             
         soll_e = soll_a-delta
@@ -187,7 +191,8 @@ class KontoView(DetailView):
                          'soll'  : soll,
                          'haben'  : habe,
                          'erkl' : b.beschreibung,
-                         'gegenk' : genk
+                         'gegenk' : genk,
+                         'beleg' : b.beleg
                         } )
 
         soll, habe = knt.saldiere(period) # ohne unterkonten
@@ -199,27 +204,36 @@ class KontoView(DetailView):
                 delt = min(sol, hab)
                 sol-=delt
                 hab-=delt
+                if sol == 0 and hab == 0:
+                    line = {'datum' : date_to_str(d2),
+                         'erkl' : 'Veraend. %s - %s '%(date_to_str(d1),date_to_str(d2)),
+                         'gegenk' : k
+                         }
+                else:
+                    line = {'datum' : date_to_str(d2),
+                             'erkl' : 'Veraend. %s - %s '%(date_to_str(d1),date_to_str(d2)),
+                             'gegenk' : k
+                             }
                 soll_e+=sol
                 habe_e+=hab
-                sol = "%10.2f"%(sol/100)
-                hab = "%10.2f"%(hab/100)
-                data.append({'datum' : date_to_str(d2),
-                         'soll'  : sol,
-                         'haben'  : hab,
-                         'erkl' : 'saldo am %s'%date_to_str(d2),
-                         'gegenk' : k
-                         })
-        
-        #soll -= delta
-        #habe -= delta
-        
+                if sol>=hab:
+                    sol = "%10.2f"%(sol/100)
+                    line.update({'soll' : sol})
+                else:
+                    hab = "%10.2f"%(hab/100)
+                    line.update({'haben' : hab})
+                data.append(line)
+
         sol = "%10.2f"%(soll_e/100)
         hab = "%10.2f"%(habe_e/100)
         
+        erkl = 'SUMME soll/haben'
+        if knt.is_bilanz():
+            erkl = 'BLANZ / Veraenderung'
         data.append({'datum' : date_to_str(d2),
                      'soll'  : sol,
                      'haben'  : hab,
-                     'erkl' : 'SUMME soll/haben',
+                     'erkl' : erkl,
                      'gegenk' : knt
                      })
         
@@ -229,13 +243,14 @@ class KontoView(DetailView):
             sol = ''
         else:
             hab = ''
-        data.append({'datum' : date_to_str(d2),
-                     'haben'  : hab,
-                     'soll'  : sol,
-                     'erkl' : 'SALDO',
-                     'gegenk' : knt
-                     })
-        
+        if not knt.is_bilanz():
+            data.append({'datum' : date_to_str(d2),
+                         'haben'  : hab,
+                         'soll'  : sol,
+                         'erkl' : 'SALDO',
+                         'gegenk' : knt
+                         })
+            
         for d in data:
             d.update({'d1' : d1, 'd2' : d2})
                 

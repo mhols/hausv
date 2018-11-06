@@ -4,7 +4,11 @@ from django.db.models import Sum
 
 from datetime import date
 import numpy as np
+from django.db.migrations.operations.models import AlterUniqueTogether
 # Create your models here.
+
+class Haus(models.Model):
+    kurz = models.CharField(max_length=20)
 
 
 class Konto(models.Model):
@@ -16,7 +20,7 @@ class Konto(models.Model):
     passiv_eigenk  = 'pk'
     passiv_eigenkmain = 'em'
     bilanzkonto = 'bk'
-    arten = ((aktiv_bestand,'aktiv'), 
+    arten = ((aktiv_bestand,'aktiv bestand'), 
              (passiv_bestand,'passiv bestand'),
              (passiv_eigenkmain,'passiv eigenkapital hauptkonto'),
              (passiv_eigenk,'passiv eigenkapital'),
@@ -25,9 +29,12 @@ class Konto(models.Model):
              (bilanzkonto, 'bilanzkonto'))
 
     artendic = { a:b for a, b in arten}
+    invartdic = { b : a for a,b in arten}
+    haus = models.ForeignKey(Haus, related_name='konten', null=True, on_delete=models.SET_NULL)
+    
     art = models.CharField(max_length=2, choices=arten, default=aktiv_bestand)
     
-    kurz = models.CharField(max_length=20, unique=True)
+    kurz = models.CharField(max_length=20)
     nice = models.CharField(max_length=30, default="")
     lang = models.TextField()
     
@@ -38,6 +45,8 @@ class Konto(models.Model):
     #lastsaldo = models.OneToOneField('Saldo', null=True, on_delete = models.PROTECT, 
     #                                 related_name='last_saldo_of')
 
+    class META:
+        unique_together = ['haus','kurz']
 
     @classmethod
     def create(cls, art,  kurz, lang):
@@ -72,7 +81,7 @@ class Konto(models.Model):
                self.art == Konto.passiv_eigenk 
     
     def is_eigenk(self):
-        return (self.art == Konto.passiv_eigenk) | (self.art == Konto.passiv_eigenkmain)
+        return (self.art == Konto.passiv_eigenk) or (self.art == Konto.passiv_eigenkmain)
     
     def is_eigenkmain(self):
         return self.art == Konto.passiv_eigenkmain
@@ -98,12 +107,11 @@ class Konto(models.Model):
         return count
     
     def saldiere(self, dates = (date(2017,1,1), date(2017,12,31))):
-        if self.is_bestand():
-            sb = self.soll_buchungen.filter(datum__lte=dates[1])
-            hb = self.haben_buchungen.filter(datum__lte=dates[1])
-        else:
-            sb = self.soll_buchungen.filter(datum__range=dates)
-            hb = self.haben_buchungen.filter(datum__range=dates)
+        """
+        saldiere in einem Interval
+        """
+        sb = self.soll_buchungen.filter(datum__range=dates)
+        hb = self.haben_buchungen.filter(datum__range=dates)
         
         soll  = sb.aggregate(Sum('wert'))['wert__sum']
         haben = hb.aggregate(Sum('wert'))['wert__sum']
@@ -113,6 +121,9 @@ class Konto(models.Model):
         if haben==None:
             haben=0
         return (soll, haben)
+    
+    def saldiere_bis(self, datum):
+        return self.saldiere((datum(2016,12,31), datum))
     
     def has_unterkonten(self):
         try:
@@ -137,6 +148,9 @@ class Konto(models.Model):
             soll += so
             haben += ha
         return soll, haben
+    
+    def saldiere_bis_incl_unterkonten(self, datum):
+        return self.saldiere_incl_unterkonten((date(2016,12,31), datum))
     
     def get_soll_buchungen(self, period=(date(2017,1,1), date(2017,1,31))):
         return self.soll_buchungen.filter(datum__range=period)
@@ -174,6 +188,9 @@ class Konto(models.Model):
             print (b)
             res = b | res
         return res
+    
+    def __str__(self):
+        return "%s:%s:%s"%(Konto.artendic[self.art],self.kurz,self.lang)
     
 class Buchung(models.Model):
     datum  = models.DateField()
@@ -239,6 +256,7 @@ def compute_sums(nk):
         sumnk += nk[li][1]
 
     return sumnk
+
 
 def generate_buchung(buchungstext):
     

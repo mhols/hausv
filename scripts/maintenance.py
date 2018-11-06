@@ -414,7 +414,7 @@ def run():
 # ]
 
     #f = open(os.path.join(BASE_DIR, 'exports-db/h22-2018-11-05b.txt'), 'r', encoding='latin-1')
-    f = open(os.path.join(BASE_DIR, 'exports-db/L3-2018-11-05.txt'), 'r', encoding='latin-1')
+    f = open(os.path.join(BASE_DIR, 'exports-db/L3-2018-11-06.txt'), 'r', encoding='latin-1')
     all = f.readlines()
     f.close()
 

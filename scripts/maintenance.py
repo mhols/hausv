@@ -414,11 +414,11 @@ def run():
 # ]
 
     #f = open(os.path.join(BASE_DIR, 'exports-db/h22-2018-11-05b.txt'), 'r', encoding='latin-1')
-    f = open(os.path.join(BASE_DIR, 'exports-db/L3-2018-11-06.txt'), 'r', encoding='latin-1')
-    all = f.readlines()
+    f = open(os.path.join(BASE_DIR, 'exports-db/L3-2018-11-08.txt'), 'r', encoding='utf-8')
+    alle = f.readlines()
     f.close()
 
-    for n, b in enumerate(all):
+    for n, b in enumerate(alle):
         try:
             art, kurz, lang = b.split(":")
             art = Konto.invartdic[art]
@@ -426,6 +426,6 @@ def run():
         except:
             try:
                 generate_buchung(b)
-            except:
-                print( "problem  with line:", n, " text = ", b)
+            except Exception as ex:
+                print( "problem  with line:", n, ex, " text = ", b)
     

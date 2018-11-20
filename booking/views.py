@@ -136,9 +136,10 @@ class KontoView(DetailView):
         soll_e = 0
         habe_e = 0
         if knt.is_bestand() or knt.is_eigenkmain() or knt.is_bilanz():
-            soll_a, habe_a = knt.saldiere_bis_incl_unterkonten(d1-oneday)
+            #soll_a, habe_a = knt.saldiere_bis_incl_unterkonten(d1-oneday)
+            soll_a, habe_a = knt.saldiere_bis(d1-oneday)
             line = {'datum' : date_to_str(d1),
-                         'erkl' : 'saldo am %s'%date_to_str(d1),
+                         'erkl' : 'Bestand am %s'%date_to_str(d1),
                          'gegenk' : knt
                   }
             delta = min(soll_a, habe_a)
@@ -200,20 +201,30 @@ class KontoView(DetailView):
         # adding one level of Unterkonten
         if knt.has_unterkonten():
             for k in knt.unterkonten.all():
+                if k.is_bestand():
+                    soll_a, habe_a = k.saldiere_bis_incl_unterkonten(d1-oneday)
+                    line = {'datum' : date_to_str(d1),
+                                 'erkl' : 'Bestand am %s'%date_to_str(d1),
+                                 'gegenk' : k
+                          }
+                    delta = min(soll_a, habe_a)
+                    hab = habe_a - delta
+                    sol = soll_a - delta
+                    hab = "%10.2f"%(hab/100)
+                    sol = "%10.2f"%(sol/100)
+                    if soll_a >= habe_a:
+                        line.update({'soll' : sol})
+                    else:
+                        line.update({'haben' : hab})
+                    data.append(line)
+
                 sol, hab = k.saldiere_incl_unterkonten(period)
                 delt = min(sol, hab)
                 sol-=delt
                 hab-=delt
-                if sol == 0 and hab == 0:
-                    line = {'datum' : date_to_str(d2),
-                         'erkl' : 'Veraend. %s - %s '%(date_to_str(d1),date_to_str(d2)),
+                line = {'erkl' : 'Veraend. %s - %s '%(date_to_str(d1),date_to_str(d2)),
                          'gegenk' : k
                          }
-                else:
-                    line = {'datum' : date_to_str(d2),
-                             'erkl' : 'Veraend. %s - %s '%(date_to_str(d1),date_to_str(d2)),
-                             'gegenk' : k
-                             }
                 soll_e+=sol
                 habe_e+=hab
                 if sol>=hab:
@@ -223,6 +234,23 @@ class KontoView(DetailView):
                     hab = "%10.2f"%(hab/100)
                     line.update({'haben' : hab})
                 data.append(line)
+
+                if k.is_bestand():
+                    soll_a, habe_a = k.saldiere_bis_incl_unterkonten(d2)
+                    line = {'datum' : date_to_str(d2),
+                                 'erkl' : 'Bestand am %s'%date_to_str(d2),
+                                 'gegenk' : k
+                          }
+                    delta = min(soll_a, habe_a)
+                    hab = habe_a - delta
+                    sol = soll_a - delta
+                    hab = "%10.2f"%(hab/100)
+                    sol = "%10.2f"%(sol/100)
+                    if soll_a >= habe_a:
+                        line.update({'soll' : sol})
+                    else:
+                        line.update({'haben' : hab})
+                    data.append(line)
 
         sol = "%10.2f"%(soll_e/100)
         hab = "%10.2f"%(habe_e/100)

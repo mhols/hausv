@@ -123,7 +123,7 @@ class Konto(models.Model):
         return (soll, haben)
     
     def saldiere_bis(self, datum):
-        return self.saldiere((datum(2016,12,31), datum))
+        return self.saldiere((date(2016,1,1), datum))
     
     def has_unterkonten(self):
         try:
@@ -150,7 +150,7 @@ class Konto(models.Model):
         return soll, haben
     
     def saldiere_bis_incl_unterkonten(self, datum):
-        return self.saldiere_incl_unterkonten((date(2016,12,31), datum))
+        return self.saldiere_incl_unterkonten((date(2016,1,1), datum))
     
     def get_soll_buchungen(self, period=(date(2017,1,1), date(2017,1,31))):
         return self.soll_buchungen.filter(datum__range=period)
@@ -263,21 +263,23 @@ def generate_buchung(buchungstext):
     #buchungstext = buchungstext.replace(' ','')
     #print ('line ', buchungstext)
     try:
-        d, sk, hk, w, bsr, bel = buchungstext.split(':')
+        tmp = buchungstext.split(':')
+        d, sk, hk, w, bsr = tmp[0:5]
+        bel =  ':'.join(tmp[5:])
     except:
         raise Exception('could not split '+buchungstext)
-    d, sk, hk, w, bel = [ s.replace(' ','') for s in [d, sk, hk, w, bel]]
+    d, sk, hk, w = [ s.replace(' ','') for s in [d, sk, hk, w]]
     #d,m,y = d.split('.')
     y,m,d = d.split('-')
     d = date(int(y), int(m), int(d))
     try:
         sk = Konto.objects.get( kurz = sk)
     except:
-        raise Exception( sk )
+        raise Exception( "no soll account with name %s"%(sk) )
     try:
         hk = Konto.objects.get( kurz = hk)
     except:
-        raise Exception( "---%s---"%(hk) )
+        raise Exception( "no haben account %s"%(hk) )
     w=w.replace('.','')
     w = int( w )
     

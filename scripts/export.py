@@ -9,17 +9,17 @@ from booking.models import Haus, Konto, Buchung, generate_buchung
 from datetime import date
 
 
-H = Haus.objects.get(kurz = 'H22')
+#H = Haus.objects.get(kurz = 'L3')
 
 def run():
     
-    print ("# generating map for "+H.kurz)
+    print ("# generating map for ")
     
-    print (H.kurz)
+    #print (H.kurz)
     
     res = ""
     
-    for k in H.konten.all():
+    for k in Konto.objects.all():
         res += "%s\n"%str(k)
     
     res += "\n------------------\n"

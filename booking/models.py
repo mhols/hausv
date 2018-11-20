@@ -51,12 +51,14 @@ class Konto(models.Model):
     @classmethod
     def create(cls, art,  kurz, lang):
         k = Konto(art=art,kurz=kurz,lang=lang)
+        k.save()
+        print ('created '+ k.kurz)
         oberk = ".".join( kurz.split('.')[:-1])
         try:
             obk = Konto.objects.get(kurz=oberk)
             k.oberkonto = obk
         except:
-            print (kurz + " does not seem to have an oberkonto")
+            print (kurz + " does not seem to have an oberkonto "+oberk)
         k.save()
         return k
     

@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
-
+from django.contrib.auth.mixins import LoginRequiredMixin
 import django_tables2 as tables
 
 from .models import Konto, Buchung
@@ -26,7 +26,7 @@ def str_to_date(s):
     return date(int(y), int(m), int(d))
     
 
-class KontenView(ListView):
+class KontenView(LoginRequiredMixin, ListView):
     
     model = Konto
     
@@ -90,7 +90,7 @@ class KontenView(ListView):
     
     
 # Create your views here.
-class KontoView(DetailView):
+class KontoView(LoginRequiredMixin, DetailView):
     
     model = Konto
     
@@ -302,7 +302,7 @@ class KontoView(DetailView):
         
         return context
 
-class NKView(TemplateView):
+class NKView(LoginRequiredMixin, TemplateView):
     
     template_name = 'booking/nk.html'
     
@@ -419,7 +419,7 @@ class NKView(TemplateView):
         context.update({ 'nktable' : ta, 'year' : self.year, 'pyear' : self.year-1})
         return context
 
-class BilanzView(TemplateView):
+class BilanzView(LoginRequiredMixin, TemplateView):
     
     tempmplate_name = 'bilanz.html'
     
@@ -438,7 +438,7 @@ class BilanzView(TemplateView):
         
         return context
     
-class GuVView(TemplateView): 
+class GuVView(LoginRequiredMixin, TemplateView): 
     pass
 
 

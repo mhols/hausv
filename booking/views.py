@@ -284,7 +284,22 @@ class KontoView(DetailView):
                 
         tab = KontoView.KontoTable( data )
         context.update( {'tab' : tab, 
-                         'konto' : knt.lang } )
+                         'konto' : knt.lang,
+                         'd1' : date_to_str(d1),
+                         'd2' : date_to_str(d2),
+                         } )
+        if knt.oberkonto is None:
+            context.update({
+                'oberkonto' : knt
+            }
+        )
+        else:
+            context.update({
+                'oberkonto' : knt.oberkonto
+            })
+             
+
+        
         return context
 
 class NKView(TemplateView):

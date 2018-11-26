@@ -46,7 +46,7 @@ class Konto(models.Model):
     #                                 related_name='last_saldo_of')
 
     class META:
-        unique_together = ['haus','kurz']
+        unique_together = ['kurz']
 
     @classmethod
     def create(cls, art,  kurz, lang):
@@ -212,8 +212,9 @@ class Buchung(models.Model):
         return "%s : %s : %s : %d : %s : %s" %(str(self.datum), self.sollkonto.kurz, self.habenkonto.kurz, self.wert, 
                                                    self.beschreibung, self.beleg)
     
-    #class Meta:
-    #    unique_together = ('datum', 'beschreibung', 'beleg', 'sollkonto', 'habenkonto', 'wert')
+    class Meta:
+        unique_together = ('datum', 'beschreibung', 'beleg', 'sollkonto', 'habenkonto', 'wert')
+
 
 class NK(models.Model):
 

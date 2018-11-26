@@ -8,81 +8,181 @@ import numpy as np
 from booking.models import NK, Konto, Buchung, distribute, compute_sums,\
     generate_buchung
 generate_buchung
-    
+
+from django.db.models import Sum
+
 from datetime import date
 
 def run():
-    year = 2018
-    nktag = "#Nebenkkosten-%d#"%year
-    beztag = "#Rueckb.Pausch-%d#"%year
-    
-    
-    for b in Buchung.objects.filter(beschreibung__contains="#").all():
-        b.delete()
-    
-    for nk in NK.objects.all():
-        nk.delete()
-    
-    nk = NK(nk = Konto.objects.get(kurz='NK.VS'), key = NK.QM); nk.save()
-    nk = NK(nk = Konto.objects.get(kurz='NK.GARTEN'), key = NK.PZ); nk.save()
-    nk = NK(nk = Konto.objects.get(kurz='NK.KW'), key = NK.PZ); nk.save()
-    nk = NK(nk = Konto.objects.get(kurz='NK.ML'), key = NK.PZ); nk.save()
-    nk = NK(nk = Konto.objects.get(kurz='NK.DK'), key = NK.PZ); nk.save()
-    nkhz = NK(nk = Konto.objects.get(kurz='NK.HZ'), key = NK.IN); nkhz.save()
-    
-    #nk = NK(nk = Konto.objects.get(kurz='NK.HZ'), key = NK.IN); nk.save()
-    
-    
-    period = (date(year-1,4,1), date(year,3,31))
-    
-    knk = {}
-    mtrkonto = ['F.Holger', 'F.Peter', 'F.Roeder']
-    totf = [ 12*20000, 12*22000, 12*14000]      # totale Forderung NK in periode
-    knk['qm'] = [90.61, 90.61, 62.89]
-    knk['pz'] = [2,2,1]
-    knk['in'] = [1,1,1]
-    
-    res = distribute(period, NK.objects.all(), knk)
-    
-    hzg = [299683, np.array([84814, 142394, 72475])]
-    res[nkhz] = hzg
-    
-    
-    
-    """
-    saldo 582654
-    
-    4.1. 200 holger
-    2.1. 220 peter
-    2.1. -585.69 SV-Geb 
-    
-    2.1. 140 roeder
-    2.1. -21.00 Badenova
-    2.1. -74.00
-    3.1. 70 einlage alex
-    
-    15.1 190.00 davon 40 Verwaltung / Rabe
-    
-    
-    
-    30.1. -21.00 Badenova
-    30.1. -74.00 Bnetze
-    31.1. -155 Gas
-    """
-    
-    
-    sumnk = compute_sums(res)
-    for i, mtr in enumerate(mtrkonto):
-        f, nmtr = mtr.split('.')
-        for nk in res.keys():
-            booking = "%s : NK : %s : %d : %s : None"\
-                %(period[1], nk.nk.kurz, res[nk][1][i], nktag+nmtr)
-            generate_buchung(booking)
-        booking = "%s :  %s : NK : %d : %s : None"\
-                %(period[1], mtr, sumnk[i], nktag+nmtr)
-        generate_buchung(booking)
+    year = 2017
+    d1, d2 = date(year,1,1), date(year,12,31)
         
-        booking = "%s : %s : ER : %d : %s : None"\
-                %(period[1], mtr, -totf[i], beztag+nmtr)
-        generate_buchung(booking)
-        print(booking)
+    mieter = {}
+    mieter['UG'] = ['NEMETS']
+    mieter['EG'] = ['ADELHEIM', 'NUERNBERG', 'HAIMERL',
+                    'SELBACH', 'KIEFER']
+    mieter['1OGL'] = ['SIMMINGER', 'HARGESHEIMER']
+    mieter['1OGR'] = ['SCHMIDT']
+    mieter['2OG'] = ['BARZ']
+    
+    MES = mieter.keys()
+    
+    TECHEM = {}
+    TECHEM['UG'] = 79652
+    TECHEM['EG'] = 177804
+    TECHEM['1OGR'] = 23495
+    TECHEM['1OGL'] = 112863
+    TECHEM['2OG'] =  73687
+    
+    BZ = {
+        'NEMETS' : 1,
+        'KIEFER' : 1,
+        'ADELHEIM': 1,
+        'NUERNBERG' : 1,
+        'HAIMERL' : 2,
+        'SELBACH' : 1,
+        'SCHMIDT' : 1,
+        'SIMMINGER' : 2,
+        'HARGESHEIMER' :  2,
+        'BARZ' : 1
+    }
+    
+    
+    NK = ['DK', 'GS', 'VER', 'WA', 'STR', 'GARTEN']
+    NKSQM = ['DK', 'GS', 'VER', 'GARTEN']
+    NKSPZ = ['WA', 'STR']
+    
+    NKS = {
+        n : Buchung.objects.filter(sollkonto__kurz='L3.EK.A.NK.%s'%(n))
+          .filter(datum__range=(d1,d2)).aggregate(Sum('wert'))['wert__sum'] for n in NK
+    }
+
+
+    Monate={}
+    Monate['NEMETS'] = 12
+    Monate['KIEFER'] = 10
+    Monate['ADELHEIM'] = 12
+    Monate['NUERNBERG'] = 12
+    Monate['HAIMERL'] = 2
+    Monate['SELBACH'] = 12
+    Monate['SCHMIDT'] = 12
+    Monate['SIMMINGER'] = 2*9
+    Monate['HARGESHEIMER'] = 2*3
+    Monate['BARZ']=2*12
+    SMT = sum([Monate[k] for k in Monate])
+    
+    mieterlist = Monate.keys()
+    
+    QM = {}
+    QM['UG'] = 38.29
+    QM['EG'] = 132.95
+    QM['1OGL'] = 96.58
+    QM['1OGR'] = 36.37
+    QM['2OG'] = 105.31
+    SQM = sum([QM[k] for k in QM])
+        
+    MM={}
+    MM['UG'] = 12
+    MM['EG'] = 48
+    MM['1OGL'] = 24
+    MM['1OGR'] = 12
+    MM['2OG'] = 24
+   
+    SMM = sum([MM[k] for k in MM])
+    
+    nkverteilung = {}
+    for mt in mieterlist:
+        nkverteilung[mt] = {}
+        for nk in NKSPZ:
+            nkverteilung[mt][nk] = NKS[nk]*Monate[mt] / float(SMT)
+    
+    nkverteilungme = {}
+    for me in QM:
+        nkverteilungme[me] = {}
+        for nk in NKSQM:
+            nkverteilungme[me][nk] = NKS[nk]*QM[me] / float(SQM)
+    
+    for mt in mieterlist:
+        for nk in NKSQM:
+            nkverteilung[mt][nk] = 0
+    for me in QM:
+        for mt in mieter[me]:
+            for nk in NKSQM:
+                nkverteilung[mt][nk] += nkverteilungme[me][nk] * float(Monate[mt]) / MM[me]
+
+    for mt in mieterlist:
+        nkverteilung[mt]['TECHEM'] = 0
+    for me in QM:
+        for mt in mieter[me]:
+            nkverteilung[mt]['TECHEM'] += TECHEM[me] * float(Monate[mt]) / MM[me]
+
+    for mt in nkverteilung:
+        print (mt, nkverteilung[mt])
+
+
+    zuZahlendeNK = {mt : sum ([nkverteilung[mt][nk] for nk in nkverteilung[mt]]) for mt in mieterlist}
+    
+        
+    alteForderungNK =  {
+        mt : Buchung.objects
+            .filter(datum__range=(d1,d2))
+            .filter(sollkonto__kurz='L3.F.%s'%(mt))
+            .filter(beschreibung__contains='Nebenkostenforderung')
+            .aggregate(Sum('wert'))['wert__sum'] 
+            for mt in mieterlist
+        }
+    
+    print ('\n\n')
+    
+    for mt in zuZahlendeNK:
+        print (mt, int(zuZahlendeNK[mt])/100)
+    
+    print ('\n\n')
+    
+    for mt in zuZahlendeNK:
+        print (mt, int(alteForderungNK[mt])/100)
+    
+    print ('\n\n')
+    
+    for mt in zuZahlendeNK:
+        try:
+            print (mt, int(zuZahlendeNK[mt] - alteForderungNK[mt])/100)
+        except:
+            pass
+
+
+    ANREDE = {
+        'NEMETS' : 'Sehr geehrte Frau Nemets',
+        'KIEFER' : 'Sehr geehrte Frau Kiefer',
+        'ADELHEIM' : 'Sehr geehrte Frau Adelheim',
+        'NUERNBERG' : 'Sehr geehrte Frau Nuernberg',
+        'HAIMERL' : 'Sehr geehrte Frau Haimerl',
+        'SELBACH' : 'Sehr geehrte Frau Selbach',
+        'SCHMIDT' : 'Sehr geehrter Herr Dr. Schmidt',
+        'SIMMINGER' : 'Sehr geehrte Frau Simminger',
+        'HARGESHEIMER' : 'Sehr geehrte Frau Hargesheimer',
+        'BARZ'    : "Sehr geehrte Frau Barz"    
+    }
+
+    for mt in mieterlist:
+        text="""
+Sehr %s
+
+Hier die Nebenkosten Abrechnung fuer die Periode %s - %s.
+In der Abrechnung ist eine Personenebelegung von %d Personen X Monaten 
+zugrunde gelegt. Die Flaeche Ihrere Wohneinheit betraegt $%7.2fm^2$.
+Die Pauschalforderung an Sie betrug $%8.2f$ Euro. Ihr Anteil 
+an den Nebenkosten betraegt $%8.2f$ Euro. Es besteht somit eine Forderung (+)
+bzw Guthaben (-) von 
+
+{\\bf $%8.2f$ Euro}
+
+Bitte um zeitnahen Ausgleich bzw. Angabe der Bankverbindung im Falle eines Guthabens.
+
+mfG
+
+Matthias Holschneider
+"""%(ANREDE[mt], str(d1), str(d2), Monate[mt], 100, int(alteForderungNK[mt])/100, int(zuZahlendeNK[mt])/100,
+                     int(zuZahlendeNK[mt]-alteForderungNK[mt])/100)
+
+        print (text)

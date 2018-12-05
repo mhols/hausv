@@ -19,7 +19,7 @@
 {% load render_table from django_tables2 %}
 
 
-<a href={%url 'konto' d1 d2 oberkonto.kurz %}>up to {{ oberkonto.lang }}</a>
+<a href={%url 'konto' d1 d2 oberkonto.kurz %}>up to {{ oberkonto.lang }}</a>     <a href={%url 'logout' %}>logout</a>
 
 <h3>{{ d1 }} - {{d2}} {{ konto }} (incl. direkte Unterkonten)</h3>
 

@@ -24,4 +24,5 @@ urlpatterns = [
     path('konto/<str:d1>/<str:d2>/<str:pk>', KontoView.as_view(), name = 'konto'),
     path('konten/<str:d1>/<str:d2>', KontenView.as_view(), name = 'konten'),
     path('nk/<int:year>', NKView.as_view(), name = 'konten'),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]

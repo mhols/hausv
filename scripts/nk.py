@@ -100,7 +100,10 @@ def run():
     for me in QM:
         nkverteilungme[me] = {}
         for nk in NKSQM:
-            nkverteilungme[me][nk] = NKS[nk]*QM[me] / float(SQM)
+            try:
+                nkverteilungme[me][nk] = NKS[nk]*QM[me] / float(SQM)
+            except:
+                print( me, nk, SQM)
     
     for mt in mieterlist:
         for nk in NKSQM:
@@ -108,8 +111,10 @@ def run():
     for me in QM:
         for mt in mieter[me]:
             for nk in NKSQM:
-                nkverteilung[mt][nk] += nkverteilungme[me][nk] * float(Monate[mt]) / MM[me]
-
+                try:
+                    nkverteilung[mt][nk] += nkverteilungme[me][nk] * float(Monate[mt]) / MM[me]
+                except:
+                    print( mt, nk, me)
     for mt in mieterlist:
         nkverteilung[mt]['TECHEM'] = 0
     for me in QM:
@@ -164,6 +169,13 @@ def run():
         'BARZ'    : "Sehr geehrte Frau Barz"    
     }
 
+
+    def forderung_guthaben(n):
+        if n >0 :
+            return "eine Forderung von\n\n{\\bf $%8.2f$ Euro}\n\nIch bitte um zeitnahen Ausgleich."%(n/100)
+        else:
+            return "ein Guthaben von\n\n{\\bf $%8.2f$ Euro}\n\nIch bitte um Angabe der Bankverbindung."%(-n/100)
+        
     for mt in mieterlist:
         text="""
 Sehr %s
@@ -172,17 +184,14 @@ Hier die Nebenkosten Abrechnung fuer die Periode %s - %s.
 In der Abrechnung ist eine Personenebelegung von %d Personen X Monaten 
 zugrunde gelegt. Die Flaeche Ihrere Wohneinheit betraegt $%7.2fm^2$.
 Die Pauschalforderung an Sie betrug $%8.2f$ Euro. Ihr Anteil 
-an den Nebenkosten betraegt $%8.2f$ Euro. Es besteht somit eine Forderung (+)
-bzw Guthaben (-) von 
+an den Nebenkosten betraegt $%8.2f$ Euro. Es besteht somit %s
 
-{\\bf $%8.2f$ Euro}
 
-Bitte um zeitnahen Ausgleich bzw. Angabe der Bankverbindung im Falle eines Guthabens.
 
 mfG
 
 Matthias Holschneider
 """%(ANREDE[mt], str(d1), str(d2), Monate[mt], 100, int(alteForderungNK[mt])/100, int(zuZahlendeNK[mt])/100,
-                     int(zuZahlendeNK[mt]-alteForderungNK[mt])/100)
+                     forderung_guthaben(int(zuZahlendeNK[mt]-alteForderungNK[mt])))
 
         print (text)

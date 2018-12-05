@@ -90,7 +90,8 @@ class KontenView(LoginRequiredMixin, ListView):
     
     
 # Create your views here.
-class KontoView(LoginRequiredMixin, DetailView):
+#class KontoView(LoginRequiredMixin, DetailView):
+class KontoView(DetailView):
     
     model = Konto
     

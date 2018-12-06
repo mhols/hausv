@@ -73,6 +73,8 @@ def run():
     
     mieterlist = Monate.keys()
     
+    wohnungofmieter = { mt : next( wg for wg in mieter if mt in mieter[wg]) for  mt in mieterlist}
+    
     QM = {}
     QM['UG'] = 38.29
     QM['EG'] = 132.95
@@ -172,15 +174,63 @@ def run():
 
     def forderung_guthaben(n):
         if n >0 :
-            return "eine Forderung von\n\n{\\bf $%8.2f$ Euro}\n\nIch bitte um zeitnahen Ausgleich."%(n/100)
+            return "eine Forderung von\n\n{\\bf $\mathbf %8.2f$ Euro}\n\nIch bitte um zeitnahen Ausgleich."%(n/100)
         else:
-            return "ein Guthaben von\n\n{\\bf $%8.2f$ Euro}\n\nIch bitte um Angabe der Bankverbindung."%(-n/100)
+            return "ein Guthaben von\n\n{\\bf $\mathbf %8.2f$ Euro}\n\nIch bitte um Angabe der Bankverbindung."%(-n/100)
         
     for mt in mieterlist:
-        text="""
-Sehr %s
+        text=r"""
+\documentclass[english,10pt]{g-brief}
+\usepackage[T1]{fontenc}
+\usepackage[latin2]{inputenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\LyxGruss}[1]{\Gruss{#1}{0.5cm}}
 
-Hier die Nebenkosten Abrechnung fuer die Periode %s - %s.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\lochermarke
+\faltmarken
+\fenstermarken
+\trennlinien
+
+\usepackage[english]{babel}
+
+\begin{document}
+
+\Name{Prof. Dr. Matthias Holschneider}
+\Unterschrift{Matthias Holschneider}
+\Strasse{Gieseler Stra{\ss}e 28}
+\Zusatz{}
+\Ort{10713 Berlin}
+\Land{}
+\RetourAdresse{Prof. Dr. M. Holschneider, Gieseler Str. 28, 10713 Berlin}
+\Telefon{+49 175 1515 574}
+\Telefax{+49 331 977 1578}
+\Telex{}
+\EMail{matthias.holschneider@gmail.com }
+\HTTP{www.math.uni-potsdam.de/\textasciitilde{}hols}
+\Bank{Sparkasse Freiburg}
+\BLZ{680 501 01}
+\Konto{12045802}
+
+
+\Adresse{ %s\\Lerchenstrasse 3\\79104 Freiburg }
+\Betreff{Nebenkosten 2017}
+\Postvermerk{}
+\MeinZeichen{}
+\IhrZeichen{}
+\IhrSchreiben{}
+\Anlagen{Rechnung TECHEM}
+\Verteiler{an alle Mieter}
+
+\Datum{\today}
+
+
+\Anrede{ %s, }
+
+\LyxGruss{mit freundlichen Gr{\"u}{\ss}en aus Berlin,}
+\begin{g-brief}
+
+Hier die Nebenkosten Abrechnung f{\"u}r die Periode %s - %s.
 In der Abrechnung ist eine Personenebelegung von %d Personen X Monaten 
 zugrunde gelegt. Die Flaeche Ihrere Wohneinheit betraegt $%7.2fm^2$.
 Die Pauschalforderung an Sie betrug $%8.2f$ Euro. Ihr Anteil 
@@ -191,7 +241,38 @@ an den Nebenkosten betraegt $%8.2f$ Euro. Es besteht somit %s
 mfG
 
 Matthias Holschneider
-"""%(ANREDE[mt], str(d1), str(d2), Monate[mt], 100, int(alteForderungNK[mt])/100, int(zuZahlendeNK[mt])/100,
-                     forderung_guthaben(int(zuZahlendeNK[mt]-alteForderungNK[mt])))
+\vfill\eject
 
-        print (text)
+Tabelle der Nebenkosten
+
+\begin{tabular}{l | c | r }
+Kosten & Total & ihr Anteil \\
+\hline
+Grundsteuer & $%8.2f$ &$%8.2f$ \\
+Versicherungen & $%8.2f$ &$%8.2f$ \\
+Dachkaenel & $%8.2f$ &$%8.2f$ \\
+Garten & $%8.2f$ &$%8.2f$ \\
+Kaltwasser & $%8.2f$ &$%8.2f$ \\
+Heizung & $%8.2f$ &$%8.2f$ \\
+\hline
+Summe & $%8.2f$ &$%8.2f$ \\
+\end{tabular}
+
+\end{g-brief}
+
+\end{document}
+"""%(mt, ANREDE[mt], str(d1), str(d2), Monate[mt], QM[wohnungofmieter[mt]],
+     int(alteForderungNK[mt])/100, int(zuZahlendeNK[mt])/100,
+    forderung_guthaben(int(zuZahlendeNK[mt]-alteForderungNK[mt])),
+    NKS['GS']/100, nkverteilung[mt]['GS']/100,
+    NKS['VER']/100, nkverteilung[mt]['VER']/100, 
+    NKS['DK']/100, nkverteilung[mt]['DK']/100, 
+    NKS['GARTEN']/100, nkverteilung[mt]['GARTEN']/100,
+    NKS['WA']/100, nkverteilung[mt]['WA']/100, 
+    sum( TECHEM[me] for me in TECHEM)/100, nkverteilung[mt]['TECHEM']/100,      
+    sum([zuZahlendeNK[mt] for mt in mieterlist])/100, zuZahlendeNK[mt]/100           
+                     )
+    
+        f = open(mt+'.tex','w')
+        f.write(text)
+        f.close()

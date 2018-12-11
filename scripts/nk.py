@@ -276,3 +276,7 @@ Summe & $%8.2f$ &$%8.2f$ \\
         f = open(mt+'.tex','w')
         f.write(text)
         f.close()
+
+        print ('2018-12-06 : L3.F.%s : L3.EK.ER.NK : %d : Ausgleich NK 2017 : None' %(mt, int(zuZahlendeNK[mt]-alteForderungNK[mt])))
+           
+           

@@ -31,7 +31,6 @@ class KontenView(LoginRequiredMixin, ListView):
     model = Konto
     
     class KontenTable(tables.Table):
-        id = tables.Column()
         kurz = tables.Column(attrs={'td' : { 'style' : "text-align:left"} })
         lang  = tables.TemplateColumn('<a href="{% url \'konto\' record.d1 record.d2 record.lang.kurz %}">\
                                       {{record.lang.lang}}</a>', \
@@ -88,7 +87,14 @@ class KontenView(LoginRequiredMixin, ListView):
         context.update({'ktb' : ktb})
         return context
     
-    
+
+def get_pk(r):
+    try:
+        res = r['pk']
+    except:
+        res = -1
+    return res
+        
 # Create your views here.
 #class KontoView(LoginRequiredMixin, DetailView):
 class KontoView(DetailView):
@@ -105,11 +111,16 @@ class KontoView(DetailView):
         erkl  = tables.Column(attrs= {'td' : { 'style' : "text-align:right"} })
         beleg = tables.Column()
         
+        
         class Meta:
+            
             attrs = {'id' : 'example',
                          'class' : 'display',
                          'style' : 'width:100%',
             #             'cellspacing' : '0'
+            }
+            row_attrs = {
+                'data-id': lambda record: get_pk(record)
             }
     
     def get_object(self, queryset=None):
@@ -194,7 +205,8 @@ class KontoView(DetailView):
                          'haben'  : habe,
                          'erkl' : b.beschreibung,
                          'gegenk' : genk,
-                         'beleg' : b.beleg
+                         'beleg' : b.beleg,
+                         'pk'    : b.pk
                         } )
 
         soll, habe = knt.saldiere(period) # ohne unterkonten

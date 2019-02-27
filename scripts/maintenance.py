@@ -3,7 +3,7 @@ Created on 15.10.2018
 
 @author: hols
 '''
-from booking.models import Konto, Haus, Buchung,generate_buchung,NK
+from booking.models import Konto, Buchung,generate_buchung,NK
 from datetime import date
 import os
 
@@ -21,12 +21,12 @@ def run(*args):
     alle = f.readlines()
     prefix = alle[0][1:-1]
     f.close()
-    for H in Haus.objects.all():
-        H.delete()
+    #for H in Haus.objects.all():
+    #    H.delete()
 
     
-    for nk in NK.objects.all():
-        nk.delete()
+    #for nk in NK.objects.all():
+    #    nk.delete()
     
     for B in Buchung.objects.filter(sollkonto__kurz__regex=r"^%s"%(prefix,)).all():
         print ("deleting %s"%(B,))
@@ -36,7 +36,7 @@ def run(*args):
         print ("deleting %s"%(K))
         K.delete()
 
-    #f = open(os.path.join(BASE_DIR, 'exports-db/h22-2018-11-05b.txt'), 'r', encoding='latin-1')
+    f = open(os.path.join(BASE_DIR, 'exports-db/h22-2018-11-05b.txt'), 'r', encoding='latin-1')
     #f = open(os.path.join(BASE_DIR, 'exports-db/L3-2018-11-19-exp.txt'), 'r', encoding='utf-8')
     #f = open(os.path.join(BASE_DIR, 'exports-db/AIYCB-2018-11-20.txt'), 'r', encoding='utf-8')
     

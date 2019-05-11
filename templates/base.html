@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>L3</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+    
+<style>
+  /* Style the header */
+header {
+  display : flex;
+  flex-direction : column;
+  background-color: #666;
+  padding: 13px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+button {
+  background-color: #666;
+  padding-right:15px;
+}
+
+.divh {
+display : flex;
+color:white;
+padding-right:5px;
+padding-left:5px;
+}
+
+.command {
+  display : flex;
+  flex-direction : line;
+  justify-content:space-between;
+  #background: #ffffff;
+  font-size: 15px;
+}
+ </style>
+
+
+{% block morescripts %}
+
+{% endblock %}
+
+{% load admin_urls %}
+
+</head>
+
+<body>
+<div class="container">
+<header>
+<div>
+	L3 - treasurer tool 
+</div>
+{% if d1 %}
+<div class="command">
+	<div class="divh">
+	<button class="divh", onclick="javascript:history.go(-1);">back</button>
+	</div>
+	{%if oberkonto%}
+	{% endif %}
+	<div class="divh">
+	</div>
+	<div class="divh">
+	<a class="divh", href={%url 'logout' %}>logout</a>
+	</div>
+</div>
+{% else %}
+<div class="command">
+	<div class="divh">
+	<button class="divh", onclick="javascript:history.go(-1);">back</button>
+	<a class="divh", href={%url 'home' %}>Home</a>
+</div>
+</div>
+{% endif %}
+
+
+</header>
+
+ {% block maincontent %}
+
+{% endblock %}
+</div>	
+
+</body>
+</html>

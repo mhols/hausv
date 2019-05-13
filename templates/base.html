@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>L3</title>
+  <title>Hausverwaltung</title>
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -61,36 +61,39 @@ padding-left:5px;
 <div class="container">
 <header>
 <div>
-	L3 - treasurer tool 
+	Hausverwaltung
 </div>
-{% if d1 %}
 <div class="command">
 	<div class="divh">
-	<button class="divh", onclick="javascript:history.go(-1);">back</button>
+		<button class="divh", onclick="javascript:history.go(-1);">back</button>
 	</div>
-	{%if oberkonto%}
+	<a class="divh", href={%url 'home' %}>Home</a>
+	{% if d1 %}
+		{% if oberkonto %}
+			<div class="divh">
+				<a class="divh", href={%url 'konto' d1 d2 oberkonto.kurz %}>up to {{oberkonto.lang}}</a>
+			</div>
+		{% endif %}
 	{% endif %}
 	<div class="divh">
+		<a class="divh", href={%url 'upload_umsaetze' %}>upload</a>
+		<a class="divh", href={%url 'parse_umsaetze' %}>parse</a>
+		<a class="divh", href={%url 'admin:index' %}>admin</a>
 	</div>
+	
 	<div class="divh">
-	<a class="divh", href={%url 'logout' %}>logout</a>
+		<a class="divh", href={%url 'logout' %}>logout</a>
 	</div>
 </div>
-{% else %}
-<div class="command">
-	<div class="divh">
-	<button class="divh", onclick="javascript:history.go(-1);">back</button>
-	<a class="divh", href={%url 'home' %}>Home</a>
-</div>
-</div>
-{% endif %}
 
 
 </header>
 
- {% block maincontent %}
+<div>
 
+{% block maincontent %}
 {% endblock %}
+
 </div>	
 
 </body>

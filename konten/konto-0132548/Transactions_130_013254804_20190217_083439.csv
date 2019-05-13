@@ -1,0 +1,19 @@
+Transactions Persönliches Konto (04);;;Customer number: 130 0132548
+08/27/2018 - 02/11/2019
+Old balance:;;;;1,313.92;EUR
+Transactions pending are not included in this report.
+Booking date;Value date;Transaction Type;Beneficiary / Originator;Payment Details;IBAN;BIC;Customer Reference;Mandate Reference;Creditor ID;Compensation amount;Original Amount;Ultimate creditor;Number of transactions;Number of cheques;Debit;Credit;Currency
+08/27/2018;08/27/2018;"SEPA-Credit Transfer";CALOR GMBH;RECNUNG NR 18.1778 VORGANG 35165 KUNDE 30;DE60790691500008935505;GENODEF1GEM;;;;;;;;;-342.30;;EUR
+09/04/2018;09/04/2018;"SEPA-Credit Transfer";Deutscher Orden Haus Hirtenhof;Miete incl. NK Muesselberg 1;DE66790691500306602983;GENODEF1GEM;;;;;;;;;;995.00;EUR
+09/10/2018;09/10/2018;"SEPA-Standing Order";Holschneider, Elisabeth und         Holschn;RINP Dauerauftrag;DE36680700300012282000;;;;;;;;;;-900.00;;EUR
+10/05/2018;10/05/2018;"SEPA-Credit Transfer";Deutscher Orden Haus Hirtenhof;Miete incl. NK Muesselberg 1;DE66790691500306602983;GENODEF1GEM;;;;;;;;;;995.00;EUR
+10/10/2018;10/10/2018;"SEPA-Standing Order";Holschneider, Elisabeth und         Holschn;RINP Dauerauftrag;DE36680700300012282000;;;;;;;;;;-900.00;;EUR
+10/31/2018;10/31/2018;"SEPA-Credit Transfer";Deutscher Orden Haus Hirtenhof;Miete incl. NK Muesselberg 1;DE66790691500306602983;GENODEF1GEM;;;;;;;;;;995.00;EUR
+11/12/2018;11/12/2018;"SEPA-Standing Order";Holschneider, Elisabeth und         Holschn;RINP Dauerauftrag;DE36680700300012282000;;;;;;;;;;-900.00;;EUR
+12/07/2018;12/07/2018;"SEPA-Credit Transfer";Deutscher Orden Haus Hirtenhof;Miete incl. NK Muesselberg 1;DE66790691500306602983;GENODEF1GEM;;;;;;;;;;995.00;EUR
+12/10/2018;12/10/2018;"SEPA-Standing Order";Holschneider, Elisabeth und         Holschn;RINP Dauerauftrag;DE36680700300012282000;;;;;;;;;;-900.00;;EUR
+01/07/2019;01/07/2019;"SEPA-Credit Transfer";Deutscher Orden Haus Hirtenhof;Miete incl. NK Muesselberg 1;DE66790691500306602983;GENODEF1GEM;;;;;;;;;;995.00;EUR
+01/10/2019;01/10/2019;"SEPA-Standing Order";Holschneider, Elisabeth und         Holschn;RINP Dauerauftrag;DE36680700300012282000;;;;;;;;;;-900.00;;EUR
+02/01/2019;02/01/2019;"SEPA-Credit Transfer";Deutscher Orden Haus Hirtenhof;Miete incl. NK Muesselberg 1;DE66790691500306602983;GENODEF1GEM;;;;;;;;;;995.00;EUR
+02/11/2019;02/11/2019;"SEPA-Standing Order";Holschneider, Elisabeth und         Holschn;RINP Dauerauftrag;DE36680700300012282000;;;;;;;;;;-900.00;;EUR
+Account balance;02/11/2019;;;1,541.62;EUR

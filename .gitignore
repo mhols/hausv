@@ -8,3 +8,4 @@ token
 scripts
 /.project
 /.pydevproject
+db.sqlite3

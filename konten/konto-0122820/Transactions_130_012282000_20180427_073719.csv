@@ -1,0 +1,10 @@
+Transactions Persönliches Konto (00);;;Customer number: 130 0122820
+03/29/2018 - 04/10/2018
+Old balance:;;;;71,487.06;EUR
+Transactions pending are not included in this report.
+Booking date;Value date;Transaction Type;Beneficiary / Originator;Payment Details;IBAN;BIC;Customer Reference;Mandate Reference;Creditor ID;Compensation amount;Original Amount;Ultimate creditor;Number of transactions;Number of cheques;Debit;Credit;Currency
+03/29/2018;03/31/2018;;;Saldo der Abschlussposten QM - Support 04082 Leipzig Kontoabschluss 1. Quartal 18 0,1 % Habenzinsen 17,03 Porto;;;;;;;;;;;;14.93;EUR
+04/10/2018;04/10/2018;"SEPA-Credit Transfer";Peter Alexander Holschneider;RINP Dauerauftrag;DE15680700300013254803;DEUTDE6FXXX;000000009802;;;;;;;;;800.00;EUR
+04/10/2018;04/10/2018;"SEPA-Credit Transfer";Peter Alexander Holschneider;RINP Dauerauftrag;DE96680700300013254800;DEUTDE6FXXX;000000009802;;;;;;;;;800.00;EUR
+04/10/2018;04/10/2018;"SEPA-Credit Transfer";Peter Alexander Holschneider;RINP Dauerauftrag;DE85680700300013254804;DEUTDE6FXXX;000000009802;;;;;;;;;900.00;EUR
+Account balance;04/10/2018;;;74,001.99;EUR

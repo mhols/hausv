@@ -122,4 +122,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = '/konto/2018-01-01/2018-11-30/AIYCB'

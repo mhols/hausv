@@ -1,0 +1,13 @@
+Transactions Persönliches Konto (04);;;Customer number: 130 0132548
+02/02/2018 - 04/10/2018
+Old balance:;;;;1,031.62;EUR
+Transactions pending are not included in this report.
+Booking date;Value date;Transaction Type;Beneficiary / Originator;Payment Details;IBAN;BIC;Customer Reference;Mandate Reference;Creditor ID;Compensation amount;Original Amount;Ultimate creditor;Number of transactions;Number of cheques;Debit;Credit;Currency
+02/02/2018;02/02/2018;"SEPA-Credit Transfer";Deutscher Orden Haus Hirtenhof;Miete incl. NK Muesselberg 1;DE66790691500306602983;GENODEF1GEM;;;;;;;;;;995.00;EUR
+02/12/2018;02/12/2018;"SEPA-Standing Order";Holschneider, Elisabeth und         Holschn;RINP Dauerauftrag;DE36680700300012282000;;;;;;;;;;-900.00;;EUR
+03/02/2018;03/02/2018;"SEPA-Credit Transfer";Deutscher Orden Haus Hirtenhof;Miete incl. NK Muesselberg 1;DE66790691500306602983;GENODEF1GEM;;;;;;;;;;995.00;EUR
+03/12/2018;03/12/2018;"SEPA-Standing Order";Holschneider, Elisabeth und         Holschn;RINP Dauerauftrag;DE36680700300012282000;;;;;;;;;;-900.00;;EUR
+03/26/2018;03/26/2018;"SEPA-Credit Transfer";CALOR GMBH;RECNUNG NR 18.0508 PROJEKT 115950 KUNDE 30;DE60790691500008935505;GENODEF1GEM;;;;;;;;;-382.70;;EUR
+04/03/2018;04/03/2018;"SEPA-Credit Transfer";Deutscher Orden Haus Hirtenhof;Miete incl. NK Muesselberg 1;DE66790691500306602983;GENODEF1GEM;;;;;;;;;;995.00;EUR
+04/10/2018;04/10/2018;"SEPA-Standing Order";Holschneider, Elisabeth und         Holschn;RINP Dauerauftrag;DE36680700300012282000;;;;;;;;;;-900.00;;EUR
+Account balance;04/10/2018;;;933.92;EUR

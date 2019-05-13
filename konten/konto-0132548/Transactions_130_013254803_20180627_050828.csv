@@ -1,0 +1,17 @@
+Transactions Persönliches Konto (03);;;Customer number: 130 0132548
+02/02/2018 - 06/11/2018
+Old balance:;;;;2,310.35;EUR
+Transactions pending are not included in this report.
+Booking date;Value date;Transaction Type;Beneficiary / Originator;Payment Details;IBAN;BIC;Customer Reference;Mandate Reference;Creditor ID;Compensation amount;Original Amount;Ultimate creditor;Number of transactions;Number of cheques;Debit;Credit;Currency
+02/02/2018;02/02/2018;"SEPA-Credit Transfer";Robin Schwerbrock;RINP Dauerauftrag MIETE BODANWEG 75 FAM SCHWERBROCK UND BRAUTZSCH;DE85600100700394775707;PBNKDEFFXXX;ZV0100239313291600000002;;;;;;;;;1,020.00;EUR
+02/12/2018;02/12/2018;"SEPA-Standing Order";Holschneider, Elisabeth und         Holschn;RINP Dauerauftrag;DE36680700300012282000;;;;;;;;;;-800.00;;EUR
+03/02/2018;03/02/2018;"SEPA-Credit Transfer";Robin Schwerbrock;RINP Dauerauftrag MIETE BODANWEG 75 FAM SCHWERBROCK UND BRAUTZSCH;DE85600100700394775707;PBNKDEFFXXX;ZV0100241078505200000002;;;;;;;;;1,020.00;EUR
+03/12/2018;03/12/2018;"SEPA-Standing Order";Holschneider, Elisabeth und         Holschn;RINP Dauerauftrag;DE36680700300012282000;;;;;;;;;;-800.00;;EUR
+03/21/2018;03/21/2018;"SEPA-Direct Debit";Helvetia DfD;Privat 080.010.0396248.2 Zeitraum 18.01.2018-18.01.2019;DE18500500000025192030;HELADEFFXXX;HV0800396248220180321000 010;00003362058;DE28HV100000088608;;;;;;-183.99;;EUR
+04/04/2018;04/04/2018;"SEPA-Credit Transfer";Robin Schwerbrock;RINP Dauerauftrag MIETE BODANWEG 75 FAM SCHWERBROCK UND BRAUTZSCH;DE85600100700394775707;PBNKDEFFXXX;ZV0100243013113800000002;;;;;;;;;1,020.00;EUR
+04/10/2018;04/10/2018;"SEPA-Standing Order";Holschneider, Elisabeth und         Holschn;RINP Dauerauftrag;DE36680700300012282000;;;;;;;;;;-800.00;;EUR
+05/03/2018;05/03/2018;"SEPA-Credit Transfer";Robin Schwerbrock;RINP Dauerauftrag MIETE BODANWEG 75 FAM SCHWERBROCK UND BRAUTZSCH;DE85600100700394775707;PBNKDEFFXXX;ZV0100244788427800000002;;;;;;;;;1,020.00;EUR
+05/10/2018;05/10/2018;"SEPA-Standing Order";Holschneider, Elisabeth und         Holschn;RINP Dauerauftrag;DE36680700300012282000;;;;;;;;;;-800.00;;EUR
+06/04/2018;06/04/2018;"SEPA-Credit Transfer";Robin Schwerbrock;RINP Dauerauftrag MIETE BODANWEG 75 FAM SCHWERBROCK UND BRAUTZSCH;DE85600100700394775707;PBNKDEFFXXX;ZV0100246522531300000002;;;;;;;;;1,020.00;EUR
+06/11/2018;06/11/2018;"SEPA-Standing Order";Holschneider, Elisabeth und         Holschn;RINP Dauerauftrag;DE36680700300012282000;;;;;;;;;;-800.00;;EUR
+Account balance;06/11/2018;;;3,226.36;EUR

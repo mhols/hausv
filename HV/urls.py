@@ -21,7 +21,7 @@ from django.views.generic import TemplateView
 from booking.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('HV/', include( [path('booking/', include('booking.urls')),])),
+    path('HV/', include( 'booking.urls')),
     #path('konto/<str:d1>/<str:d2>/<str:pk>', KontoView.as_view(), name = 'konto'),
     #path('konten/<str:d1>/<str:d2>', KontenView.as_view(), name = 'konten'),
     #path('nk/<int:year>', NKView.as_view(), name = 'konten'),

@@ -1,0 +1,111 @@
+bilanzkonto:L3*:Anfangs Bilanzkonto
+
+bilanzkonto:L3:Lerchenstrasse 3 Uebersicht
+
+aktiv bestand:L3.B:Sparkassen Konto
+
+aktiv bestand:L3.WR:Wustenrot Bank Bauspar
+
+aktiv bestand:L3.F:Forderungen
+
+aktiv bestand:L3.F.HARGESHEIMER:Forderungen Lena Hargesheimer
+
+aktiv bestand:L3.F.ADELHEIM:Forderungen Adelheim
+
+aktiv bestand:L3.F.BRAENDLE:Forderungen an BRAENDLE
+
+aktiv bestand:L3.F.NUERNBERG:Forderungen an Nuernberg
+
+aktiv bestand:L3.F.BARZ:Forderungen an Barz
+
+aktiv bestand:L3.F.HAIMERL:Forderungen an Haimerl
+
+aktiv bestand:L3.F.LAMIN:Forderungen an Lamin
+
+aktiv bestand:L3.F.MALLMANN:Forderungen an Mallmann
+
+aktiv bestand:L3.F.KUERTI:Forderungen an Kuerti
+
+aktiv bestand:L3.F.MINGIRULLI:Forderungen an Mingirulli
+
+aktiv bestand:L3.F.NEMETS:Forderungen NEMETS
+
+aktiv bestand:L3.F.SCHMIDT:Forderungen Schmidt
+
+aktiv bestand:L3.F.SELBACH:Forderungen Selbach
+
+aktiv bestand:L3.F.SIMMINGER:Forderungen Simminger
+
+aktiv bestand:L3.F.KIEFER:Forderungen Kiefer
+
+passiv bestand:L3.EK:Eigenkapital
+
+passiv bestand:L3.EK.MATTHIAS:Eigenkapital Matthias
+
+passiv ertrag:L3.EK.ER:Ertraege
+
+passiv ertrag:L3.EK.ER.MIETE:Mieteinnahmen
+
+passiv ertrag:L3.EK.ER.NK:NK Einnahmen
+
+passiv aufwand:L3.EK.A:Aufwand
+
+passiv aufwand:L3.EK.A.ST:Steuern
+
+passiv aufwand:L3.EK.A.H:Handwerker
+
+passiv aufwand:L3.EK.A.H.KADEL:Kadel
+
+passiv aufwand:L3.EK.A.H.RUTTKOWSKI:Ruttkowski
+
+passiv aufwand:L3.EK.A.H.SOREX:Sorex Feuerloescher
+
+passiv aufwand:L3.EK.A.H.HERDEL:Herdel
+
+passiv aufwand:L3.EK.A.H.DITTRICH:Kaminfeger
+
+passiv aufwand:L3.EK.A.RE:Instandhaltung, Reparaturen
+
+passiv aufwand:L3.EK.A.RE.UG:Instandhaltung, Reparaturen UG
+
+passiv aufwand:L3.EK.A.RE.1OG:Instandhaltung, Reparaturen 1OG
+
+passiv aufwand:L3.EK.A.RE.2OG:Instandhaltung, Reparaturen 2OG
+
+passiv aufwand:L3.EK.A.VER:Verwaltungskosten
+
+passiv aufwand:L3.EK.A.NK:Nebenkosten
+
+passiv aufwand:L3.EK.A.NK.DK:Dachkanel Reinigung
+
+passiv aufwand:L3.EK.A.NK.GS:Grundsteuer
+
+passiv aufwand:L3.EK.A.NK.VER:Versicherungen
+
+passiv aufwand:L3.EK.A.NK.WA:Kaltwasser
+
+passiv aufwand:L3.EK.A.NK.HZ:Heizung
+
+passiv aufwand:L3.EK.A.NK.HZ.FL:Feuerloescher
+
+passiv aufwand:L3.EK.A.NK.HZ.GAS:Gasverbrauch
+
+passiv aufwand:L3.EK.A.NK.HZ.WART:Wartung HZ
+
+passiv aufwand:L3.EK.A.NK.HZ.KAMIN:Kaminfeger
+
+passiv aufwand:L3.EK.A.NK.HZ.STR:Heizstom
+
+passiv aufwand:L3.EK.A.NK.HZ.ABR:Abrechnungsservice
+
+passiv aufwand:L3.EK.A.NK.STR:Hausstrom
+
+passiv aufwand:L3.EK.A.NK.GARTEN:Gartenarbeiten
+
+passiv bestand:L3.V:Verbindlichkeiten
+
+passiv bestand:L3.V.KAU:Kautionskonten
+
+passiv bestand:L3.V.WR:Kreditschuld Wuestenrot
+
+

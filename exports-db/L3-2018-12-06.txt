@@ -1,0 +1,1039 @@
+#L3
+
+# generating map for 
+bilanzkonto:L3*:Anfangs Bilanzkonto
+
+bilanzkonto:L3:Lerchenstrasse 3 Uebersicht
+
+aktiv bestand:L3.B:Sparkassen Konto
+
+aktiv bestand:L3.WR:Wustenrot Bank Bauspar
+
+aktiv bestand:L3.F:Forderungen
+
+aktiv bestand:L3.F.HARGESHEIMER:Forderungen Lena Hargesheimer
+
+aktiv bestand:L3.F.ADELHEIM:Forderungen Adelheim
+
+aktiv bestand:L3.F.BRAENDLE:Forderungen an BRAENDLE
+
+aktiv bestand:L3.F.NUERNBERG:Forderungen Nuernberg
+
+aktiv bestand:L3.F.BARZ:Forderungen an Barz
+
+aktiv bestand:L3.F.HAIMERL:Forderungen an Haimerl
+
+aktiv bestand:L3.F.LAMIN:Forderungen an Lamin
+
+aktiv bestand:L3.F.MALLMANN:Forderungen an Mallmann
+
+aktiv bestand:L3.F.KUERTI:Forderungen an Kuerti
+
+aktiv bestand:L3.F.MINGIRULLI:Forderungen an Mingirulli
+
+aktiv bestand:L3.F.NEMETS:Forderungen NEMETS
+
+aktiv bestand:L3.F.SCHMIDT:Forderungen Schmidt
+
+aktiv bestand:L3.F.SELBACH:Forderungen Selbach
+
+aktiv bestand:L3.F.SIMMINGER:Forderungen Simminger
+
+aktiv bestand:L3.F.KIEFER:Forderungen Kiefer
+
+passiv bestand:L3.EK:Eigenkapital
+
+passiv bestand:L3.EK.MATTHIAS:Eigenkapital Matthias
+
+passiv ertrag:L3.EK.ER:Ertraege
+
+passiv ertrag:L3.EK.ER.MIETE:Mieteinnahmen
+
+passiv ertrag:L3.EK.ER.NK:NK Einnahmen
+
+passiv aufwand:L3.EK.A:Aufwand
+
+passiv aufwand:L3.EK.A.ST:Steuern
+
+passiv aufwand:L3.EK.A.H:Handwerker
+
+passiv aufwand:L3.EK.A.H.KADEL:Kadel
+
+passiv aufwand:L3.EK.A.H.RUTTKOWSKI:Ruttkowski
+
+passiv aufwand:L3.EK.A.H.SOREX:Sorex Feuerloescher
+
+passiv aufwand:L3.EK.A.H.HERDEL:Herdel
+
+passiv aufwand:L3.EK.A.H.DITTRICH:Kaminfeger
+
+passiv aufwand:L3.EK.A.RE:Instandhaltung, Reparaturen
+
+passiv aufwand:L3.EK.A.RE.UG:Instandhaltung, Reparaturen UG
+
+passiv aufwand:L3.EK.A.RE.1OG:Instandhaltung, Reparaturen 1OG
+
+passiv aufwand:L3.EK.A.RE.2OG:Instandhaltung, Reparaturen 2OG
+
+passiv aufwand:L3.EK.A.VER:Verwaltungskosten
+
+passiv aufwand:L3.EK.A.NK:Nebenkosten
+
+passiv aufwand:L3.EK.A.NK.DK:Dachkanel Reinigung
+
+passiv aufwand:L3.EK.A.NK.GS:Grundsteuer
+
+passiv aufwand:L3.EK.A.NK.VER:Versicherungen
+
+passiv aufwand:L3.EK.A.NK.WA:Kaltwasser
+
+passiv aufwand:L3.EK.A.NK.HZ:Heizung
+
+passiv aufwand:L3.EK.A.NK.HZ.FL:Feuerloescher
+
+passiv aufwand:L3.EK.A.NK.HZ.GAS:Gasverbrauch
+
+passiv aufwand:L3.EK.A.NK.HZ.WART:Wartung HZ
+
+passiv aufwand:L3.EK.A.NK.HZ.KAMIN:Kaminfeger
+
+passiv aufwand:L3.EK.A.NK.HZ.STR:Heizstom
+
+passiv aufwand:L3.EK.A.NK.HZ.ABR:Abrechnungsservice
+
+passiv aufwand:L3.EK.A.NK.STR:Hausstrom
+
+passiv aufwand:L3.EK.A.NK.GARTEN:Gartenarbeiten
+
+passiv bestand:L3.V:Verbindlichkeiten
+
+passiv bestand:L3.V.KAU:Kautionskonten
+
+passiv bestand:L3.V.WR:Kreditschuld Wuestenrot
+
+
+------------------
+2016-08-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2016-08-01 : L3.F.NUERNBERG : L3.V.KAU : 70000 :  Kautionsforderung Nuernberg   :  None
+2016-08-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2016-09-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2016-09-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2016-10-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2016-10-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2016-10-13 : L3.B : L3.F.NUERNBERG : 80000 :    Miete und NK Victoria Nuernberg GUTSCHRIFT   :  "12045802"; "13.10.16"; "13.10.16"; "GUTSCHRIFT"; "EREF + 03052861177900927870715SVWZ + MITTESEPTEMBER + OKTOBER"; "NUERNBERGVICTORIA"; "DE66680900000038114409"; "GENODE61FR1"; "800,00"; "EUR"; "Umsatzgebucht"
+2016-11-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2016-11-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2016-11-07 : L3.B : L3.F.NUERNBERG : 60000 :    Miete und NK Victoria Nuernberg GUTSCHRIFT   :  "12045802"; "07.11.16"; "07.11.16"; "GUTSCHRIFT"; "EREF + 03023095218400937091573SVWZ + 400MIETE + 200KAUTION"; "NUERNBERGVICTORIA"; "DE66680900000038114409"; "GENODE61FR1"; "600,00"; "EUR"; "Umsatzgebucht"
+2016-12-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2016-12-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2016-12-02 : L3.B : L3.F.NUERNBERG : 60000 :    Miete und NK Victoria Nuernberg DAUERAUFTRAG   :  "12045802"; "02.12.16"; "02.12.16"; "DAUERAUFTRAG"; "SVWZ + 400Miete + 200Kaution"; "NuernbergVictoria"; "DE66680900000038114409"; "GENODE61FR1"; "600,00"; "EUR"; "Umsatzgebucht"
+2016-12-30 : L3.B : L3.F.SELBACH : 35000 :    Miete und NK Selbach DAUERAUFTRAG   :  "DE32680501010012045802"; "Dr.JochenundSusanneSelbach"; "DE94673900000086317109"; "GENODE61WTH"; "350,00"; "EUR"; "Umsatzgebucht(manualadd)"
+2016-12-30 : L3.B : L3.F.SIMMINGER : 130000 :    Miete und NK Simminger DAUERAUFTRAG   :  Simminger"; "DE75200411440614992600"; "COBADEHD044"; "1300,00",Haendisch
+2016-12-30 : L3* : L3.B : 365000 :   Ausbuchung von bla bla in 2016   :  oops
+2016-12-30 : L3.EK.ER : L3* : 200000 :   Ausbuchung von bla bla in 2016   :  oops
+2016-12-31 : L3* : L3.V.WR : 18000000 :   init   :  None
+2016-12-31 : L3.B : L3* : 9635857 :   init   :  None
+2017-01-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2017-01-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2017-01-01 : L3.F.HAIMERL : L3.EK.ER.NK : 5000 :   Nebenkostenforderung Haimerl   :  None
+2017-01-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2017-01-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2017-01-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2017-01-01 : L3.F.SELBACH : L3.EK.ER.NK : 4000 :   Nebenkostenforderung Selbach   :  None
+2017-01-01 : L3.F.SIMMINGER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Simminger   :  None
+2017-01-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2017-01-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2017-01-01 : L3.F.HAIMERL : L3.EK.ER.MIETE : 32000 :  Mietforderung Haimerl   :  None
+2017-01-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2017-01-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2017-01-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2017-01-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2017-01-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 31000 :  Mietforderung Selbach   :  None
+2017-01-01 : L3.F.SIMMINGER : L3.EK.ER.MIETE : 112000 :  Mietforderung Simminger   :  None
+2017-01-02 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "12045802"; "02.01.17"; "02.01.17"; "FOLGELASTSCHRIFT"; "EREF + 01-01-17KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2017-01-02 : L3.EK.A.NK.VER : L3.B : 44883 :    Feuer Versicherung FOLGELASTSCHRIFT   :  "12045802"; "02.01.17"; "02.01.17"; "FOLGELASTSCHRIFT"; "EREF + 6800098282170605072365MREF + IGM00002522218CRED + DE9300200000021090SVWZ + GebaeudeF-ElementarVers.V10205158803448,83EUR."; "SVGebaeudeversicherung"; "DE97500500000003200029"; "HELADEFFXXX"; "-448,83"; "EUR"; "Umsatzgebucht"
+2017-01-02 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "12045802"; "02.01.17"; "02.01.17"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG01/17"; "ZurichDeutscherHeroldLebensversicherungAktiengesel"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2017-01-02 : L3.V.WR : L3.B : 49400 :    Kredit Wuestenrot FOLGELASTSCHRIFT   :  "12045802"; "02.01.17"; "02.01.17"; "FOLGELASTSCHRIFT"; "EREF + 12/162080452635494,00MREF + 220000077620CRED + DE90ZZZ00000000192SVWZ + WUSTENROTBANKAG"; "PROF.DR.MATTHIASHOLSCHNEI"; "DE92604200002080452635"; "WBAGDE61XXX"; "-494,00"; "EUR"; "Umsatzgebucht"
+2017-01-02 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "12045802"; "02.01.17"; "02.01.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-01-03 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "03.01.17"; "03.01.17"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "Schmidt,Dirk"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2017-01-03 : L3.B : L3.F.HAIMERL : 37000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "03.01.17"; "03.01.17"; "DAUERAUFTRAG"; "EREF + ZV0100215897393700000002SVWZ + MIETEJULIAHAIMERL320.-KALTMIETE,50.-NEBENKOSTEN"; "KlausHaimerl"; "DE87700100800183070800"; "PBNKDEFFXXX"; "370,00"; "EUR"; "Umsatzgebucht"
+2017-01-03 : L3.B : L3.F.NUERNBERG : 60000 :    Miete und NK Victoria Nuernberg DAUERAUFTRAG   :  "12045802"; "03.01.17"; "03.01.17"; "DAUERAUFTRAG"; "SVWZ + 400Miete + 200Kaution"; "NuernbergVictoria"; "DE66680900000038114409"; "GENODE61FR1"; "600,00"; "EUR"; "Umsatzgebucht"
+2017-01-04 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "12045802"; "04.01.17"; "04.01.17"; "GUTSCHRIFT"; "EREF + CCB.3.UE.68082SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-01-05 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "12045802"; "05.01.17"; "05.01.17"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2017-01-16 : L3.EK.A.NK.GARTEN : L3.B : 16300 :    Rabe DAUERAUFTRAG   :  "12045802"; "16.01.17"; "16.01.17"; "DAUERAUFTRAG"; "SVWZ + VorgartenpflegeLerchenstr."; "Rabe,Ladislav"; "DE50680501010012809062"; "FRSPDE66XXX"; "-163,00"; "EUR"; "Umsatzgebucht"
+2017-01-18 : L3.EK.A.NK.HZ.ABR : L3.B : 18132 :    Techem Ablese Service FOLGELASTSCHRIFT   :  "12045802"; "18.01.17"; "18.01.17"; "FOLGELASTSCHRIFT"; "EREF + 9031295473MREF + 0001000000001214CRED + DE31ZZZ00000236867SVWZ + RG00801302904.1.2017Glaeubiger-ID.DE31ZZZ00000236867IhreMandatsreferenzbeiuns.0001000000001214"; "TECHEMEnergyServices"; "DE16500400000582454500"; "COBADEFFXXX"; "-181,32"; "EUR"; "Umsatzgebucht"
+2017-01-30 : L3.B : L3.F.SIMMINGER : 130000 :    Miete und NK Simminger DAUERAUFTRAG   :  "12045802"; "30.01.17"; "30.01.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstr.3"; "EvaSimminger"; "DE75200411440614992600"; "COBADEHD044"; "1300,00"; "EUR"; "Umsatzgebucht"
+2017-01-30 : L3.EK.A.NK.STR : L3.B : 1900 :    Strom Badenova FOLGELASTSCHRIFT   :  "12045802"; "30.01.17"; "30.01.17"; "FOLGELASTSCHRIFT"; "EREF + 006092500046MREF + 7001007509088001CRED + DE37ZZZ00000023650SVWZ + BELEG006092500046/VK001007509088/ABSCHLAGFAELLIG30012017FUERJANUAR/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "-19,00"; "EUR"; "Umsatzgebucht"
+2017-01-30 : L3.EK.A.VER : L3.B : 650 :    Verwaltung ENTGELTABSCHLUSS   :  "12045802"; "01.02.17"; "30.01.17"; "ENTGELTABSCHLUSS"; "Abrechnung31.01.2017InformationzurAbrechnungEntgeltevom31.12.2016bis31.01.20176,50-Paketpreis1x6,506,50---------------Abrechnung31.01.20176,50-Rechnungsnummer.20170201-BW105-00009231970"; ""; ""; ""; "-6,50"; "EUR"; "Umsatzgebucht"
+2017-01-30 : L3.EK.A.NK.WA : L3.B : 14400 :    Wasser bnNetze FOLGELASTSCHRIFT   :  "12045802"; "30.01.17"; "30.01.17"; "FOLGELASTSCHRIFT"; "EREF + 006110998970MREF + 7001129416769001CRED + DE63ZZZ00000023667SVWZ + BELEG006110998970/VK001129416769/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDERABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "-144,00"; "EUR"; "Umsatzgebucht"
+2017-01-31 : L3.EK.A.NK.HZ.GAS : L3.B : 32000 :    Gasrechnung FOLGELASTSCHRIFT   :  "12045802"; "31.01.17"; "31.01.17"; "FOLGELASTSCHRIFT"; "EREF + LS1020000301171MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag01/2017KD418613Lerchenstr.3GasEUR320,00"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-320,00"; "EUR"; "Umsatzgebucht"
+2017-01-31 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "12045802"; "31.01.17"; "31.01.17"; "GUTSCHRIFT"; "EREF + CCB.30.UE.125685SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-01-31 : L3.B : L3.F.SELBACH : 35000 :    Miete und NK Selbach DAUERAUFTRAG   :  "12045802"; "31.01.17"; "31.01.17"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "Dr.JochenundSusanneSelbach"; "DE94673900000086317109"; "GENODE61WTH"; "350,00"; "EUR"; "Umsatzgebucht"
+2017-02-01 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "12045802"; "01.02.17"; "01.02.17"; "FOLGELASTSCHRIFT"; "EREF + 01-02-17KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2017-02-01 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "12045802"; "01.02.17"; "01.02.17"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG02/17"; "ZurichDeutscherHeroldLebensversicherungAktiengesel"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2017-02-01 : L3.V.WR : L3.B : 49400 :    Kredit Wuestenrot FOLGELASTSCHRIFT   :  "12045802"; "01.02.17"; "01.02.17"; "FOLGELASTSCHRIFT"; "EREF + 01/172080452635494,00MREF + 220000077620CRED + DE90ZZZ00000000192SVWZ + WUSTENROTBANKAG"; "PROF.DR.MATTHIASHOLSCHNEI"; "DE92604200002080452635"; "WBAGDE61XXX"; "-494,00"; "EUR"; "Umsatzgebucht"
+2017-02-01 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "12045802"; "01.02.17"; "01.02.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-02-01 : L3.EK.ER.NK : L3.F.MALLMANN : 24436 :   Ausgleich NK 15 Mallmann   :  None
+2017-02-01 : L3.F.KUERTI : L3.EK.ER.NK : 10795 :   Ausgleich NK 15/16 Kuerti   :  None
+2017-02-01 : L3.F.MALLMANN : L3.EK.ER.NK  : 7417 :   Ausgleich NK 16 Mallmann   :  None
+2017-02-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 7262 :   Ausgleich NK Adelheim   :  None
+2017-02-01 : L3.EK.ER.NK : L3.F.BARZ : 12936 :   Ausgleich NK Barz   :  None
+2017-02-01 : L3.F.HAIMERL : L3.EK.ER.NK : 6200 :   Ausgleich NK Haimerl   :  None
+2017-02-01 : L3.F.NEMETS : L3.EK.ER.NK : 18199 :   Ausgleich NK Nemetz   :  None
+2017-02-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 2148 :   Ausgleich NK Nuernberg   :  None
+2017-02-01 : L3.EK.ER.NK : L3.F.SCHMIDT : 96284 :   Ausgleich NK Schmidt   :  None
+2017-02-01 : L3.F.SELBACH : L3.EK.ER.NK : 22339 :   Ausgleich NK Selbach   :  None
+2017-02-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2017-02-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2017-02-01 : L3.F.HAIMERL : L3.EK.ER.NK : 5000 :   Nebenkostenforderung Haimerl   :  None
+2017-02-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2017-02-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2017-02-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2017-02-01 : L3.F.SELBACH : L3.EK.ER.NK : 4000 :   Nebenkostenforderung Selbach   :  None
+2017-02-01 : L3.F.SIMMINGER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Simminger   :  None
+2017-02-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2017-02-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2017-02-01 : L3.F.HAIMERL : L3.EK.ER.MIETE : 32000 :  Mietforderung Haimerl   :  None
+2017-02-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2017-02-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2017-02-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2017-02-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2017-02-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 31000 :  Mietforderung Selbach   :  None
+2017-02-01 : L3.F.SIMMINGER : L3.EK.ER.MIETE : 112000 :  Mietforderung Simminger   :  None
+2017-02-02 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "02.02.17"; "02.02.17"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "Schmidt,Dirk"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2017-02-02 : L3.B : L3.F.HAIMERL : 37000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "02.02.17"; "02.02.17"; "DAUERAUFTRAG"; "EREF + ZV0100217701109800000002SVWZ + MIETEJULIAHAIMERL320.-KALTMIETE,50.-NEBENKOSTEN"; "KlausHaimerl"; "DE87700100800183070800"; "PBNKDEFFXXX"; "370,00"; "EUR"; "Umsatzgebucht"
+2017-02-02 : L3.B : L3.F.NUERNBERG : 60000 :    Miete und NK Victoria Nuernberg DAUERAUFTRAG   :  "12045802"; "02.02.17"; "02.02.17"; "DAUERAUFTRAG"; "SVWZ + 400Miete + 200Kaution"; "NuernbergVictoria"; "DE66680900000038114409"; "GENODE61FR1"; "600,00"; "EUR"; "Umsatzgebucht"
+2017-02-03 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "12045802"; "03.02.17"; "03.02.17"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2017-02-09 : L3.EK.A.NK.HZ.GAS : L3.B : 66628 :    Gasrechnung FOLGELASTSCHRIFT   :  "12045802"; "09.02.17"; "09.02.17"; "FOLGELASTSCHRIFT"; "EREF + LS2020000016418MREF + W20D418613013366CRED + DE6502000000211132SVWZ + SchlussrechnungKD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "StadtwerkeWaldkirchGmbH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-666,28"; "EUR"; "Umsatzgebucht"
+2017-02-13 : L3.EK.A.NK.STR : L3.B : 8400 :    BADENOVA SONDERRECHNUNG ONLINE-UEBERWEISUNG   :  "12045802"; "13.02.17"; "13.02.17"; "ONLINE-UEBERWEISUNG"; "SVWZ + 1141989989DATUM11.02.2017,14.21UHR1.TAN978137ABWA + PROF.DR.MATTHIASHOLSCHNEIDER"; "Badenova"; "DE59680400070160055000"; "COBADEFFXXX"; "-84,00"; "EUR"; "Umsatzgebucht"
+2017-02-13 : L3.EK.A.H.RUTTKOWSKI : L3.B : 17029 :    DACHDECKER ONLINE-UEBERWEISUNG   :  "12045802"; "13.02.17"; "13.02.17"; "ONLINE-UEBERWEISUNG"; "SVWZ + RecnungNr.16210DATUM11.02.2017,15.22UHR1.TAN807427ABWA + PROF.DR.MATTHIASHOLSCHNEIDER"; "Ruttkowski"; "DE86680501010002147435"; "FRSPDE66XXX"; "-170,29"; "EUR"; "Umsatzgebucht"
+2017-02-13 : L3.F.MALLMANN : L3.B : 23436 :    Miet und NK ONLINE-UEBERWEISUNG   :  "12045802"; "13.02.17"; "13.02.17"; "ONLINE-UEBERWEISUNG"; "SVWZ + Nebenkosten2015DATUM13.02.2017,11.21UHR1.TAN213091ABWA + PROF.DR.MATTHIASHOLSCHNEIDER"; "SusanneMallmann"; "DE77660908000013724352"; "GENODE61BBB"; "-234,36"; "EUR"; "Umsatzgebucht"
+2017-02-15 : L3.EK.A.NK.GS : L3.B : 21957 :    Grundsteuer FOLGELASTSCHRIFT   :  "12045802"; "15.02.17"; "15.02.17"; "FOLGELASTSCHRIFT"; "EREF + 140700138843MREF + 501002762799001CRED + DE69ZZZ00000055472SVWZ + 501002762799/GrundsteuerRate2017ABWA + StadtFreiburgStadtkasse"; "StadtFreiburg"; "DE63680501010002010012"; "FRSPDE66XXX"; "-219,57"; "EUR"; "Umsatzgebucht"
+2017-02-28 : L3.EK.A.NK.HZ.GAS : L3.B : 32000 :    Gasrechnung FOLGELASTSCHRIFT   :  "12045802"; "28.02.17"; "28.02.17"; "FOLGELASTSCHRIFT"; "EREF + LS1020000316020MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag02/2017KD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-320,00"; "EUR"; "Umsatzgebucht"
+2017-02-28 : L3.V.WR : L3.B : 960000 :    Kredit Wuestenrot ONLINE-UEBERWEISUNG   :  "12045802"; "28.02.17"; "28.02.17"; "ONLINE-UEBERWEISUNG"; "SVWZ + SondertilgungDATUM28.02.2017,17.04UHR1.TAN801506ABWA + PROF.DR.MATTHIASHOLSCHNEIDER"; "wuestenrotbankag"; "DE92604200002080452635"; "WBAGDE61XXX"; "-9600,00"; "EUR"; "Umsatzgebucht"
+2017-02-28 : L3.B : L3.F.SIMMINGER : 130000 :    Miete und NK Simminger DAUERAUFTRAG   :  "12045802"; "28.02.17"; "28.02.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstr.3"; "EvaSimminger"; "DE75200411440614992600"; "COBADEHD044"; "1300,00"; "EUR"; "Umsatzgebucht"
+2017-02-28 : L3.V.WR : L3.B : 960000 :    Sondertilgung ONLINE-UEBERWEISUNG   :  "12045802"; "28.02.17"; "28.02.17"; "ONLINE-UEBERWEISUNG"; "SVWZ + SondertilgungDATUM28.02.2017,17.01UHR1.TAN875660ABWA + PROF.DR.MATTHIASHOLSCHNEIDER"; "wuestenrotbankag"; "DE16604200002073982939"; "WBAGDE61XXX"; "-9600,00"; "EUR"; "Umsatzgebucht"
+2017-02-28 : L3.EK.A.NK.STR : L3.B : 1900 :    Strom Badenova FOLGELASTSCHRIFT   :  "12045802"; "28.02.17"; "28.02.17"; "FOLGELASTSCHRIFT"; "EREF + 006101631582MREF + 7001007509088001CRED + DE37ZZZ00000023650SVWZ + BELEG006101631582/VK001007509088/ABSCHLAGFAELLIG28022017FUERFEBRUAR/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "-19,00"; "EUR"; "Umsatzgebucht"
+2017-02-28 : L3.EK.A.VER : L3.B : 720 :    Verwaltung ENTGELTABSCHLUSS   :  "12045802"; "01.03.17"; "28.02.17"; "ENTGELTABSCHLUSS"; "Abrechnung28.02.2017InformationzurAbrechnungEntgeltevom01.02.2017bis28.02.20177,20-Paketpreis1x6,506,50-Kontoauszüge1x0,700,70---------------Abrechnung28.02.20177,20-Rechnungsnummer.20170301-BW105-00009398837"; ""; ""; ""; "-7,20"; "EUR"; "Umsatzgebucht"
+2017-02-28 : L3.EK.A.NK.WA : L3.B : 14400 :    Wasser bnNetze FOLGELASTSCHRIFT   :  "12045802"; "28.02.17"; "28.02.17"; "FOLGELASTSCHRIFT"; "EREF + 006072321070MREF + 7001129416769001CRED + DE63ZZZ00000023667SVWZ + BELEG006072321070/VK001129416769/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDERABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "-144,00"; "EUR"; "Umsatzgebucht"
+2017-03-01 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "12045802"; "01.03.17"; "01.03.17"; "FOLGELASTSCHRIFT"; "EREF + 01-03-17KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2017-03-01 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "12045802"; "01.03.17"; "01.03.17"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG03/17"; "ZurichDeutscherHeroldLebensversicherungAktiengesel"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2017-03-01 : L3.V.WR : L3.B : 49400 :    Kredit Wuestenrot FOLGELASTSCHRIFT   :  "12045802"; "01.03.17"; "01.03.17"; "FOLGELASTSCHRIFT"; "EREF + 02/172080452635494,00MREF + 220000077620CRED + DE90ZZZ00000000192SVWZ + WUSTENROTBANKAG"; "PROF.DR.MATTHIASHOLSCHNEI"; "DE92604200002080452635"; "WBAGDE61XXX"; "-494,00"; "EUR"; "Umsatzgebucht"
+2017-03-01 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "12045802"; "01.03.17"; "01.03.17"; "GUTSCHRIFT"; "EREF + CCB.59.UE.65546SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-03-01 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "12045802"; "01.03.17"; "01.03.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-03-01 : L3.B : L3.F.SELBACH : 35000 :    Miete und NK Selbach DAUERAUFTRAG   :  "12045802"; "01.03.17"; "01.03.17"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "Dr.JochenundSusanneSelbach"; "DE94673900000086317109"; "GENODE61WTH"; "350,00"; "EUR"; "Umsatzgebucht"
+2017-03-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2017-03-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2017-03-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2017-03-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2017-03-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2017-03-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2017-03-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2017-03-01 : L3.F.SIMMINGER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Simminger   :  None
+2017-03-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2017-03-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2017-03-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2017-03-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2017-03-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2017-03-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2017-03-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2017-03-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2017-03-01 : L3.F.SIMMINGER : L3.EK.ER.MIETE : 112000 :  Mietforderung Simminger   :  None
+2017-03-02 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "02.03.17"; "02.03.17"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "Schmidt,Dirk"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2017-03-03 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "12045802"; "03.03.17"; "03.03.17"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2017-03-07 : L3.EK.A.NK.VER : L3.B : 13756 :    Zuerich Versicherung FOLGELASTSCHRIFT   :  "12045802"; "07.03.17"; "07.03.17"; "FOLGELASTSCHRIFT"; "EREF + ABBUCHUNGSNR.1505644050317MREF + 02136008026CRED + DE38ZZZ00000023244SVWZ + HAFTPFLICHT400977393424BEITRAG010317137,56"; "ZurichInsuranceplcNiederlassungfuerDeutschland"; "DE38500700100093778901"; "DEUTDEFFXXX"; "-137,56"; "EUR"; "Umsatzgebucht"
+2017-03-08 : L3.B : L3.F.SELBACH : 5000 :    Miete und NK Selbach GUTSCHRIFT   :  "12045802"; "08.03.17"; "08.03.17"; "GUTSCHRIFT"; "SVWZ + MieteFrederickeSelbachRestzahlungMaerz2017"; "Dr.JochenundSusanneSelbach"; "DE94673900000086317109"; "GENODE61WTH"; "50,00"; "EUR"; "Umsatzgebucht"
+2017-03-10 : L3.EK.A.ST : L3.B : 218282 :    Steuer FOLGELASTSCHRIFT   :  "12045802"; "10.03.17"; "10.03.17"; "FOLGELASTSCHRIFT"; "EREF + 024/351/62167-----L0803201700034022MREF + BE041277825590CRED + DE02HST00000026026SVWZ + STEUERNR024/351/62167EINK.ST1VJ.172.182,82EURABWA + BerlinerFinanzaemter"; "FinanzamtCharlottenburgi.A.d.BerlinerFinanzämter"; "DE94100500006600046463"; "BELADEBEXXX"; "-2182,82"; "EUR"; "Umsatzgebucht"
+2017-03-22 : L3.F.MALLMANN : L3.B : 1000 :    Miet und NK ONLINE-UEBERWEISUNG   :  "12045802"; "22.03.17"; "22.03.17"; "ONLINE-UEBERWEISUNG"; "SVWZ + AusgleichRueckzahlungMieteDATUM22.03.2017,12.58UHR1.TAN921131ABWA + PROF.DR.MATTHIASHOLSCHNEIDER"; "SusanneMallmann"; "DE77660908000013724352"; "GENODE61BBB"; "-10,00"; "EUR"; "Umsatzgebucht"
+2017-03-29 : L3.B : L3.F.SELBACH : 40000 :    Miete und NK Selbach DAUERAUFTRAG   :  "12045802"; "29.03.17"; "29.03.17"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "Dr.JochenundSusanneSelbach"; "DE94673900000086317109"; "GENODE61WTH"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-03-30 : L3.B : L3.F.SIMMINGER : 130000 :    Miete und NK Simminger DAUERAUFTRAG   :  "12045802"; "30.03.17"; "30.03.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstr.3"; "EvaSimminger"; "DE75200411440614992600"; "COBADEHD044"; "1300,00"; "EUR"; "Umsatzgebucht"
+2017-03-30 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "31.03.17"; "30.03.17"; "ABSCHLUSS"; "10,9900v.H.fürKontoüberziehungenüberdieKreditliniehinausDieAnpassungdesÜberziehungszinssatzesrichtetsichnacheinerVeränderungdesReferenzzinssatzes(3-Monats-Euribor).MaßgeblichistderamletztenÜberprüfungsstichtagermittelteWertdesReferenzzinssatzes.DessenEntwicklungwirddieSparkasseregelmäßigam"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-03-30 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "31.03.17"; "30.03.17"; "ABSCHLUSS"; "25.03.,25.06.,25.09.und25.12.einesjedenJahresüberprüfen.HatsichderReferenzzinssatzummindestens0,2ProzentpunktegegenüberseinemmaßgeblichenWertbeiVertragsabschluss,bzw.derletztenZins-anpassungverändert,sinktodersteigtderÜberziehungszinssatzumebenso"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-03-30 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "31.03.17"; "30.03.17"; "ABSCHLUSS"; "Abrechnung31.03.2017InformationzurAbrechnungKontostandam31.03.201784.169,65 + --------------Abrechnungszeitraumvom01.01.2017bis31.03.2017Abrechnung31.03.20170,00 + Sollzinssätzeam30.03.201710,9900v.H.fürDispositionskredit(aktuelleKreditlinie2.000,00)"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-03-30 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "31.03.17"; "30.03.17"; "ABSCHLUSS"; "vieleProzentpunktemitWirkungzum1.desFolgemonats.Kontostand/Rechnungsabschlussam31.03.201784.169,65 + Rechnungsnummer.20170331-BW105-00009625229"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-03-30 : L3.EK.A.VER : L3.B : 650 :    Verwaltung ENTGELTABSCHLUSS   :  "12045802"; "31.03.17"; "30.03.17"; "ENTGELTABSCHLUSS"; "Abrechnung31.03.2017InformationzurAbrechnungEntgeltevom01.03.2017bis31.03.20176,50-Paketpreis1x6,506,50---------------Abrechnung31.03.20176,50-Rechnungsnummer.20170331-BW105-00009625230"; ""; ""; ""; "-6,50"; "EUR"; "Umsatzgebucht"
+2017-03-31 : L3.EK.A.NK.HZ.GAS : L3.B : 32000 :    Gasrechnung FOLGELASTSCHRIFT   :  "12045802"; "31.03.17"; "31.03.17"; "FOLGELASTSCHRIFT"; "EREF + LS1020000330968MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag03/2017KD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-320,00"; "EUR"; "Umsatzgebucht"
+2017-03-31 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "12045802"; "31.03.17"; "31.03.17"; "GUTSCHRIFT"; "EREF + CCB.89.UE.75483SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-04-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2017-04-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2017-04-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2017-04-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2017-04-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2017-04-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2017-04-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2017-04-01 : L3.F.SIMMINGER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Simminger   :  None
+2017-04-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2017-04-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2017-04-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2017-04-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2017-04-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2017-04-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2017-04-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2017-04-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2017-04-01 : L3.F.SIMMINGER : L3.EK.ER.MIETE : 112000 :  Mietforderung Simminger   :  None
+2017-04-03 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "12045802"; "03.04.17"; "03.04.17"; "FOLGELASTSCHRIFT"; "EREF + 01-04-17KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2017-04-03 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "12045802"; "03.04.17"; "03.04.17"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG04/17"; "ZurichDeutscherHeroldLebensversicherungAktiengesel"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2017-04-03 : L3.V.WR : L3.B : 49400 :    Kredit Wuestenrot FOLGELASTSCHRIFT   :  "12045802"; "03.04.17"; "03.04.17"; "FOLGELASTSCHRIFT"; "EREF + 03/172080452635494,00MREF + 220000077620CRED + DE90ZZZ00000000192SVWZ + WUSTENROTBANKAG"; "PROF.DR.MATTHIASHOLSCHNEI"; "DE92604200002080452635"; "WBAGDE61XXX"; "-494,00"; "EUR"; "Umsatzgebucht"
+2017-04-03 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "12045802"; "03.04.17"; "03.04.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-04-03 : L3.B : L3.F.NUERNBERG : 40000 :    Miete und NK Victoria Nuernberg DAUERAUFTRAG   :  "12045802"; "03.04.17"; "03.04.17"; "DAUERAUFTRAG"; "SVWZ + Miete"; "NuernbergVictoria"; "DE66680900000038114409"; "GENODE61FR1"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-04-04 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "04.04.17"; "04.04.17"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "Schmidt,Dirk"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2017-04-04 : L3.B : L3.F.HAIMERL : 6200 :    Miete und NK GUTSCHRIFT   :  "12045802"; "04.04.17"; "04.04.17"; "GUTSCHRIFT"; "EREF + ZV0100221343487600000002SVWZ + JuliaHaimerlNebenkostennachzahlung2015"; "KlausHaimerl"; "DE87700100800183070800"; "PBNKDEFFXXX"; "62,00"; "EUR"; "Umsatzgebucht"
+2017-04-04 : L3.B : L3.EK.A.NK.STR : 1484 :    Strom Badenova GUTSCHRIFT   :  "12045802"; "04.04.17"; "04.04.17"; "GUTSCHRIFT"; "EREF + 006012703225SVWZ + BELEG006012703225/VK001007509088/GUTHABENBIS07042017/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "14,84"; "EUR"; "Umsatzgebucht"
+2017-04-05 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "12045802"; "05.04.17"; "05.04.17"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2017-04-18 : L3.EK.A.VER : L3.B : 5083 :    Online Mietvertraege EINMAL LASTSCHRIFT   :  "12045802"; "18.04.17"; "18.04.17"; "EINMALLASTSCHRIFT"; "EREF + ID-00938MREF + 104306-1490119489CRED + DE19ZZZ00000072571SVWZ + OnlineMietvertraege,haus-und-grund-vertrag.de,Kd-Nr..104306,Rechnungs-Nr.568320"; "H + GHaus + GrundVerwaltungsGmbHKarlsruhe"; "DE41660501010009124900"; "KARSDE66XXX"; "-50,83"; "EUR"; "Umsatzgebucht"
+2017-04-18 : L3.EK.A.NK.GARTEN : L3.B : 16300 :    Rabe DAUERAUFTRAG   :  "12045802"; "18.04.17"; "18.04.17"; "DAUERAUFTRAG"; "SVWZ + VorgartenpflegeLerchenstr."; "Rabe,Ladislav"; "DE50680501010012809062"; "FRSPDE66XXX"; "-163,00"; "EUR"; "Umsatzgebucht"
+2017-04-19 : L3.EK.A.NK.WA : L3.B : 20508 :    Wasser bnNetze FOLGELASTSCHRIFT   :  "12045802"; "19.04.17"; "19.04.17"; "FOLGELASTSCHRIFT"; "EREF + 006141127753MREF + 7001129416769001CRED + DE63ZZZ00000023667SVWZ + BELEG006141127753/VK001129416769/FORDERUNGENFAELLIGBIS19042017/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDERABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "-205,08"; "EUR"; "Umsatzgebucht"
+2017-04-25 : L3.B : L3.F.KIEFER : 40000 :    Miete und NK GUTSCHRIFT   :  "12045802"; "25.04.17"; "25.04.17"; "GUTSCHRIFT"; "SVWZ + Miete"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-04-25 : L3.B : L3.F.KIEFER : 40000 :    Miete und NK GUTSCHRIFT   :  "12045802"; "25.04.17"; "25.04.17"; "GUTSCHRIFT"; "SVWZ + MieteApril"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-04-28 : L3.EK.A.NK.HZ.GAS : L3.B : 32000 :    Gasrechnung FOLGELASTSCHRIFT   :  "12045802"; "28.04.17"; "28.04.17"; "FOLGELASTSCHRIFT"; "EREF + LS1020000345934MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag04/2017KD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-320,00"; "EUR"; "Umsatzgebucht"
+2017-04-28 : L3.EK.A.VER : L3.B : 650 :    Verwaltung ENTGELTABSCHLUSS   :  "12045802"; "02.05.17"; "28.04.17"; "ENTGELTABSCHLUSS"; "Abrechnung28.04.2017InformationzurAbrechnungEntgeltevom01.04.2017bis28.04.20176,50-Paketpreis1x6,506,50---------------Abrechnung28.04.20176,50-Rechnungsnummer.20170502-BW105-00009968565"; ""; ""; ""; "-6,50"; "EUR"; "Umsatzgebucht"
+2017-05-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2017-05-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2017-05-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2017-05-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2017-05-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2017-05-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2017-05-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2017-05-01 : L3.F.SIMMINGER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Simminger   :  None
+2017-05-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2017-05-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2017-05-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2017-05-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2017-05-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2017-05-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2017-05-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2017-05-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2017-05-01 : L3.F.SIMMINGER : L3.EK.ER.MIETE : 112000 :  Mietforderung Simminger   :  None
+2017-05-02 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "12045802"; "02.05.17"; "02.05.17"; "FOLGELASTSCHRIFT"; "EREF + 01-05-17KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2017-05-02 : L3.EK.A.H : L3.B : 19900 :    Elektro Schmidt ONLINE-UEBERWEISUNG   :  "12045802"; "02.05.17"; "02.05.17"; "ONLINE-UEBERWEISUNG"; "SVWZ + kunde2326rechn4531DATUM30.04.2017,11.56UHR1.TAN059496ABWA + PROF.DR.MATTHIASHOLSCHNEIDER"; "elekrroSchmidt"; "DE51680900000038226908"; "GENODE61FR1"; "-199,00"; "EUR"; "Umsatzgebucht"
+2017-05-02 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "12045802"; "02.05.17"; "02.05.17"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG05/17"; "ZurichDeutscherHeroldLebensversicherungAktiengesel"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2017-05-02 : L3.EK.A.H.KADEL : L3.B : 37140 :    Kadel ONLINE-UEBERWEISUNG   :  "12045802"; "02.05.17"; "02.05.17"; "ONLINE-UEBERWEISUNG"; "SVWZ + kunde21583rechnung61651236DATUM30.04.2017,12.38UHR1.TAN323088ABWA + PROF.DR.MATTHIASHOLSCHNEIDER"; "KADEL"; "DE76680900000002829800"; "GENODE61FR1"; "-371,40"; "EUR"; "Umsatzgebucht"
+2017-05-02 : L3.EK.A.H.KADEL : L3.B : 6962 :    Kadel ONLINE-UEBERWEISUNG   :  "12045802"; "02.05.17"; "02.05.17"; "ONLINE-UEBERWEISUNG"; "SVWZ + kunde21583rechnung61651237DATUM30.04.2017,12.36UHR1.TAN097531ABWA + PROF.DR.MATTHIASHOLSCHNEIDER"; "KADEL"; "DE76680900000002829800"; "GENODE61FR1"; "-69,62"; "EUR"; "Umsatzgebucht"
+2017-05-02 : L3.V.WR : L3.B : 49400 :    Kredit Wuestenrot FOLGELASTSCHRIFT   :  "12045802"; "02.05.17"; "02.05.17"; "FOLGELASTSCHRIFT"; "EREF + 04/172080452635494,00MREF + 220000077620CRED + DE92ZZZ00000032166SVWZ + 04/172080452635"; "WUESTENROTBAUSPARKASSEAG"; "DE74600600000455500100"; "GENODESGXXX"; "-494,00"; "EUR"; "Umsatzgebucht"
+2017-05-02 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "12045802"; "02.05.17"; "02.05.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-05-02 : L3.B : L3.F.KIEFER : 40000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "02.05.17"; "02.05.17"; "DAUERAUFTRAG"; "SVWZ + Miete"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-05-02 : L3.B : L3.F.SELBACH : 40000 :    Miete und NK Selbach DAUERAUFTRAG   :  "12045802"; "02.05.17"; "02.05.17"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "Dr.JochenundSusanneSelbach"; "DE94673900000086317109"; "GENODE61WTH"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-05-02 : L3.B : L3.F.SIMMINGER : 130000 :    Miete und NK Simminger DAUERAUFTRAG   :  "12045802"; "02.05.17"; "02.05.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstr.3"; "EvaSimminger"; "DE75200411440614992600"; "COBADEHD044"; "1300,00"; "EUR"; "Umsatzgebucht"
+2017-05-02 : L3.B : L3.F.NUERNBERG : 40000 :    Miete und NK Victoria Nuernberg DAUERAUFTRAG   :  "12045802"; "02.05.17"; "02.05.17"; "DAUERAUFTRAG"; "SVWZ + Miete"; "NuernbergVictoria"; "DE66680900000038114409"; "GENODE61FR1"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-05-02 : L3.EK.A.H.DITTRICH : L3.B : 6515 :    Schornsteinfeger ONLINE-UEBERWEISUNG   :  "12045802"; "02.05.17"; "02.05.17"; "ONLINE-UEBERWEISUNG"; "SVWZ + kunde561rnr545-2017vgDATUM30.04.2017,12.28UHR1.TAN758462ABWA + PROF.DR.MATTHIASHOLSCHNEIDER"; "ChristianDittrich"; "DE08680501010012163313"; "FRSPDE66XXX"; "-65,15"; "EUR"; "Umsatzgebucht"
+2017-05-02 : L3.EK.A.NK.STR : L3.B : 1700 :    Strom Badenova FOLGELASTSCHRIFT   :  "12045802"; "02.05.17"; "02.05.17"; "FOLGELASTSCHRIFT"; "EREF + 006111072286MREF + 7001007509088001CRED + DE37ZZZ00000023650SVWZ + BELEG006111072286/VK001007509088/ABSCHLAGFAELLIG30042017FUERAPRIL/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "-17,00"; "EUR"; "Umsatzgebucht"
+2017-05-02 : L3.EK.A.NK.WA : L3.B : 16800 :    Wasser bnNetze FOLGELASTSCHRIFT   :  "12045802"; "02.05.17"; "02.05.17"; "FOLGELASTSCHRIFT"; "EREF + 006062866609MREF + 7001129416769001CRED + DE63ZZZ00000023667SVWZ + BELEG006062866609/VK001129416769/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDERABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "-168,00"; "EUR"; "Umsatzgebucht"
+2017-05-03 : L3.EK.A.H.KADEL : L3.B : 44102 :    Kadel EINZELUEBERWEISUNG   :  "12045802"; "03.05.17"; "03.05.17"; "EINZELUEBERWEISUNG"; "SVWZ + KD-NR215832BH/K6,25.04.17ABWA + HOLSCHNEIDERMATTHIASDR."; "KADELGMBH"; "DE80680501010002077024"; "FRSPDE66XXX"; "-441,02"; "EUR"; "Umsatzgebucht"
+2017-05-03 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "12045802"; "03.05.17"; "03.05.17"; "GUTSCHRIFT"; "EREF + CCB.122.UE.92395SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-05-03 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "03.05.17"; "03.05.17"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "Schmidt,Dirk"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2017-05-05 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "12045802"; "05.05.17"; "05.05.17"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2017-05-08 : L3.B : L3.EK.A.H.KADEL : 44102 :    Kadel GUTSCHRIFT   :  "12045802"; "08.05.17"; "08.05.17"; "GUTSCHRIFT"; "SVWZ + RücküberweisungdadoppeltbezahltKDNr.2158361651236-37ABWA + KadelGmbHGundelfingenK6"; "KadelGmbH"; "DE58670505050063027618"; "MANSDE66XXX"; "441,02"; "EUR"; "Umsatzgebucht"
+2017-05-10 : L3.B : L3.F.KIEFER : 70000 :    Miete und NK GUTSCHRIFT   :  "12045802"; "10.05.17"; "10.05.17"; "GUTSCHRIFT"; "SVWZ + Kaution"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "700,00"; "EUR"; "Umsatzgebucht"
+2017-05-15 : L3.EK.A.NK.GS : L3.B : 21957 :    Grundsteuer FOLGELASTSCHRIFT   :  "12045802"; "15.05.17"; "15.05.17"; "FOLGELASTSCHRIFT"; "EREF + 140400041451MREF + 501002762799001CRED + DE69ZZZ00000055472SVWZ + 501002762799/GrundsteuerRate2017ABWA + StadtFreiburgStadtkasse"; "StadtFreiburg"; "DE63680501010002010012"; "FRSPDE66XXX"; "-219,57"; "EUR"; "Umsatzgebucht"
+2017-05-29 : L3.B : L3.F.SELBACH : 40000 :    Miete und NK Selbach DAUERAUFTRAG   :  "12045802"; "29.05.17"; "29.05.17"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "Dr.JochenundSusanneSelbach"; "DE94673900000086317109"; "GENODE61WTH"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-05-30 : L3.B : L3.F.SIMMINGER : 130000 :    Miete und NK Simminger DAUERAUFTRAG   :  "12045802"; "30.05.17"; "30.05.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstr.3"; "EvaSimminger"; "DE75200411440614992600"; "COBADEHD044"; "1300,00"; "EUR"; "Umsatzgebucht"
+2017-05-30 : L3.EK.A.NK.STR : L3.B : 1700 :    Strom Badenova FOLGELASTSCHRIFT   :  "12045802"; "30.05.17"; "30.05.17"; "FOLGELASTSCHRIFT"; "EREF + 006042898749MREF + 7001007509088001CRED + DE37ZZZ00000023650SVWZ + BELEG006042898749/VK001007509088/ABSCHLAGFAELLIG30052017FUERMAI/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "-17,00"; "EUR"; "Umsatzgebucht"
+2017-05-30 : L3.EK.A.VER : L3.B : 720 :    Verwaltung ENTGELTABSCHLUSS   :  "12045802"; "31.05.17"; "30.05.17"; "ENTGELTABSCHLUSS"; "Abrechnung31.05.2017InformationzurAbrechnungEntgeltevom29.04.2017bis31.05.20177,20-Paketpreis1x6,506,50-Kontoauszüge1x0,700,70---------------Abrechnung31.05.20177,20-Rechnungsnummer.20170531-BW105-00010108880"; ""; ""; ""; "-7,20"; "EUR"; "Umsatzgebucht"
+2017-05-30 : L3.EK.A.NK.WA : L3.B : 16800 :    Wasser bnNetze FOLGELASTSCHRIFT   :  "12045802"; "30.05.17"; "30.05.17"; "FOLGELASTSCHRIFT"; "EREF + 006171350863MREF + 7001129416769001CRED + DE63ZZZ00000023667SVWZ + BELEG006171350863/VK001129416769/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDERABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "-168,00"; "EUR"; "Umsatzgebucht"
+2017-05-31 : L3.EK.A.NK.HZ.GAS : L3.B : 32000 :    Gasrechnung FOLGELASTSCHRIFT   :  "12045802"; "31.05.17"; "31.05.17"; "FOLGELASTSCHRIFT"; "EREF + LS1020000360844MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag05/2017KD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-320,00"; "EUR"; "Umsatzgebucht"
+2017-06-01 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "12045802"; "01.06.17"; "01.06.17"; "FOLGELASTSCHRIFT"; "EREF + 01-06-17KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2017-06-01 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "12045802"; "01.06.17"; "01.06.17"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG06/17"; "ZurichDeutscherHeroldLebensversicherungAktiengesel"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2017-06-01 : L3.V.WR : L3.B : 49400 :    Kredit Tilgung und Zins FOLGELASTSCHRIFT   :  "12045802"; "01.06.17"; "01.06.17"; "FOLGELASTSCHRIFT"; "EREF + 05/172080452635494,00MREF + 220000077620CRED + DE92ZZZ00000032166SVWZ + 05/172080452635"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-494,00"; "EUR"; "Umsatzgebucht"
+2017-06-01 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "12045802"; "01.06.17"; "01.06.17"; "GUTSCHRIFT"; "EREF + CCB.151.UE.151758SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-06-01 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "12045802"; "01.06.17"; "01.06.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-06-01 : L3.B : L3.F.KIEFER : 40000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "01.06.17"; "01.06.17"; "DAUERAUFTRAG"; "SVWZ + Miete"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-06-01 : L3.B : L3.F.NUERNBERG : 40000 :    Miete und NK Victoria Nuernberg DAUERAUFTRAG   :  "12045802"; "01.06.17"; "01.06.17"; "DAUERAUFTRAG"; "SVWZ + Miete"; "NuernbergVictoria"; "DE66680900000038114409"; "GENODE61FR1"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-06-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2017-06-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2017-06-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2017-06-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2017-06-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2017-06-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2017-06-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2017-06-01 : L3.F.SIMMINGER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Simminger   :  None
+2017-06-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2017-06-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2017-06-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2017-06-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2017-06-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2017-06-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2017-06-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2017-06-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2017-06-01 : L3.F.SIMMINGER : L3.EK.ER.MIETE : 112000 :  Mietforderung Simminger   :  None
+2017-06-02 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "12045802"; "02.06.17"; "02.06.17"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2017-06-02 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "02.06.17"; "02.06.17"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "Schmidt,Dirk"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2017-06-12 : L3.EK.MATTHIAS : L3.B : 55000 :    Barentnahme BAR KASSE   :  "12045802"; "12.06.17"; "12.06.17"; "BARKASSE"; ""; ""; ""; "68050101"; "-550,00"; "EUR"; "Umsatzgebucht"
+2017-06-12 : L3.EK.A.ST : L3.B : 218282 :    Steuer FOLGELASTSCHRIFT   :  "12045802"; "12.06.17"; "12.06.17"; "FOLGELASTSCHRIFT"; "EREF + 024/351/62167-----L0806201700035125MREF + BE041277825590CRED + DE02HST00000026026SVWZ + STEUERNR024/351/62167EINK.ST2VJ.172.182,82EURABWA + BerlinerFinanzaemter"; "FinanzamtCharlottenburgi.A.d.BerlinerFinanzÃ¤mter"; "DE94100500006600046463"; "BELADEBEXXX"; "-2182,82"; "EUR"; "Umsatzgebucht"
+2017-06-29 : L3.B : L3.F.SELBACH : 40000 :    Miete und NK Selbach DAUERAUFTRAG   :  "12045802"; "29.06.17"; "29.06.17"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "Selbach*Dr.JochenundSusanne"; "DE94673900000086317109"; "GENODE61WTH"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-06-30 : L3.EK.A.NK.HZ.GAS : L3.B : 32000 :    Gasrechnung FOLGELASTSCHRIFT   :  "12045802"; "30.06.17"; "30.06.17"; "FOLGELASTSCHRIFT"; "EREF + LS1020000375822MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag06/2017KD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-320,00"; "EUR"; "Umsatzgebucht"
+2017-06-30 : L3.B : L3.F.SIMMINGER : 130000 :    Miete und NK Simminger DAUERAUFTRAG   :  "12045802"; "30.06.17"; "30.06.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstr.3"; "EvaSimminger"; "DE75200411440614992600"; "COBADEHD044"; "1300,00"; "EUR"; "Umsatzgebucht"
+2017-06-30 : L3.EK.A.NK.STR : L3.B : 1700 :    Strom Badenova FOLGELASTSCHRIFT   :  "12045802"; "30.06.17"; "30.06.17"; "FOLGELASTSCHRIFT"; "EREF + 006042921769MREF + 7001007509088001CRED + DE37ZZZ00000023650SVWZ + BELEG006042921769/VK001007509088/ABSCHLAGFAELLIG30062017FUERJUNI/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "-17,00"; "EUR"; "Umsatzgebucht"
+2017-06-30 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "30.06.17"; "30.06.17"; "ABSCHLUSS"; "10,9900v.H.fÃ¼rKontoÃ¼berziehungenÃ¼berdieKreditliniehinausDieAnpassungdesÃberziehungszinssatzesrichtetsichnacheinerVerÃ¤nderungdesReferenzzinssatzes(3-Monats-Euribor).MaÃgeblichistderamletztenÃberprÃ¼fungsstichtagermittelteWertdesReferenzzinssatzes.DessenEntwicklungwirddieSparkasseregelmÃ¤Ãigam"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-06-30 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "30.06.17"; "30.06.17"; "ABSCHLUSS"; "10,9900v.H.fürKontoüberziehungenüberdieKreditliniehinausDieAnpassungdesÜberziehungszinssatzesrichtetsichnacheinerVeränderungdesReferenzzinssatzes(3-Monats-Euribor).MaßgeblichistderamletztenÜberprüfungsstichtagermittelteWertdesReferenzzinssatzes.DessenEntwicklungwirddieSparkasseregelmäßigam"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-06-30 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "30.06.17"; "30.06.17"; "ABSCHLUSS"; "25.03.,25.06.,25.09.und25.12.einesjedenJahresÃ¼berprÃ¼fen.HatsichderReferenzzinssatzummindestens0,2ProzentpunktegegenÃ¼berseinemmaÃgeblichenWertbeiVertragsabschluss,bzw.derletztenZins-anpassungverÃ¤ndert,sinktodersteigtderÃberziehungszinssatzumebenso"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-06-30 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "30.06.17"; "30.06.17"; "ABSCHLUSS"; "25.03.,25.06.,25.09.und25.12.einesjedenJahresüberprüfen.HatsichderReferenzzinssatzummindestens0,2ProzentpunktegegenüberseinemmaßgeblichenWertbeiVertragsabschluss,bzw.derletztenZins-anpassungverändert,sinktodersteigtderÜberziehungszinssatzumebenso"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-06-30 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "30.06.17"; "30.06.17"; "ABSCHLUSS"; "Abrechnung30.06.2017InformationzurAbrechnungKontostandam30.06.201792.220,13 + --------------Abrechnungszeitraumvom01.04.2017bis30.06.2017Abrechnung30.06.20170,00 + SollzinssÃ¤tzeam30.06.201710,9900v.H.fÃ¼rDispositionskredit(aktuelleKreditlinie2.000,00)"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-06-30 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "30.06.17"; "30.06.17"; "ABSCHLUSS"; "Abrechnung30.06.2017InformationzurAbrechnungKontostandam30.06.201792.220,13 + --------------Abrechnungszeitraumvom01.04.2017bis30.06.2017Abrechnung30.06.20170,00 + Sollzinssätzeam30.06.201710,9900v.H.fürDispositionskredit(aktuelleKreditlinie2.000,00)"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-06-30 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "30.06.17"; "30.06.17"; "ABSCHLUSS"; "vieleProzentpunktemitWirkungzum1.desFolgemonats.Kontostand/Rechnungsabschlussam30.06.201792.220,13 + Rechnungsnummer.20170630-BW105-00010348439"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-06-30 : L3.EK.A.VER : L3.B : 650 :    Verwaltung ENTGELTABSCHLUSS   :  "12045802"; "30.06.17"; "30.06.17"; "ENTGELTABSCHLUSS"; "Abrechnung30.06.2017InformationzurAbrechnungEntgeltevom01.06.2017bis30.06.20176,50-Paketpreis1x6,506,50---------------Abrechnung30.06.20176,50-Rechnungsnummer.20170630-BW105-00010348440"; ""; ""; ""; "-6,50"; "EUR"; "Umsatzgebucht"
+2017-06-30 : L3.EK.A.NK.WA : L3.B : 16800 :    Wasser bnNetze FOLGELASTSCHRIFT   :  "12045802"; "30.06.17"; "30.06.17"; "FOLGELASTSCHRIFT"; "EREF + 006082246531MREF + 7001129416769001CRED + DE63ZZZ00000023667SVWZ + BELEG006082246531/VK001129416769/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDERABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "-168,00"; "EUR"; "Umsatzgebucht"
+2017-07-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2017-07-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2017-07-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2017-07-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2017-07-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2017-07-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2017-07-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2017-07-01 : L3.F.SIMMINGER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Simminger   :  None
+2017-07-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2017-07-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2017-07-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2017-07-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2017-07-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2017-07-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2017-07-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2017-07-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2017-07-01 : L3.F.SIMMINGER : L3.EK.ER.MIETE : 112000 :  Mietforderung Simminger   :  None
+2017-07-03 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "12045802"; "03.07.17"; "03.07.17"; "FOLGELASTSCHRIFT"; "EREF + 01-07-17KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2017-07-03 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "12045802"; "03.07.17"; "03.07.17"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG07/17"; "ZurichDeutscherHeroldLebensversicherungAktiengesel"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2017-07-03 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "12045802"; "03.07.17"; "03.07.17"; "GUTSCHRIFT"; "EREF + CCB.181.UE.143911SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-07-03 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "12045802"; "03.07.17"; "03.07.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-07-03 : L3.B : L3.F.KIEFER : 40000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "03.07.17"; "03.07.17"; "DAUERAUFTRAG"; "SVWZ + Miete"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-07-03 : L3.B : L3.F.NUERNBERG : 40000 :    Miete und NK Victoria Nuernberg DAUERAUFTRAG   :  "12045802"; "03.07.17"; "03.07.17"; "DAUERAUFTRAG"; "SVWZ + Miete"; "VictoriaNuernberg"; "DE66680900000038114409"; "GENODE61FR1"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-07-04 : L3.V.WR : L3.B : 49400 :    Kredit Wuestenrot FOLGELASTSCHRIFT   :  "12045802"; "04.07.17"; "04.07.17"; "FOLGELASTSCHRIFT"; "EREF + 06/172080452635494,00MREF + 220000077620CRED + DE92ZZZ00000032166SVWZ + 06/172080452635"; "WUESTENROTBAUSPARKASSEAG"; "DE74600600000455500100"; "GENODESGXXX"; "-494,00"; "EUR"; "Umsatzgebucht"
+2017-07-04 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "04.07.17"; "04.07.17"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "Schmidt,Dirk"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2017-07-05 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "12045802"; "05.07.17"; "05.07.17"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2017-07-06 : L3.B : L3.F.NUERNBERG : 20000 :    Miete und NK Victoria Nuernberg GUTSCHRIFT   :  "12045802"; "06.07.17"; "06.07.17"; "GUTSCHRIFT"; "EREF + 03561866567601025731953SVWZ + ."; "VictoriaNuernberg"; "DE66680900000038114409"; "GENODE61FR1"; "200,00"; "EUR"; "Umsatzgebucht"
+2017-07-06 : L3.EK.A.NK.HZ.ABR : L3.B : 41213 :    Techem Ablese Service FOLGELASTSCHRIFT   :  "12045802"; "06.07.17"; "06.07.17"; "FOLGELASTSCHRIFT"; "EREF + 9031387736MREF + 0001000000001214CRED + DE31ZZZ00000236867SVWZ + RG008304626422.6.2017Glaeubiger-ID.DE31ZZZ00000236867IhreMandatsreferenzbeiuns.0001000000001214"; "TECHEMEnergyServices"; "DE16500400000582454500"; "COBADEFFXXX"; "-412,13"; "EUR"; "Umsatzgebucht"
+2017-07-17 : L3.EK.A.NK.GARTEN : L3.B : 16300 :    Rabe DAUERAUFTRAG   :  "12045802"; "17.07.17"; "17.07.17"; "DAUERAUFTRAG"; "SVWZ + VorgartenpflegeLerchenstr."; "Rabe,Ladislav"; "DE50680501010012809062"; "FRSPDE66XXX"; "-163,00"; "EUR"; "Umsatzgebucht"
+2017-07-18 : L3.EK.MATTHIAS : L3.B : 418 :    Privatentnahme KARTENZAHLUNG   :  "12045802"; "18.07.17"; "18.07.17"; "KARTENZAHLUNG"; "SVWZ + 2017-07-17T11.55.26Karte52021-12ABWA + EDEKA5420,POTSDAM//POTSDAM/DE"; "EDEKA5420,POTSDAM"; "DE03200907002535050071"; "EDEKDEHHXXX"; "-4,18"; "EUR"; "Umsatzgebucht"
+2017-07-30 : L3.EK.A.VER : L3.B : 650 :    Verwaltung ENTGELTABSCHLUSS   :  "12045802"; "31.07.17"; "30.07.17"; "ENTGELTABSCHLUSS"; "Abrechnung31.07.2017InformationzurAbrechnungEntgeltevom01.07.2017bis31.07.20176,50-Paketpreis1x6,506,50---------------Abrechnung31.07.20176,50-Rechnungsnummer.20170731-BW105-00010666426"; ""; ""; ""; "-6,50"; "EUR"; "Umsatzgebucht"
+2017-07-31 : L3.EK.A.NK.HZ.GAS : L3.B : 32000 :    Gasrechnung FOLGELASTSCHRIFT   :  "12045802"; "31.07.17"; "31.07.17"; "FOLGELASTSCHRIFT"; "EREF + LS1020000390754MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag07/2017KD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-320,00"; "EUR"; "Umsatzgebucht"
+2017-07-31 : L3.B : L3.F.SELBACH : 40000 :    Miete und NK Selbach DAUERAUFTRAG   :  "12045802"; "31.07.17"; "31.07.17"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "SelbachDr.JochenundSusanne"; "DE94673900000086317109"; "GENODE61WTH"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-07-31 : L3.B : L3.F.SELBACH : 22339 :    Miete und NK Selbach GUTSCHRIFT   :  "12045802"; "31.07.17"; "31.07.17"; "GUTSCHRIFT"; "SVWZ + MieteFriederikeSelbachZi,Freiburg"; "Dr.JochenundSusanneSelbach"; "DE94673900000086317109"; "GENODE61WTH"; "223,39"; "EUR"; "Umsatzgebucht"
+2017-07-31 : L3.B : L3.F.SIMMINGER : 130000 :    Miete und NK Simminger DAUERAUFTRAG   :  "12045802"; "31.07.17"; "31.07.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstr.3"; "EvaSimminger"; "DE75200411440614992600"; "COBADEHD044"; "1300,00"; "EUR"; "Umsatzgebucht"
+2017-07-31 : L3.EK.A.NK.STR : L3.B : 1700 :    Strom Badenova FOLGELASTSCHRIFT   :  "12045802"; "31.07.17"; "31.07.17"; "FOLGELASTSCHRIFT"; "EREF + 006082257376MREF + 7001007509088001CRED + DE37ZZZ00000023650SVWZ + BELEG006082257376/VK001007509088/ABSCHLAGFAELLIG30072017FUERJULI/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "-17,00"; "EUR"; "Umsatzgebucht"
+2017-07-31 : L3.EK.A.NK.WA : L3.B : 16800 :    Wasser bnNetze FOLGELASTSCHRIFT   :  "12045802"; "31.07.17"; "31.07.17"; "FOLGELASTSCHRIFT"; "EREF + 006082269917MREF + 7001129416769001CRED + DE63ZZZ00000023667SVWZ + BELEG006082269917/VK001129416769/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDERABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "-168,00"; "EUR"; "Umsatzgebucht"
+2017-08-01 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "12045802"; "01.08.17"; "01.08.17"; "FOLGELASTSCHRIFT"; "EREF + 01-08-17KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2017-08-01 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "12045802"; "01.08.17"; "01.08.17"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG08/17"; "ZurichDeutscherHeroldLebensversicherungAktiengesel"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2017-08-01 : L3.V.WR : L3.B : 49400 :    Kredit Wuestenrot FOLGELASTSCHRIFT   :  "12045802"; "01.08.17"; "01.08.17"; "FOLGELASTSCHRIFT"; "EREF + 07/172080452635494,00MREF + 220000077620CRED + DE92ZZZ00000032166SVWZ + 07/172080452635"; "WUESTENROTBAUSPARKASSEAG"; "DE24600400710510439300"; "COBADEFFXXX"; "-494,00"; "EUR"; "Umsatzgebucht"
+2017-08-01 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "12045802"; "01.08.17"; "01.08.17"; "GUTSCHRIFT"; "EREF + CCB.212.UE.144209SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-08-01 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "12045802"; "01.08.17"; "01.08.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-08-01 : L3.B : L3.F.KIEFER : 40000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "01.08.17"; "01.08.17"; "DAUERAUFTRAG"; "SVWZ + Miete"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-08-01 : L3.B : L3.F.NUERNBERG : 60000 :    Miete und NK Victoria Nuernberg DAUERAUFTRAG   :  "12045802"; "01.08.17"; "01.08.17"; "DAUERAUFTRAG"; "SVWZ + Miete + Kaution"; "VictoriaNuernberg"; "DE66680900000038114409"; "GENODE61FR1"; "600,00"; "EUR"; "Umsatzgebucht"
+2017-08-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2017-08-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2017-08-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2017-08-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2017-08-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2017-08-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2017-08-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2017-08-01 : L3.F.SIMMINGER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Simminger   :  None
+2017-08-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2017-08-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2017-08-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2017-08-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2017-08-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2017-08-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2017-08-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2017-08-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2017-08-01 : L3.F.SIMMINGER : L3.EK.ER.MIETE : 112000 :  Mietforderung Simminger   :  None
+2017-08-02 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "02.08.17"; "02.08.17"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "Schmidt,Dirk"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2017-08-04 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "12045802"; "04.08.17"; "04.08.17"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2017-08-15 : L3.EK.A.NK.GS : L3.B : 21957 :    Grundsteuer FOLGELASTSCHRIFT   :  "12045802"; "15.08.17"; "15.08.17"; "FOLGELASTSCHRIFT"; "EREF + 140200097491MREF + 501002762799001CRED + DE69ZZZ00000055472SVWZ + 501002762799/GrundsteuerRate2017ABWA + StadtFreiburgStadtkasse"; "StadtFreiburg"; "DE63680501010002010012"; "FRSPDE66XXX"; "-219,57"; "EUR"; "Umsatzgebucht"
+2017-08-18 : L3.EK.A.H.SOREX : L3.B : 7759 :    Sorex ONLINE-UEBERWEISUNG   :  "12045802"; "18.08.17"; "18.08.17"; "ONLINE-UEBERWEISUNG"; "SVWZ + rechnung4457992DATUM18.08.2017,19.21UHR1.TAN936044ABWA + PROF.DR.MATTHIASHOLSCHNEIDER"; "sorex"; "DE48680501010012648175"; "FRSPDE66XXX"; "-77,59"; "EUR"; "Umsatzgebucht"
+2017-08-29 : L3.B : L3.F.SELBACH : 40000 :    Miete und NK Selbach DAUERAUFTRAG   :  "12045802"; "29.08.17"; "29.08.17"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "SelbachDr.JochenundSusanne"; "DE94673900000086317109"; "GENODE61WTH"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-08-30 : L3.B : L3.F.SIMMINGER : 130000 :    Miete und NK Simminger DAUERAUFTRAG   :  "12045802"; "30.08.17"; "30.08.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstr.3"; "EvaSimminger"; "DE75200411440614992600"; "COBADEHD044"; "1300,00"; "EUR"; "Umsatzgebucht"
+2017-08-30 : L3.EK.A.NK.STR : L3.B : 1700 :    Strom Badenova FOLGELASTSCHRIFT   :  "12045802"; "30.08.17"; "30.08.17"; "FOLGELASTSCHRIFT"; "EREF + 006151327699MREF + 7001007509088001CRED + DE37ZZZ00000023650SVWZ + BELEG006151327699/VK001007509088/ABSCHLAGFAELLIG30082017FUERAUGUST/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "-17,00"; "EUR"; "Umsatzgebucht"
+2017-08-30 : L3.EK.A.VER : L3.B : 720 :    Verwaltung ENTGELTABSCHLUSS   :  "12045802"; "31.08.17"; "30.08.17"; "ENTGELTABSCHLUSS"; "Abrechnung31.08.2017InformationzurAbrechnungEntgeltevom01.08.2017bis31.08.20177,20-Paketpreis1x6,506,50-Kontoauszüge1x0,700,70---------------Abrechnung31.08.20177,20-Rechnungsnummer.20170831-BW105-00010846937"; ""; ""; ""; "-7,20"; "EUR"; "Umsatzgebucht"
+2017-08-30 : L3.EK.A.NK.WA : L3.B : 16800 :    Wasser bnNetze FOLGELASTSCHRIFT   :  "12045802"; "30.08.17"; "30.08.17"; "FOLGELASTSCHRIFT"; "EREF + 006171386902MREF + 7001129416769001CRED + DE63ZZZ00000023667SVWZ + BELEG006171386902/VK001129416769/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDERABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "-168,00"; "EUR"; "Umsatzgebucht"
+2017-08-31 : L3.EK.A.NK.HZ.GAS : L3.B : 32000 :    Gasrechnung FOLGELASTSCHRIFT   :  "12045802"; "31.08.17"; "31.08.17"; "FOLGELASTSCHRIFT"; "EREF + LS1020000405708MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag08/2017KD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-320,00"; "EUR"; "Umsatzgebucht"
+2017-08-31 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "12045802"; "31.08.17"; "31.08.17"; "GUTSCHRIFT"; "EREF + CCB.242.UE.328490SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-09-01 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "12045802"; "01.09.17"; "01.09.17"; "FOLGELASTSCHRIFT"; "EREF + 01-09-17KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2017-09-01 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "12045802"; "01.09.17"; "01.09.17"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG09/17"; "ZurichDeutscherHeroldLebensversicherungAktiengesel"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2017-09-01 : L3.V.WR : L3.B : 49400 :    Kredit Wuestenrot FOLGELASTSCHRIFT   :  "12045802"; "01.09.17"; "01.09.17"; "FOLGELASTSCHRIFT"; "EREF + 08/172080452635494,00MREF + 220000077620CRED + DE92ZZZ00000032166SVWZ + 08/172080452635"; "WUESTENROTBAUSPARKASSEAG"; "DE24600400710510439300"; "COBADEFFXXX"; "-494,00"; "EUR"; "Umsatzgebucht"
+2017-09-01 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "12045802"; "01.09.17"; "01.09.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-09-01 : L3.B : L3.F.KIEFER : 40000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "01.09.17"; "01.09.17"; "DAUERAUFTRAG"; "SVWZ + Miete"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-09-01 : L3.B : L3.F.NUERNBERG : 40000 :    Miete und NK Victoria Nuernberg DAUERAUFTRAG   :  "12045802"; "01.09.17"; "01.09.17"; "DAUERAUFTRAG"; "SVWZ + Miete + Kaution"; "VictoriaNuernberg"; "DE66680900000038114409"; "GENODE61FR1"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-09-01 : L3.EK.A.NK.VER : L3.B : 40713 :    SV-Gebaeude FOLGELASTSCHRIFT   :  "12045802"; "01.09.17"; "01.09.17"; "FOLGELASTSCHRIFT"; "EREF + HV0800074831120170901000012MREF + 00001805596CRED + DE28HV100000088608SVWZ + Gebaeude080.012.0074831.1Zeitraum01.09.2017-01.09.2018ABWA + HelvetiaSchweizerischeVersicherungsgesellschaftAG"; "HelvetiaDfD"; "DE18500500000025192030"; "HELADEFFXXX"; "-407,13"; "EUR"; "Umsatzgebucht"
+2017-09-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2017-09-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2017-09-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2017-09-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2017-09-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2017-09-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2017-09-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2017-09-01 : L3.F.SIMMINGER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Simminger   :  None
+2017-09-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2017-09-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2017-09-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2017-09-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2017-09-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2017-09-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2017-09-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2017-09-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2017-09-01 : L3.F.SIMMINGER : L3.EK.ER.MIETE : 112000 :  Mietforderung Simminger   :  None
+2017-09-04 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "04.09.17"; "04.09.17"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "Schmidt,Dirk"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2017-09-05 : L3.B : L3.F.LAMIN : 3000 :    Garage Lamin GUTSCHRIFT   :  "12045802"; "05.09.17"; "05.09.17"; "GUTSCHRIFT"; "EREF + 930071632BBBYBDW"; "Keita,Lamin"; "DE94310108337125580820"; "SCFBDE33XXX"; "30,00"; "EUR"; "Umsatzgebucht"
+2017-09-05 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "12045802"; "05.09.17"; "05.09.17"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2017-09-11 : L3.EK.A.ST : L3.B : 218282 :    Steuer FOLGELASTSCHRIFT   :  "12045802"; "11.09.17"; "11.09.17"; "FOLGELASTSCHRIFT"; "EREF + 024/351/62167-----L0709201700035656MREF + BE041277825590CRED + DE02HST00000026026SVWZ + STEUERNR024/351/62167EINK.ST3VJ.172.182,82EURABWA + BerlinerFinanzaemter"; "FinanzamtCharlottenburgi.A.d.BerlinerFinanzÃ¤mter"; "DE94100500006600046463"; "BELADEBEXXX"; "-2182,82"; "EUR"; "Umsatzgebucht"
+2017-09-27 : L3.EK.A.NK.VER : L3.B : 6415 :    SV-Gebaeude ERSTLASTSCHRIFT   :  "12045802"; "27.09.17"; "27.09.17"; "ERSTLASTSCHRIFT"; "EREF + HV0800390905420170927000010MREF + 00003301682CRED + DE28HV100000088608SVWZ + Privat080.010.0390905.4Zeitraum15.09.2017-15.09.2018ABWA + HelvetiaSchweizerischeVersicherungsgesellschaftAG"; "HelvetiaDfD"; "DE18500500000025192030"; "HELADEFFXXX"; "-64,15"; "EUR"; "Umsatzgebucht"
+2017-09-28 : L3.B : L3.F.HARGESHEIMER : 130000 :    Miete und NK GUTSCHRIFT   :  "12045802"; "28.09.17"; "28.09.17"; "GUTSCHRIFT"; "SVWZ + MietefürLerchenstraße3,erstesOG"; "LENAHARGESHEIMER"; "DE45664500501004370233"; "SOLADES1OFG"; "1300,00"; "EUR"; "Umsatzgebucht"
+2017-09-29 : L3.EK.A.NK.HZ.GAS : L3.B : 32000 :    Gasrechnung FOLGELASTSCHRIFT   :  "12045802"; "29.09.17"; "29.09.17"; "FOLGELASTSCHRIFT"; "EREF + LS1020000420702MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag09/2017KD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-320,00"; "EUR"; "Umsatzgebucht"
+2017-09-29 : L3.B : L3.F.SELBACH : 40000 :    Miete und NK Selbach DAUERAUFTRAG   :  "12045802"; "29.09.17"; "29.09.17"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "SelbachDr.JochenundSusanne"; "DE94673900000086317109"; "GENODE61WTH"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-09-29 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "29.09.17"; "29.09.17"; "ABSCHLUSS"; "10,9900v.H.fÃ¼rKontoÃ¼berziehungenÃ¼berdieKreditliniehinausDieAnpassungdesÃberziehungszinssatzesrichtetsichnacheinerVerÃ¤nderungdesReferenzzinssatzes(3-Monats-Euribor).MaÃgeblichistderamletztenÃberprÃ¼fungsstichtagermittelteWertdesReferenzzinssatzes.DessenEntwicklungwirddieSparkasseregelmÃ¤Ãigam"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-09-29 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "29.09.17"; "29.09.17"; "ABSCHLUSS"; "10,9900v.H.fürKontoüberziehungenüberdieKreditliniehinausDieAnpassungdesÜberziehungszinssatzesrichtetsichnacheinerVeränderungdesReferenzzinssatzes(3-Monats-Euribor).MaßgeblichistderamletztenÜberprüfungsstichtagermittelteWertdesReferenzzinssatzes.DessenEntwicklungwirddieSparkasseregelmäßigam"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-09-29 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "29.09.17"; "29.09.17"; "ABSCHLUSS"; "25.03.,25.06.,25.09.und25.12.einesjedenJahresÃ¼berprÃ¼fen.HatsichderReferenzzinssatzummindestens0,2ProzentpunktegegenÃ¼berseinemmaÃgeblichenWertbeiVertragsabschluss,bzw.derletztenZins-anpassungverÃ¤ndert,sinktodersteigtderÃberziehungszinssatzumebenso"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-09-29 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "29.09.17"; "29.09.17"; "ABSCHLUSS"; "25.03.,25.06.,25.09.und25.12.einesjedenJahresüberprüfen.HatsichderReferenzzinssatzummindestens0,2ProzentpunktegegenüberseinemmaßgeblichenWertbeiVertragsabschluss,bzw.derletztenZins-anpassungverändert,sinktodersteigtderÜberziehungszinssatzumebenso"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-09-29 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "29.09.17"; "29.09.17"; "ABSCHLUSS"; "Abrechnung29.09.2017InformationzurAbrechnungKontostandam29.09.2017100.898,06 + --------------Abrechnungszeitraumvom01.07.2017bis29.09.2017Abrechnung29.09.20170,00 + SollzinssÃ¤tzeam29.09.201710,9900v.H.fÃ¼rDispositionskredit(aktuelleKreditlinie2.000,00)"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-09-29 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "29.09.17"; "29.09.17"; "ABSCHLUSS"; "Abrechnung29.09.2017InformationzurAbrechnungKontostandam29.09.2017100.898,06 + --------------Abrechnungszeitraumvom01.07.2017bis29.09.2017Abrechnung29.09.20170,00 + Sollzinssätzeam29.09.201710,9900v.H.fürDispositionskredit(aktuelleKreditlinie2.000,00)"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-09-29 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "29.09.17"; "29.09.17"; "ABSCHLUSS"; "vieleProzentpunktemitWirkungzum1.desFolgemonats.Kontostand/Rechnungsabschlussam29.09.2017100.898,06 + Rechnungsnummer.20170929-BW105-00011079938"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-09-29 : L3.EK.A.VER : L3.B : 650 :    Verwaltung ENTGELTABSCHLUSS   :  "12045802"; "29.09.17"; "29.09.17"; "ENTGELTABSCHLUSS"; "Abrechnung29.09.2017InformationzurAbrechnungEntgeltevom01.09.2017bis29.09.20176,50-Paketpreis1x6,506,50---------------Abrechnung29.09.20176,50-Rechnungsnummer.20170929-BW105-00011079939"; ""; ""; ""; "-6,50"; "EUR"; "Umsatzgebucht"
+2017-10-01 : L3.F.HARGESHEIMER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung an Hargesheimer   :  None
+2017-10-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2017-10-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2017-10-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2017-10-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2017-10-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2017-10-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2017-10-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2017-10-01 : L3.F.HARGESHEIMER : L3.EK.ER.MIETE : 112000 :  Mietf Simminger an Hargesheimer   :  None
+2017-10-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2017-10-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2017-10-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2017-10-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2017-10-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2017-10-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2017-10-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2017-10-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2017-10-02 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "12045802"; "02.10.17"; "02.10.17"; "FOLGELASTSCHRIFT"; "EREF + 01-10-17KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2017-10-02 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "12045802"; "02.10.17"; "02.10.17"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG10/17"; "ZurichDeutscherHeroldLebensversicherungAktiengesel"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2017-10-02 : L3.V.WR : L3.B : 49400 :    Kredit Tilgung und Zins FOLGELASTSCHRIFT   :  "12045802"; "02.10.17"; "02.10.17"; "FOLGELASTSCHRIFT"; "EREF + 09/172080452635494,00MREF + 220000077620CRED + DE92ZZZ00000032166SVWZ + 09/172080452635"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-494,00"; "EUR"; "Umsatzgebucht"
+2017-10-02 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "12045802"; "02.10.17"; "02.10.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-10-02 : L3.B : L3.F.KIEFER : 40000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "02.10.17"; "02.10.17"; "DAUERAUFTRAG"; "SVWZ + Miete"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-10-02 : L3.B : L3.F.NUERNBERG : 40000 :    Miete und NK Victoria Nuernberg DAUERAUFTRAG   :  "12045802"; "02.10.17"; "02.10.17"; "DAUERAUFTRAG"; "SVWZ + Miete"; "VictoriaNuernberg"; "DE66680900000038114409"; "GENODE61FR1"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-10-02 : L3.EK.A.NK.STR : L3.B : 1700 :    Strom Badenova FOLGELASTSCHRIFT   :  "12045802"; "02.10.17"; "02.10.17"; "FOLGELASTSCHRIFT"; "EREF + 006101734585MREF + 7001007509088001CRED + DE37ZZZ00000023650SVWZ + BELEG006101734585/VK001007509088/ABSCHLAGFAELLIG30092017FUERSEPTEMBER/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "-17,00"; "EUR"; "Umsatzgebucht"
+2017-10-02 : L3.EK.A.NK.WA : L3.B : 16800 :    Wasser bnNetze FOLGELASTSCHRIFT   :  "12045802"; "02.10.17"; "02.10.17"; "FOLGELASTSCHRIFT"; "EREF + 006042994095MREF + 7001129416769001CRED + DE63ZZZ00000023667SVWZ + BELEG006042994095/VK001129416769/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDERABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "-168,00"; "EUR"; "Umsatzgebucht"
+2017-10-04 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "12045802"; "04.10.17"; "04.10.17"; "GUTSCHRIFT"; "EREF + CCB.275.UE.98880SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-10-04 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "04.10.17"; "04.10.17"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "Schmidt,Dirk"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2017-10-05 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "12045802"; "05.10.17"; "05.10.17"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2017-10-12 : L3.EK.MATTHIAS : L3.B : 50000 :    Bar Abhebung Berlin AUSZAHLUNG   :  "12045802"; "13.10.17"; "12.10.17"; "AUSZAHLUNG"; "SVWZ + 2017-10-12T17.43.50Karte52021-12ABWA + 078897141//BerlinerSparkasse/DE"; "BerlinerSparkasse"; "DE77100500009000481713"; "BELADEBEXXX"; "-500,00"; "EUR"; "Umsatzgebucht"
+2017-10-13 : L3.EK.MATTHIAS : L3.B : 1350 :    Privatentnahme (DB) KARTENZAHLUNG   :  "12045802"; "13.10.17"; "13.10.17"; "KARTENZAHLUNG"; "SVWZ + 2017-10-12T08.57.19Karte52021-12ABWA + DBAUTOMAT//BERLIN-CHARLOTTENBG./DE"; "DBVertriebGmbH"; "DE43120800004084300300"; "DRESDEFF120"; "-13,50"; "EUR"; "Umsatzgebucht"
+2017-10-16 : L3.EK.MATTHIAS : L3.B : 1016 :    Pivat NETTO SEPA-ELV-LASTSCHRIFT   :  "12045802"; "16.10.17"; "16.10.17"; "SEPA-ELV-LASTSCHRIFT"; "EREF + 12100832513082921120006339065306237MREF + 6530623796391710120832CRED + DE08ZZZ00000923168SVWZ + 121008325130829211200063390ELV6530623712.1008.32ME5"; "NETTOSAGTDANKE65306237"; "DE50130700000450400708"; "DEUTDEBRXXX"; "-10,16"; "EUR"; "Umsatzgebucht"
+2017-10-16 : L3.EK.A.NK.GARTEN : L3.B : 16300 :    Rabe DAUERAUFTRAG   :  "12045802"; "16.10.17"; "16.10.17"; "DAUERAUFTRAG"; "SVWZ + VorgartenpflegeLerchenstr."; "Rabe,Ladislav"; "DE50680501010012809062"; "FRSPDE66XXX"; "-163,00"; "EUR"; "Umsatzgebucht"
+2017-10-30 : L3.EK.A.NK.HZ.GAS : L3.B : 32000 :    Gasrechnung FOLGELASTSCHRIFT   :  "12045802"; "30.10.17"; "30.10.17"; "FOLGELASTSCHRIFT"; "EREF + LS1020000435704MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag10/2017KD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-320,00"; "EUR"; "Umsatzgebucht"
+2017-10-30 : L3.B : L3.F.SELBACH : 40000 :    Miete und NK Selbach DAUERAUFTRAG   :  "12045802"; "30.10.17"; "30.10.17"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "SelbachDr.JochenundSusanne"; "DE94673900000086317109"; "GENODE61WTH"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-10-30 : L3.EK.A.NK.STR : L3.B : 1700 :    Strom Badenova FOLGELASTSCHRIFT   :  "12045802"; "30.10.17"; "30.10.17"; "FOLGELASTSCHRIFT"; "EREF + 006151392588MREF + 7001007509088001CRED + DE37ZZZ00000023650SVWZ + BELEG006151392588/VK001007509088/ABSCHLAGFAELLIG30102017FUEROKTOBER/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "-17,00"; "EUR"; "Umsatzgebucht"
+2017-10-30 : L3.EK.A.VER : L3.B : 650 :    Verwaltung ENTGELTABSCHLUSS   :  "12045802"; "30.10.17"; "30.10.17"; "ENTGELTABSCHLUSS"; "Abrechnung30.10.2017InformationzurAbrechnungEntgeltevom30.09.2017bis30.10.20176,50-Paketpreis1x6,506,50---------------Abrechnung30.10.20176,50-Rechnungsnummer.20171030-BW105-00011393005"; ""; ""; ""; "-6,50"; "EUR"; "Umsatzgebucht"
+2017-10-30 : L3.EK.A.NK.WA : L3.B : 16800 :    Wasser bnNetze FOLGELASTSCHRIFT   :  "12045802"; "30.10.17"; "30.10.17"; "FOLGELASTSCHRIFT"; "EREF + 006004276347MREF + 7001129416769001CRED + DE63ZZZ00000023667SVWZ + BELEG006004276347/VK001129416769/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDERABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "-168,00"; "EUR"; "Umsatzgebucht"
+2017-11-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2017-11-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2017-11-01 : L3.F.HARGESHEIMER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Hargesheimer   :  None
+2017-11-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2017-11-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2017-11-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2017-11-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2017-11-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2017-11-01 : L3.F.HARGESHEIMER : L3.V.KAU : 200000 :  Kautionsforderung Hargesheimer   :  None
+2017-11-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2017-11-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2017-11-01 : L3.F.HARGESHEIMER : L3.EK.ER.MIETE : 112000 :  Mietforderung Hargesheimer   :  None
+2017-11-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2017-11-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2017-11-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2017-11-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2017-11-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2017-11-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2017-11-01 : L3.EK.A : L3.F.HARGESHEIMER : 75000 :  Verlust Kaution Tacke...   :  None
+2017-11-02 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "12045802"; "02.11.17"; "02.11.17"; "FOLGELASTSCHRIFT"; "EREF + 01-11-17KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2017-11-02 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "12045802"; "02.11.17"; "02.11.17"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG11/17"; "ZurichDeutscherHeroldLebensversicherungAktiengesel"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2017-11-02 : L3.V.WR : L3.B : 49400 :    Kredit Tilgung und Zins FOLGELASTSCHRIFT   :  "12045802"; "02.11.17"; "02.11.17"; "FOLGELASTSCHRIFT"; "EREF + 10/172080452635494,00MREF + 220000077620CRED + DE92ZZZ00000032166SVWZ + 10/172080452635"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-494,00"; "EUR"; "Umsatzgebucht"
+2017-11-02 : L3.B : L3.F.HARGESHEIMER : 130000 :    Miet und NK Hargesheimer DAUERAUFTRAG   :  "12045802"; "02.11.17"; "02.11.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse3,1.OG"; "LenaHargesheimer"; "DE93500105175423163373"; "INGDDEFFXXX"; "1300,00"; "EUR"; "Umsatzgebucht"
+2017-11-02 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "12045802"; "02.11.17"; "02.11.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-11-02 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "02.11.17"; "02.11.17"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "Schmidt,Dirk"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2017-11-02 : L3.B : L3.F.KIEFER : 40000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "02.11.17"; "02.11.17"; "DAUERAUFTRAG"; "SVWZ + Miete"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-11-03 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "12045802"; "03.11.17"; "03.11.17"; "GUTSCHRIFT"; "EREF + CCB.306.UE.7498SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-11-03 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "12045802"; "03.11.17"; "03.11.17"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2017-11-10 : L3.EK.MATTHIAS : L3.B : 50000 :    Barentnahme BAR KASSE   :  "12045802"; "10.11.17"; "10.11.17"; "BARKASSE"; ""; ""; ""; "68050101"; "-500,00"; "EUR"; "Umsatzgebucht"
+2017-11-14 : L3.B : L3.F.ADELHEIM : 2359 :    Miete und NK Adelheim GUTSCHRIFT   :  "12045802"; "14.11.17"; "14.11.17"; "GUTSCHRIFT"; "SVWZ + zusätzlicheNebenkosten"; "JOSEFINEADELHELM"; "DE88690500010024799991"; "SOLADES1KNZ"; "23,59"; "EUR"; "Umsatzgebucht"
+2017-11-15 : L3.EK.A.NK.GS : L3.B : 21957 :    Grundsteuer FOLGELASTSCHRIFT   :  "12045802"; "15.11.17"; "15.11.17"; "FOLGELASTSCHRIFT"; "EREF + 140300036771MREF + 501002762799001CRED + DE69ZZZ00000055472SVWZ + 501002762799/GrundsteuerRate2017ABWA + StadtFreiburgStadtkasse"; "StadtFreiburg"; "DE63680501010002010012"; "FRSPDE66XXX"; "-219,57"; "EUR"; "Umsatzgebucht"
+2017-11-15 : L3.B : L3.EK.MATTHIAS : 50000 :    Papi BAR einzahlung GUTSCHRIFT   :  "12045802"; "15.11.17"; "15.11.17"; "GUTSCHRIFT"; "SVWZ + w/barabhebgPETERan091017v,SPARKASSE"; "PeterAlexanderHolschneider"; "DE96680700300013254800"; "DEUTDE6FXXX"; "500,00"; "EUR"; "Umsatzgebucht"
+2017-11-17 : L3.EK.MATTHIAS : L3.B : 42840 :    Barentnahme BAR KASSE   :  "12045802"; "17.11.17"; "17.11.17"; "BARKASSE"; ""; ""; ""; "68050101"; "-428,40"; "EUR"; "Umsatzgebucht"
+2017-11-29 : L3.B : L3.F.SELBACH : 40000 :    Miete und NK Selbach DAUERAUFTRAG   :  "12045802"; "29.11.17"; "29.11.17"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "SelbachDr.JochenundSusanne"; "DE94673900000086317109"; "GENODE61WTH"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-11-30 : L3.EK.A.NK.HZ.GAS : L3.B : 32000 :    Gasrechnung FOLGELASTSCHRIFT   :  "12045802"; "30.11.17"; "30.11.17"; "FOLGELASTSCHRIFT"; "EREF + LS1020000450679MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag11/2017KD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-320,00"; "EUR"; "Umsatzgebucht"
+2017-11-30 : L3.EK.A.NK.STR : L3.B : 1700 :    Strom Badenova FOLGELASTSCHRIFT   :  "12045802"; "30.11.17"; "30.11.17"; "FOLGELASTSCHRIFT"; "EREF + 006022429392MREF + 7001007509088001CRED + DE37ZZZ00000023650SVWZ + BELEG006022429392/VK001007509088/ABSCHLAGFAELLIG30112017FUERNOVEMBER/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "-17,00"; "EUR"; "Umsatzgebucht"
+2017-11-30 : L3.EK.A.VER : L3.B : 720 :    Verwaltung ENTGELTABSCHLUSS   :  "12045802"; "30.11.17"; "30.11.17"; "ENTGELTABSCHLUSS"; "Abrechnung30.11.2017InformationzurAbrechnungEntgeltevom31.10.2017bis30.11.20177,20-Paketpreis1x6,506,50-Kontoauszüge1x0,700,70---------------Abrechnung30.11.20177,20-Rechnungsnummer.20171130-BW105-00011581019"; ""; ""; ""; "-7,20"; "EUR"; "Umsatzgebucht"
+2017-11-30 : L3.EK.A.NK.WA : L3.B : 16800 :    Wasser bnNetze FOLGELASTSCHRIFT   :  "12045802"; "30.11.17"; "30.11.17"; "FOLGELASTSCHRIFT"; "EREF + 006072443046MREF + 7001129416769001CRED + DE63ZZZ00000023667SVWZ + BELEG006072443046/VK001129416769/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDERABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "-168,00"; "EUR"; "Umsatzgebucht"
+2017-12-01 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "12045802"; "01.12.17"; "01.12.17"; "FOLGELASTSCHRIFT"; "EREF + 01-12-17KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2017-12-01 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "12045802"; "01.12.17"; "01.12.17"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG12/17"; "ZurichDeutscherHeroldLebensversicherungAG"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2017-12-01 : L3.V.WR : L3.B : 49400 :    Kredit Tilgung und Zins FOLGELASTSCHRIFT   :  "12045802"; "01.12.17"; "01.12.17"; "FOLGELASTSCHRIFT"; "EREF + 11/172080452635494,00MREF + 220000077620CRED + DE92ZZZ00000032166SVWZ + 11/172080452635"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-494,00"; "EUR"; "Umsatzgebucht"
+2017-12-01 : L3.B : L3.F.HARGESHEIMER : 130000 :    Miet und NK Hargesheimer DAUERAUFTRAG   :  "12045802"; "01.12.17"; "01.12.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse3,1.OG"; "LenaHargesheimer"; "DE93500105175423163373"; "INGDDEFFXXX"; "1300,00"; "EUR"; "Umsatzgebucht"
+2017-12-01 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "12045802"; "01.12.17"; "01.12.17"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-12-01 : L3.B : L3.F.KIEFER : 40000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "01.12.17"; "01.12.17"; "DAUERAUFTRAG"; "SVWZ + Miete"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-12-01 : L3.B : L3.F.NUERNBERG : 40000 :    Miete und NK Victoria Nuernberg DAUERAUFTRAG   :  "12045802"; "01.12.17"; "01.12.17"; "DAUERAUFTRAG"; "SVWZ + Miete"; "VictoriaNuernberg"; "DE66680900000038114409"; "GENODE61FR1"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-12-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2017-12-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2017-12-01 : L3.F.HARGESHEIMER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Hargesheimer   :  None
+2017-12-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2017-12-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2017-12-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2017-12-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2017-12-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2017-12-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2017-12-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2017-12-01 : L3.F.HARGESHEIMER : L3.EK.ER.MIETE : 112000 :  Mietforderung Hargesheimer   :  None
+2017-12-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2017-12-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2017-12-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2017-12-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2017-12-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2017-12-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2017-12-04 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "04.12.17"; "04.12.17"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "DirkSchmidt"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2017-12-05 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "12045802"; "05.12.17"; "05.12.17"; "GUTSCHRIFT"; "EREF + CCB.338.UE.15765SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2017-12-05 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "12045802"; "05.12.17"; "05.12.17"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2017-12-11 : L3.EK.A.ST : L3.B : 218282 :    Steuer FOLGELASTSCHRIFT   :  "12045802"; "11.12.17"; "11.12.17"; "FOLGELASTSCHRIFT"; "EREF + 024/351/62167-----L0712201700035434MREF + BE041277825590CRED + DE02HST00000026026SVWZ + STEUERNR024/351/62167EINK.ST4VJ.172.182,82EURABWA + BerlinerFinanzaemter"; "FinanzamtCharlottenburgi.A.d.BerlinerFinanzÃ¤mter"; "DE94100500006600046463"; "BELADEBEXXX"; "-2182,82"; "EUR"; "Umsatzgebucht"
+2017-12-13 : L3.EK.A.H.HERDEL : L3.B : 38675 :    Herdel EINZELUEBERWEISUNG   :  "12045802"; "13.12.17"; "13.12.17"; "EINZELUEBERWEISUNG"; "SVWZ + 250917LT.HR.SCHMIDWETERABWA + HOLSCHNEIDERMATTHIASDR."; "HARTMUTHERDEL"; "DE92680501010010106468"; "FRSPDE66XXX"; "-386,75"; "EUR"; "Umsatzgebucht"
+2017-12-28 : L3.EK.A.NK.HZ.GAS : L3.B : 32000 :    Gasrechnung FOLGELASTSCHRIFT   :  "12045802"; "28.12.17"; "28.12.17"; "FOLGELASTSCHRIFT"; "EREF + LS1020000465693MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag12/2017KD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-320,00"; "EUR"; "Umsatzgebucht"
+2017-12-29 : L3.B : L3.F.SELBACH : 40000 :    Miete und NK Selbach DAUERAUFTRAG   :  "12045802"; "29.12.17"; "29.12.17"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "SelbachDr.JochenundSusanne"; "DE94673900000086317109"; "GENODE61WTH"; "400,00"; "EUR"; "Umsatzgebucht"
+2017-12-29 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "29.12.17"; "29.12.17"; "ABSCHLUSS"; "10,9900v.H.fürKontoüberziehungenüberdieKreditliniehinausDieAnpassungdesÜberziehungszinssatzesrichtetsichnacheinerVeränderungdesReferenzzinssatzes(3-Monats-Euribor).MaßgeblichistderamletztenÜberprüfungsstichtagermittelteWertdesReferenzzinssatzes.DessenEntwicklungwirddieSparkasseregelmäßigam"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-12-29 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "29.12.17"; "29.12.17"; "ABSCHLUSS"; "25.03.,25.06.,25.09.und25.12.einesjedenJahresüberprüfen.HatsichderReferenzzinssatzummindestens0,2ProzentpunktegegenüberseinemmaßgeblichenWertbeiVertragsabschluss,bzw.derletztenZins-anpassungverändert,sinktodersteigtderÜberziehungszinssatzumebenso"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-12-29 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "29.12.17"; "29.12.17"; "ABSCHLUSS"; "Abrechnung29.12.2017InformationzurAbrechnungKontostandam29.12.2017106.687,56 + --------------Abrechnungszeitraumvom30.09.2017bis29.12.2017Abrechnung29.12.20170,00 + Sollzinssätzeam29.12.201710,9900v.H.fürDispositionskredit(aktuelleKreditlinie2.000,00)"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-12-29 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "12045802"; "29.12.17"; "29.12.17"; "ABSCHLUSS"; "vieleProzentpunktemitWirkungzum1.desFolgemonats.Kontostand/Rechnungsabschlussam29.12.2017106.687,56 + Rechnungsnummer.20171229-BW105-00011824965"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2017-12-29 : L3.EK.A.VER : L3.B : 650 :    Verwaltung ENTGELTABSCHLUSS   :  "12045802"; "29.12.17"; "29.12.17"; "ENTGELTABSCHLUSS"; "Abrechnung29.12.2017InformationzurAbrechnungEntgeltevom01.12.2017bis29.12.20176,50-Paketpreis1x6,506,50---------------Abrechnung29.12.20176,50-Rechnungsnummer.20171229-BW105-00011824966"; ""; ""; ""; "-6,50"; "EUR"; "Umsatzgebucht"
+2018-01-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2018-01-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2018-01-01 : L3.F.HARGESHEIMER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Hargesheimer   :  None
+2018-01-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2018-01-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2018-01-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2018-01-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2018-01-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2018-01-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2018-01-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2018-01-01 : L3.F.HARGESHEIMER : L3.EK.ER.MIETE : 112000 :  Mietforderung Hargesheimer   :  None
+2018-01-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2018-01-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2018-01-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2018-01-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2018-01-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2018-01-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2018-01-02 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "12045802"; "02.01.18"; "02.01.18"; "FOLGELASTSCHRIFT"; "EREF + 01-01-18KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2018-01-02 : L3.EK.A.NK.VER : L3.B : 46158 :    Feuer Versicherung FOLGELASTSCHRIFT   :  "12045802"; "02.01.18"; "02.01.18"; "FOLGELASTSCHRIFT"; "EREF + 6700110312330605072365MREF + IGM00002522218CRED + DE9300200000021090SVWZ + GebaeudeF-ElementarVers.V10205158803461,58EUR.ABWA + SVSparkassenVersicherungGebaudeversicherungAG"; "SVGebaeudeversicherung"; "DE97500500000003200029"; "HELADEFFXXX"; "-461,58"; "EUR"; "Umsatzgebucht"
+2018-01-02 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "12045802"; "02.01.18"; "02.01.18"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG01/18"; "ZurichDeutscherHeroldLebensversicherungAG"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2018-01-02 : L3.V.WR : L3.B : 49400 :    Kredit Tilgung und Zins FOLGELASTSCHRIFT   :  "12045802"; "02.01.18"; "02.01.18"; "FOLGELASTSCHRIFT"; "EREF + 12/172080452635494,00MREF + 220000077620CRED + DE92ZZZ00000032166SVWZ + 12/172080452635"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-494,00"; "EUR"; "Umsatzgebucht"
+2018-01-02 : L3.B : L3.F.HARGESHEIMER : 130000 :    Miet und NK Hargesheimer DAUERAUFTRAG   :  "12045802"; "02.01.18"; "02.01.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse3,1.OG"; "LenaHargesheimer"; "DE93500105175423163373"; "INGDDEFFXXX"; "1300,00"; "EUR"; "Umsatzgebucht"
+2018-01-02 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "12045802"; "02.01.18"; "02.01.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2018-01-02 : L3.B : L3.F.KIEFER : 40000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "02.01.18"; "02.01.18"; "DAUERAUFTRAG"; "SVWZ + Miete"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-01-02 : L3.B : L3.F.NUERNBERG : 40000 :    Miete und NK Victoria Nuernberg DAUERAUFTRAG   :  "12045802"; "02.01.18"; "02.01.18"; "DAUERAUFTRAG"; "SVWZ + Miete"; "VictoriaNuernberg"; "DE66680900000038114409"; "GENODE61FR1"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-01-02 : L3.EK.A.NK.STR : L3.B : 1700 :    Strom Badenova FOLGELASTSCHRIFT   :  "12045802"; "02.01.18"; "02.01.18"; "FOLGELASTSCHRIFT"; "EREF + 006121355067MREF + 7001007509088001CRED + DE37ZZZ00000023650SVWZ + BELEG006121355067/VK001007509088/ABSCHLAGFAELLIG30122017FUERDEZEMBER/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "-17,00"; "EUR"; "Umsatzgebucht"
+2018-01-02 : L3.EK.A.NK.WA : L3.B : 16800 :    Wasser bnNetze FOLGELASTSCHRIFT   :  "12045802"; "02.01.18"; "02.01.18"; "FOLGELASTSCHRIFT"; "EREF + 006052739000MREF + 7001129416769001CRED + DE63ZZZ00000023667SVWZ + BELEG006052739000/VK001129416769/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDERABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "-168,00"; "EUR"; "Umsatzgebucht"
+2018-01-03 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "12045802"; "03.01.18"; "03.01.18"; "GUTSCHRIFT"; "EREF + CCB.2.UE.402489SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2018-01-03 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "03.01.18"; "03.01.18"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "DirkSchmidt"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2018-01-05 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "12045802"; "05.01.18"; "05.01.18"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2018-01-10 : L3.B : L3.F.ADELHEIM : 4903 :    Miete und NK Adelheim GUTSCHRIFT   :  "12045802"; "10.01.18"; "10.01.18"; "GUTSCHRIFT"; "SVWZ + Nebenkostennachzahlung2016"; "JOSEFINEADELHELM"; "DE88690500010024799991"; "SOLADES1KNZ"; "49,03"; "EUR"; "Umsatzgebucht"
+2018-01-11 : L3.B : L3.F.NUERNBERG : 32100 :    Miete und NK Victoria Nuernberg GUTSCHRIFT   :  "12045802"; "11.01.18"; "11.01.18"; "GUTSCHRIFT"; "EREF + 03590106186401092719820SVWZ + RESTKAUTION"; "VictoriaNuernberg"; "DE66680900000038114409"; "GENODE61FR1"; "321,00"; "EUR"; "Umsatzgebucht"
+2018-01-15 : L3.EK.A.NK.GARTEN : L3.B : 18280 :    Rabe DAUERAUFTRAG   :  "12045802"; "15.01.18"; "15.01.18"; "DAUERAUFTRAG"; "SVWZ + VorgartenpflegeLerchenstr."; "Rabe,Ladislav"; "DE50680501010012809062"; "FRSPDE66XXX"; "-182,80"; "EUR"; "Umsatzgebucht"
+2018-01-23 : L3.EK.A.H.RUTTKOWSKI : L3.B : 17779 :    DACHDECKER ONLINE-UEBERWEISUNG   :  "12045802"; "23.01.18"; "23.01.18"; "ONLINE-UEBERWEISUNG"; "SVWZ + RecnungNr.17208DATUM23.01.2018,19.39UHR1.TAN192672ABWA + PROF.DR.MATTHIASHOLSCHNEIDER"; "Ruttkowski"; "DE86680501010002147435"; "FRSPDE66XXX"; "-177,79"; "EUR"; "Umsatzgebucht"
+2018-01-24 : L3.B : L3.EK.A.NK.HZ.GAS : 14010 :    Gasrechnung GUTSCHRIFT   :  "12045802"; "24.01.18"; "24.01.18"; "GUTSCHRIFT"; "SVWZ + GUTHABENRueckzahlungKD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "140,10"; "EUR"; "Umsatzgebucht"
+2018-01-29 : L3.B : L3.F.SELBACH : 40000 :    Miete und NK Selbach DAUERAUFTRAG   :  "12045802"; "29.01.18"; "29.01.18"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "SelbachDr.JochenundSusanne"; "DE94673900000086317109"; "GENODE61WTH"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-01-30 : L3.EK.A.NK.STR : L3.B : 1700 :    Strom Badenova FOLGELASTSCHRIFT   :  "12045802"; "30.01.18"; "30.01.18"; "FOLGELASTSCHRIFT"; "EREF + 006161829920MREF + 7001007509088001CRED + DE37ZZZ00000023650SVWZ + BELEG006161829920/VK001007509088/ABSCHLAGFAELLIG30012018FUERJANUAR/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "-17,00"; "EUR"; "Umsatzgebucht"
+2018-01-30 : L3.EK.A.VER : L3.B : 650 :    Verwaltung ENTGELTABSCHLUSS   :  "12045802"; "31.01.18"; "30.01.18"; "ENTGELTABSCHLUSS"; "Abrechnung31.01.2018InformationzurAbrechnungEntgeltevom30.12.2017bis31.01.20186,50-Paketpreis1x6,506,50---------------Abrechnung31.01.20186,50-Rechnungsnummer.20180131-BW105-00012161767"; ""; ""; ""; "-6,50"; "EUR"; "Umsatzgebucht"
+2018-01-30 : L3.EK.A.NK.WA : L3.B : 16800 :    Wasser bnNetze FOLGELASTSCHRIFT   :  "12045802"; "30.01.18"; "30.01.18"; "FOLGELASTSCHRIFT"; "EREF + 006043053184MREF + 7001129416769001CRED + DE63ZZZ00000023667SVWZ + BELEG006043053184/VK001129416769/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDERABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "-168,00"; "EUR"; "Umsatzgebucht"
+2018-01-31 : L3.EK.A.NK.HZ.GAS : L3.B : 29000 :    Gasrechnung FOLGELASTSCHRIFT   :  "12045802"; "31.01.18"; "31.01.18"; "FOLGELASTSCHRIFT"; "EREF + LS1020000480784MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag01/2018KD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-290,00"; "EUR"; "Umsatzgebucht"
+2018-02-01 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "12045802"; "01.02.18"; "01.02.18"; "FOLGELASTSCHRIFT"; "EREF + 01-02-18KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2018-02-01 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "12045802"; "01.02.18"; "01.02.18"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG02/18"; "ZurichDeutscherHeroldLebensversicherungAG"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2018-02-01 : L3.V.WR : L3.B : 49400 :    Kredit Tilgung und Zins FOLGELASTSCHRIFT   :  "12045802"; "01.02.18"; "01.02.18"; "FOLGELASTSCHRIFT"; "EREF + 01/182080452635494,00MREF + 220000077620CRED + DE92ZZZ00000032166SVWZ + 01/182080452635"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-494,00"; "EUR"; "Umsatzgebucht"
+2018-02-01 : L3.B : L3.F.HARGESHEIMER : 130000 :    Miet und NK Hargesheimer DAUERAUFTRAG   :  "12045802"; "01.02.18"; "01.02.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse3,1.OG"; "LenaHargesheimer"; "DE93500105175423163373"; "INGDDEFFXXX"; "1300,00"; "EUR"; "Umsatzgebucht"
+2018-02-01 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "12045802"; "01.02.18"; "01.02.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2018-02-01 : L3.B : L3.F.KIEFER : 40000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "01.02.18"; "01.02.18"; "DAUERAUFTRAG"; "SVWZ + Miete"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-02-01 : L3.B : L3.F.NUERNBERG : 40000 :    Miete und NK Victoria Nuernberg DAUERAUFTRAG   :  "12045802"; "01.02.18"; "01.02.18"; "DAUERAUFTRAG"; "SVWZ + Miete"; "VictoriaNuernberg"; "DE66680900000038114409"; "GENODE61FR1"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-02-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2018-02-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2018-02-01 : L3.F.HARGESHEIMER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Hargesheimer   :  None
+2018-02-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2018-02-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2018-02-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2018-02-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2018-02-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2018-02-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2018-02-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2018-02-01 : L3.F.HARGESHEIMER : L3.EK.ER.MIETE : 112000 :  Mietforderung Hargesheimer   :  None
+2018-02-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2018-02-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2018-02-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2018-02-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2018-02-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2018-02-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2018-02-02 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "12045802"; "02.02.18"; "02.02.18"; "GUTSCHRIFT"; "EREF + CCB.32.UE.44144SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2018-02-02 : L3.B : L3.F.NEMETS : 18199 :    Miet und Nebenkosten GUTSCHRIFT   :  "12045802"; "02.02.18"; "02.02.18"; "GUTSCHRIFT"; "EREF + CCB.32.UE.44651SVWZ + Nebenkosten"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "181,99"; "EUR"; "Umsatzgebucht"
+2018-02-02 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "12045802"; "02.02.18"; "02.02.18"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "DirkSchmidt"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2018-02-05 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "12045802"; "05.02.18"; "05.02.18"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2018-02-13 : L3.F.BRAENDLE : L3.B : 25886 :    Miet und NK ONLINE-UEBERWEISUNG   :  "12045802"; "13.02.18"; "13.02.18"; "ONLINE-UEBERWEISUNG"; "SVWZ + KAUTION + NKAusgleichDATUM13.02.2018,14.44UHR1.TAN923354ABWA + PROF.DR.MATTHIASHOLSCHNEIDER"; "Braendle"; "DE02680642220000309508"; "GENODE61GUN"; "-258,86"; "EUR"; "Umsatzgebucht"
+2018-02-13 : L3.F.BARZ : L3.B : 12936 :    Miete und NK Barz ONLINE-UEBERWEISUNG   :  "12045802"; "13.02.18"; "13.02.18"; "ONLINE-UEBERWEISUNG"; "SVWZ + NEBENKOSTEN2016DATUM13.02.2018,15.03UHR1.TAN633996ABWA + PROF.DR.MATTHIASHOLSCHNEIDER"; "MaikeBarz"; "DE35600908000104668412"; "GENODEF1S02"; "-129,36"; "EUR"; "Umsatzgebucht"
+2018-02-13 : L3.F.SCHMIDT : L3.B : 96284 :    Miete und NK ONLINE-UEBERWEISUNG   :  "12045802"; "13.02.18"; "13.02.18"; "ONLINE-UEBERWEISUNG"; "SVWZ + NEBENKOSTEN2015 + 2016DATUM13.02.2018,14.50UHR1.TAN117853ABWA + PROF.DR.MATTHIASHOLSCHNEIDER"; "DirkSchmidt"; "DE21680700240268962800"; "DEUTDEDBFRE"; "-962,84"; "EUR"; "Umsatzgebucht"
+2018-02-13 : L3.F.MINGIRULLI : L3.B : 41509 :    NK Ausgleich ONLINE-UEBERWEISUNG   :  "12045802"; "13.02.18"; "13.02.18"; "ONLINE-UEBERWEISUNG"; "SVWZ + NEBENKOSTENAUSGLEICH2016DATUM13.02.2018,14.47UHR1.TAN846885ABWA + PROF.DR.MATTHIASHOLSCHNEIDER"; "Dr.NadjaMingirulli"; "DE34120300001009351063"; "BYLADEM1001"; "-415,09"; "EUR"; "Umsatzgebucht"
+2018-02-15 : L3.EK.A.NK.GS : L3.B : 21957 :    Grundsteuer FOLGELASTSCHRIFT   :  "12045802"; "15.02.18"; "15.02.18"; "FOLGELASTSCHRIFT"; "EREF + 141000038460MREF + 501002762799001CRED + DE69ZZZ00000055472SVWZ + 501002762799/GrundsteuerRate2018ABWA + StadtFreiburgStadtkasse"; "StadtFreiburg"; "DE63680501010002010012"; "FRSPDE66XXX"; "-219,57"; "EUR"; "Umsatzgebucht"
+2018-02-20 : L3.B : L3.F.MALLMANN : 7417 :    Miete und NK Mallmann GUTSCHRIFT   :  "12045802"; "20.02.18"; "20.02.18"; "GUTSCHRIFT"; "SVWZ + Nebenkosten2016MallmannLerchenstr.3"; "SusanneKroeger"; "DE92660908000003724352"; "GENODE61BBB"; "74,17"; "EUR"; "Umsatzgebucht"
+2018-02-28 : L3.EK.A.NK.HZ.GAS : L3.B : 29000 :    Gasrechnung FOLGELASTSCHRIFT   :  "12045802"; "28.02.18"; "28.02.18"; "FOLGELASTSCHRIFT"; "EREF + LS1020000495704MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag02/2018KD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-290,00"; "EUR"; "Umsatzgebucht"
+2018-02-28 : L3.V.KAU : L3.B : 70000 :    Kaution LASTSCHRIFT   :  "DE32680501010012045802"; "28.02.18"; "28.02.18"; "LASTSCHRIFT"; "SVWZ + Sparkassenbuch3205197997"; "Dr.MatthiasHolschneider"; "DE87680501013205197997"; "FRSPDE66XXX"; "-700,00"; "EUR"; "Umsatzgebucht"
+2018-02-28 : L3.V.KAU : L3.B : 62000 :    Kautionsanlage LASTSCHRIFT   :  "DE32680501010012045802"; "28.02.18"; "28.02.18"; "LASTSCHRIFT"; "SVWZ + Sparkassenbuch3205198013"; "Dr.MatthiasHolschneider"; "DE43680501013205198013"; "FRSPDE66XXX"; "-620,00"; "EUR"; "Umsatzgebucht"
+2018-02-28 : L3.B : L3.V.KAU : 64081 :    Kautionskonto UMBUCHUNG   :  "DE32680501010012045802"; "28.02.18"; "28.02.18"; "UMBUCHUNG"; "Kontoaufloesung3204853050"; ""; "3204853050"; "68050101"; "640,81"; "EUR"; "Umsatzgebucht"
+2018-02-28 : L3.B : L3.F.SELBACH : 40000 :    Miete und NK Selbach DAUERAUFTRAG   :  "12045802"; "28.02.18"; "28.02.18"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "Dr.JochenundSusanneSelbach"; "DE94673900000086317109"; "GENODE61WTH"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-02-28 : L3.V.KAU : L3.B : 70000 :    Sparkassenbuch 3205197966 LASTSCHRIFT   :  "DE32680501010012045802"; "28.02.18"; "28.02.18"; "LASTSCHRIFT"; "SVWZ + Sparkassenbuch3205197966"; "Dr.MatthiasHolschneider"; "DE51680501013205197966"; "FRSPDE66XXX"; "-700,00"; "EUR"; "Umsatzgebucht"
+2018-02-28 : L3.EK.A.NK.STR : L3.B : 1700 :    Strom Badenova FOLGELASTSCHRIFT   :  "12045802"; "28.02.18"; "28.02.18"; "FOLGELASTSCHRIFT"; "EREF + 006141255286MREF + 7001007509088001CRED + DE37ZZZ00000023650SVWZ + BELEG006141255286/VK001007509088/ABSCHLAGFAELLIG28022018FUERFEBRUAR/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "-17,00"; "EUR"; "Umsatzgebucht"
+2018-02-28 : L3.EK.A.VER : L3.B : 720 :    Verwaltung ENTGELTABSCHLUSS   :  "DE32680501010012045802"; "28.02.18"; "28.02.18"; "ENTGELTABSCHLUSS"; "Abrechnung28.02.2018InformationzurAbrechnungEntgeltevom01.02.2018bis28.02.20187,20-Paketpreis1x6,506,50-Kontoauszüge1x0,700,70---------------Abrechnung28.02.20187,20-Rechnungsnummer.20180228-BW105-00012342909"; ""; ""; ""; "-7,20"; "EUR"; "Umsatzgebucht"
+2018-02-28 : L3.EK.A.NK.WA : L3.B : 16800 :    Wasser bnNetze FOLGELASTSCHRIFT   :  "12045802"; "28.02.18"; "28.02.18"; "FOLGELASTSCHRIFT"; "EREF + 006151467975MREF + 7001129416769001CRED + DE63ZZZ00000023667SVWZ + BELEG006151467975/VK001129416769/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDERABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "-168,00"; "EUR"; "Umsatzgebucht"
+2018-03-01 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "12045802"; "27.02.18"; "01.03.18"; "FOLGELASTSCHRIFT"; "EREF + 01-03-18KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzvorgemerkt"
+2018-03-01 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "01.03.18"; "01.03.18"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG03/18"; "ZurichDeutscherHeroldLebensversicherungAG"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2018-03-01 : L3.V.WR : L3.B : 49400 :    Kredit Tilgung und Zins FOLGELASTSCHRIFT   :  "12045802"; "27.02.18"; "01.03.18"; "FOLGELASTSCHRIFT"; "EREF + 02/182080452635494,00MREF + 220000077620CRED + DE92ZZZ00000032166SVWZ + 02/182080452635"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-494,00"; "EUR"; "Umsatzvorgemerkt"
+2018-03-01 : L3.B : L3.F.HARGESHEIMER : 130000 :    Miet und NK Hargesheimer DAUERAUFTRAG   :  "DE32680501010012045802"; "01.03.18"; "01.03.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse3,1.OG"; "LenaHargesheimer"; "DE93500105175423163373"; "INGDDEFFXXX"; "1300,00"; "EUR"; "Umsatzgebucht"
+2018-03-01 : L3.B : L3.F.KUERTI : 10795 :    Miete GUTSCHRIFT   :  "DE32680501010012045802"; "01.03.18"; "01.03.18"; "GUTSCHRIFT"; "SVWZ + NK14/15ABWA + CHRISTINEKRTI"; "ChristineKürti"; "DE36620500000010173422"; "HEISDE66XXX"; "107,95"; "EUR"; "Umsatzgebucht"
+2018-03-01 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "DE32680501010012045802"; "01.03.18"; "01.03.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2018-03-01 : L3.B : L3.F.NUERNBERG : 40000 :    Miete und NK Victoria Nuernberg DAUERAUFTRAG   :  "DE32680501010012045802"; "01.03.18"; "01.03.18"; "DAUERAUFTRAG"; "SVWZ + Miete"; "VictoriaNuernberg"; "DE66680900000038114409"; "GENODE61FR1"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-03-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2018-03-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2018-03-01 : L3.F.HARGESHEIMER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Hargesheimer   :  None
+2018-03-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2018-03-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2018-03-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2018-03-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2018-03-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2018-03-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2018-03-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2018-03-01 : L3.F.HARGESHEIMER : L3.EK.ER.MIETE : 112000 :  Mietforderung Hargesheimer   :  None
+2018-03-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2018-03-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2018-03-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2018-03-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2018-03-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2018-03-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2018-03-02 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "DE32680501010012045802"; "02.03.18"; "02.03.18"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "DirkSchmidt"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2018-03-02 : L3.B : L3.F.KIEFER : 40000 :    Miete und NK DAUERAUFTRAG   :  "DE32680501010012045802"; "02.03.18"; "02.03.18"; "DAUERAUFTRAG"; "SVWZ + Miete"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-03-05 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "DE32680501010012045802"; "05.03.18"; "05.03.18"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2018-03-05 : L3.EK.A.H.DITTRICH : L3.B : 5211 :    Schornsteinfeger ONLINE-UEBERWEISUNG   :  "DE32680501010012045802"; "05.03.18"; "05.03.18"; "ONLINE-UEBERWEISUNG"; "SVWZ + kunde561rechnung283-2018DATUM05.03.2018,10.11UHR1.TAN482017ABWA + PROF.DR.MATTHIASHOLSCHNEIDER"; "ChristianDittrich"; "DE08680501010012163313"; "FRSPDE66XXX"; "-52,11"; "EUR"; "Umsatzgebucht"
+2018-03-05 : L3.EK.A.H.DITTRICH : L3.B : 6627 :    Schornsteinfeger ONLINE-UEBERWEISUNG   :  "DE32680501010012045802"; "05.03.18"; "05.03.18"; "ONLINE-UEBERWEISUNG"; "SVWZ + kunde561rechnung284-2018DATUM05.03.2018,10.12UHR1.TAN484375ABWA + PROF.DR.MATTHIASHOLSCHNEIDER"; "ChristianDittrich"; "DE08680501010012163313"; "FRSPDE66XXX"; "-66,27"; "EUR"; "Umsatzgebucht"
+2018-03-06 : L3.B : L3.F.HARGESHEIMER : 125000 :    Miet und NK Hargesheimer GUTSCHRIFT   :  "DE32680501010012045802"; "06.03.18"; "06.03.18"; "GUTSCHRIFT"; "SVWZ + Kaution"; "LenaHargesheimer"; "DE93500105175423163373"; "INGDDEFFXXX"; "1250,00"; "EUR"; "Umsatzgebucht"
+2018-03-06 : L3.EK.A.NK.VER : L3.B : 13756 :    Zuerich Versicherung FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "06.03.18"; "06.03.18"; "FOLGELASTSCHRIFT"; "EREF + ABBUCHUNGSNR.1504061040318MREF + 02136008026CRED + DE38ZZZ00000023244SVWZ + HAFTPFLICHT400977393424BEITRAG010318137,56"; "ZurichInsuranceplcNiederlassungfürDeutschland"; "DE38500700100093778901"; "DEUTDEFFXXX"; "-137,56"; "EUR"; "Umsatzgebucht"
+2018-03-07 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "DE32680501010012045802"; "07.03.18"; "07.03.18"; "GUTSCHRIFT"; "EREF + CCB.65.UE.14218SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2018-03-12 : L3.EK.A.ST : L3.B : 218282 :    Steuer FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "12.03.18"; "12.03.18"; "FOLGELASTSCHRIFT"; "EREF + 024/351/62167-----L0803201800037497MREF + BE041277825590CRED + DE02HST00000026026SVWZ + STEUERNR024/351/62167EINK.ST1VJ.182.182,82EURABWA + BerlinerFinanzaemter"; "FinanzamtCharlottenburgi.A.d.BerlinerFinanzämter"; "DE94100500006600046463"; "BELADEBEXXX"; "-2182,82"; "EUR"; "Umsatzgebucht"
+2018-03-29 : L3.EK.A.NK.HZ.GAS : L3.B : 29000 :    Gasrechnung FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "29.03.18"; "29.03.18"; "FOLGELASTSCHRIFT"; "EREF + LS1020000510788MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag03/2018KD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-290,00"; "EUR"; "Umsatzgebucht"
+2018-03-29 : L3.B : L3.F.SELBACH : 40000 :    Miete und NK Selbach DAUERAUFTRAG   :  "DE32680501010012045802"; "29.03.18"; "29.03.18"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "Dr.JochenundSusanneSelbach"; "DE94673900000086317109"; "GENODE61WTH"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-03-29 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "DE32680501010012045802"; "29.03.18"; "29.03.18"; "ABSCHLUSS"; "10,9900v.H.fürKontoüberziehungenüberdieKreditliniehinausDieAnpassungdesÜberziehungszinssatzesrichtetsichnacheinerVeränderungdesReferenzzinssatzes(3-Monats-Euribor).MaßgeblichistderamletztenÜberprüfungsstichtagermittelteWertdesReferenzzinssatzes.DessenEntwicklungwirddieSparkasseregelmäßigam"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2018-03-29 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "DE32680501010012045802"; "29.03.18"; "29.03.18"; "ABSCHLUSS"; "25.03.,25.06.,25.09.und25.12.einesjedenJahresüberprüfen.HatsichderReferenzzinssatzummindestens0,2ProzentpunktegegenüberseinemmaßgeblichenWertbeiVertragsabschluss,bzw.derletztenZins-anpassungverändert,sinktodersteigtderÜberziehungszinssatzumebenso"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2018-03-29 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "DE32680501010012045802"; "29.03.18"; "29.03.18"; "ABSCHLUSS"; "Abrechnung29.03.2018InformationzurAbrechnungKontostandam29.03.2018113.646,07 + --------------Abrechnungszeitraumvom30.12.2017bis29.03.2018Abrechnung29.03.20180,00 + Sollzinssätzeam29.03.201810,9900v.H.fürDispositionskredit(aktuelleKreditlinie2.000,00)"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2018-03-29 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "DE32680501010012045802"; "29.03.18"; "29.03.18"; "ABSCHLUSS"; "vieleProzentpunktemitWirkungzum1.desFolgemonats.Kontostand/Rechnungsabschlussam29.03.2018113.646,07 + Rechnungsnummer.20180329-BW105-00012573213"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2018-03-29 : L3.EK.A.VER : L3.B : 650 :    Verwaltung ENTGELTABSCHLUSS   :  "DE32680501010012045802"; "29.03.18"; "29.03.18"; "ENTGELTABSCHLUSS"; "Abrechnung29.03.2018InformationzurAbrechnungEntgeltevom01.03.2018bis29.03.20186,50-Paketpreis1x6,506,50---------------Abrechnung29.03.20186,50-Rechnungsnummer.20180329-BW105-00012573214"; ""; ""; ""; "-6,50"; "EUR"; "Umsatzgebucht"
+2018-04-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2018-04-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2018-04-01 : L3.F.HARGESHEIMER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Hargesheimer   :  None
+2018-04-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2018-04-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2018-04-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2018-04-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2018-04-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2018-04-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2018-04-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2018-04-01 : L3.F.HARGESHEIMER : L3.EK.ER.MIETE : 112000 :  Mietforderung Hargesheimer   :  None
+2018-04-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2018-04-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2018-04-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2018-04-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2018-04-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2018-04-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2018-04-03 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "03.04.18"; "03.04.18"; "FOLGELASTSCHRIFT"; "EREF + 01-04-18KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2018-04-03 : L3.V.WR : L3.B : 49400 :    Kredit Tilgung und Zins FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "03.04.18"; "03.04.18"; "FOLGELASTSCHRIFT"; "EREF + 03/182080452635494,00MREF + 220000077620CRED + DE92ZZZ00000032166SVWZ + 03/182080452635"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-494,00"; "EUR"; "Umsatzgebucht"
+2018-04-03 : L3.B : L3.F.HARGESHEIMER : 130000 :    Miet und NK Hargesheimer DAUERAUFTRAG   :  "DE32680501010012045802"; "03.04.18"; "03.04.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse3,1.OG"; "LenaHargesheimer"; "DE93500105175423163373"; "INGDDEFFXXX"; "1300,00"; "EUR"; "Umsatzgebucht"
+2018-04-03 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "DE32680501010012045802"; "03.04.18"; "03.04.18"; "GUTSCHRIFT"; "EREF + CCB.93.UE.13390SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2018-04-03 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "DE32680501010012045802"; "03.04.18"; "03.04.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2018-04-03 : L3.B : L3.F.KIEFER : 40000 :    Miete und NK DAUERAUFTRAG   :  "DE32680501010012045802"; "03.04.18"; "03.04.18"; "DAUERAUFTRAG"; "SVWZ + Miete"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-04-04 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "04.04.18"; "04.04.18"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG04/18"; "ZurichDeutscherHeroldLebensversicherungAG"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2018-04-04 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "DE32680501010012045802"; "04.04.18"; "04.04.18"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "DirkSchmidt"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2018-04-04 : L3.B : L3.EK.A.NK.WA : 12936 :    Wasser bnNetze GUTSCHRIFT   :  "DE32680501010012045802"; "04.04.18"; "04.04.18"; "GUTSCHRIFT"; "EREF + 006181787558SVWZ + BELEG006181787558/VK001129416769GUTHABENBIS06042018/LERCHENSTRE3/PROF.DR.MATHIASHOLSCHNEIDEABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "129,36"; "EUR"; "Umsatzgebucht"
+2018-04-05 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "DE32680501010012045802"; "05.04.18"; "05.04.18"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2018-04-12 : L3.EK.A.NK.STR : L3.B : 1628 :    Strom Badenova FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "12.04.18"; "12.04.18"; "FOLGELASTSCHRIFT"; "EREF + 006192184000MREF + 7001007509088001CRED + DE37ZZZ00000023650SVWZ + BELEG006192184000/VK001007509088/FORDERUNGENFAELLIGBIS12042018/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "-16,28"; "EUR"; "Umsatzgebucht"
+2018-04-16 : L3.EK.A.NK.GARTEN : L3.B : 18280 :    Rabe DAUERAUFTRAG   :  "DE32680501010012045802"; "16.04.18"; "16.04.18"; "DAUERAUFTRAG"; "SVWZ + VorgartenpflegeLerchenstr."; "Rabe,Ladislav"; "DE50680501010012809062"; "FRSPDE66XXX"; "-182,80"; "EUR"; "Umsatzgebucht"
+2018-04-27 : L3.EK.A.H.KADEL : L3.B : 43804 :    Kadel ONLINE-UEBERWEISUNG   :  "DE32680501010012045802"; "27.04.18"; "27.04.18"; "ONLINE-UEBERWEISUNG"; "SVWZ + kunde21583rechnung61751112DATUM27.04.2018,08.45UHR1.TAN436886ABWA + PROF.DR.MATTHIASHOLSCHNEIDER"; "KADEL"; "DE80680501010002077024"; "FRSPDE66XXX"; "-438,04"; "EUR"; "Umsatzgebucht"
+2018-04-30 : L3.EK.A.NK.HZ.GAS : L3.B : 29000 :    Gasrechnung FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "30.04.18"; "30.04.18"; "FOLGELASTSCHRIFT"; "EREF + LS1020000525984MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag04/2018KD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-290,00"; "EUR"; "Umsatzgebucht"
+2018-04-30 : L3.B : L3.F.SELBACH : 40000 :    Miete und NK Selbach DAUERAUFTRAG   :  "DE32680501010012045802"; "30.04.18"; "30.04.18"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "Dr.JochenundSusanneSelbach"; "DE94673900000086317109"; "GENODE61WTH"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-04-30 : L3.EK.A.NK.STR : L3.B : 1700 :    Strom Badenova FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "30.04.18"; "30.04.18"; "FOLGELASTSCHRIFT"; "EREF + 006012971830MREF + 7001007509088001CRED + DE37ZZZ00000023650SVWZ + BELEG006012971830/VK001007509088/ABSCHLAGFAELLIG30042018FUERAPRIL/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "-17,00"; "EUR"; "Umsatzgebucht"
+2018-04-30 : L3.EK.A.VER : L3.B : 650 :    Verwaltung ENTGELTABSCHLUSS   :  "DE32680501010012045802"; "30.04.18"; "30.04.18"; "ENTGELTABSCHLUSS"; "Abrechnung30.04.2018InformationzurAbrechnungEntgeltevom30.03.2018bis30.04.20186,50-Paketpreis1x6,506,50---------------Abrechnung30.04.20186,50-Rechnungsnummer.20180430-BW105-00012889243"; ""; ""; ""; "-6,50"; "EUR"; "Umsatzgebucht"
+2018-04-30 : L3.EK.A.NK.WA : L3.B : 15800 :    Wasser bnNetze FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "30.04.18"; "30.04.18"; "FOLGELASTSCHRIFT"; "EREF + 006032909468MREF + 7001129416769001CRED + DE63ZZZ00000023667SVWZ + BELEG006032909468/VK001129416769/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDERABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "-158,00"; "EUR"; "Umsatzgebucht"
+2018-05-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2018-05-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2018-05-01 : L3.F.HARGESHEIMER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Hargesheimer   :  None
+2018-05-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2018-05-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2018-05-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2018-05-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2018-05-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2018-05-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2018-05-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2018-05-01 : L3.F.HARGESHEIMER : L3.EK.ER.MIETE : 112000 :  Mietforderung Hargesheimer   :  None
+2018-05-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2018-05-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2018-05-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2018-05-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2018-05-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2018-05-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2018-05-02 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "02.05.18"; "02.05.18"; "FOLGELASTSCHRIFT"; "EREF + 01-05-18KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2018-05-02 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "02.05.18"; "02.05.18"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG05/18"; "ZurichDeutscherHeroldLebensversicherungAG"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2018-05-02 : L3.V.WR : L3.B : 49400 :    Kredit Tilgung und Zins FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "02.05.18"; "02.05.18"; "FOLGELASTSCHRIFT"; "EREF + 04/182080452635494,00MREF + 220000077620CRED + DE92ZZZ00000032166SVWZ + 04/182080452635"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-494,00"; "EUR"; "Umsatzgebucht"
+2018-05-02 : L3.B : L3.F.HARGESHEIMER : 130000 :    Miet und NK Hargesheimer DAUERAUFTRAG   :  "DE32680501010012045802"; "02.05.18"; "02.05.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse3,1.OG"; "LenaHargesheimer"; "DE93500105175423163373"; "INGDDEFFXXX"; "1300,00"; "EUR"; "Umsatzgebucht"
+2018-05-02 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "DE32680501010012045802"; "02.05.18"; "02.05.18"; "GUTSCHRIFT"; "EREF + CCB.122.UE.10438SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2018-05-02 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "DE32680501010012045802"; "02.05.18"; "02.05.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2018-05-02 : L3.B : L3.F.KIEFER : 40000 :    Miete und NK DAUERAUFTRAG   :  "DE32680501010012045802"; "02.05.18"; "02.05.18"; "DAUERAUFTRAG"; "SVWZ + Miete"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-05-02 : L3.B : L3.F.NUERNBERG : 40000 :    Miete und NK Victoria Nuernberg DAUERAUFTRAG   :  "DE32680501010012045802"; "02.05.18"; "02.05.18"; "DAUERAUFTRAG"; "SVWZ + Miete"; "VictoriaNuernberg"; "DE66680900000038114409"; "GENODE61FR1"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-05-03 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "DE32680501010012045802"; "03.05.18"; "03.05.18"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "DirkSchmidt"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2018-05-04 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "DE32680501010012045802"; "04.05.18"; "04.05.18"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2018-05-15 : L3.EK.A.NK.GS : L3.B : 21957 :    Grundsteuer FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "15.05.18"; "15.05.18"; "FOLGELASTSCHRIFT"; "EREF + 140700195428MREF + 501002762799001CRED + DE69ZZZ00000055472SVWZ + 501002762799/GrundsteuerRate2018ABWA + StadtFreiburgStadtkasse"; "StadtFreiburg"; "DE63680501010002010012"; "FRSPDE66XXX"; "-219,57"; "EUR"; "Umsatzgebucht"
+2018-05-15 : L3.EK.A.NK.GARTEN : L3.B : 18280 :    Rabe DAUERAUFTRAG   :  "DE32680501010012045802"; "15.05.18"; "15.05.18"; "DAUERAUFTRAG"; "SVWZ + VorgartenpflegeLerchenstr."; "Rabe,Ladislav"; "DE50680501010012809062"; "FRSPDE66XXX"; "-182,80"; "EUR"; "Umsatzgebucht"
+2018-05-16 : L3.EK.MATTHIAS : L3.B : 10000 :    Privatentnahme BARGELDAUSZAHLUNG   :  "DE32680501010012045802"; "17.05.18"; "16.05.18"; "BARGELDAUSZAHLUNG"; "SVWZ + 2018-05-16T19.57.28Karte52021-12ABWA + 010897012//BerlinerSparkasse/DE"; "BerlinerSparkasse"; "DE02100500009000481705"; "BELADEBEXXX"; "-100,00"; "EUR"; "Umsatzgebucht"
+2018-05-21 : L3.EK.MATTHIAS : L3.B : 10000 :    Privatentnahme BARGELDAUSZAHLUNG   :  "DE32680501010012045802"; "22.05.18"; "21.05.18"; "BARGELDAUSZAHLUNG"; "SVWZ + 2018-05-21T20.04.18Karte52021-12ABWA + 095897116//BerlinerSparkasse/DE"; "BerlinerSparkasse"; "DE02100500009000481705"; "BELADEBEXXX"; "-100,00"; "EUR"; "Umsatzgebucht"
+2018-05-28 : L3.EK.A.ST : L3.B : 412897 :    Steuer FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "28.05.18"; "28.05.18"; "FOLGELASTSCHRIFT"; "EREF + 024/351/62167-----L2405201800000513MREF + BE041277825590CRED + DE02HST00000026026SVWZ + STEUERNR024/351/62167EINK.ST20164.128,97EURABWA + BerlinerFinanzaemter"; "FinanzamtCharlottenburgi.A.d.BerlinerFinanzämter"; "DE94100500006600046463"; "BELADEBEXXX"; "-4128,97"; "EUR"; "Umsatzgebucht"
+2018-05-29 : L3.B : L3.F.SELBACH : 40000 :    Miete und NK Selbach DAUERAUFTRAG   :  "DE32680501010012045802"; "29.05.18"; "29.05.18"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "Dr.JochenundSusanneSelbach"; "DE94673900000086317109"; "GENODE61WTH"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-05-30 : L3.EK.A.NK.HZ.GAS : L3.B : 29000 :    Gasrechnung FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "30.05.18"; "30.05.18"; "FOLGELASTSCHRIFT"; "EREF + LS1020000541122MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag05/2018KD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-290,00"; "EUR"; "Umsatzgebucht"
+2018-05-30 : L3.EK.A.NK.STR : L3.B : 1700 :    Strom Badenova FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "30.05.18"; "30.05.18"; "FOLGELASTSCHRIFT"; "EREF + 006151520081MREF + 7001007509088001CRED + DE37ZZZ00000023650SVWZ + BELEG006151520081/VK001007509088/ABSCHLAGFAELLIG30052018FUERMAI/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "-17,00"; "EUR"; "Umsatzgebucht"
+2018-05-30 : L3.EK.A.VER : L3.B : 720 :    Verwaltung ENTGELTABSCHLUSS   :  "DE32680501010012045802"; "30.05.18"; "30.05.18"; "ENTGELTABSCHLUSS"; "Abrechnung30.05.2018InformationzurAbrechnungEntgeltevom01.05.2018bis30.05.20187,20-Paketpreis1x6,506,50-Kontoauszüge1x0,700,70---------------Abrechnung30.05.20187,20-Rechnungsnummer.20180530-BW105-00013074649"; ""; ""; ""; "-7,20"; "EUR"; "Umsatzgebucht"
+2018-05-30 : L3.EK.A.NK.WA : L3.B : 15800 :    Wasser bnNetze FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "30.05.18"; "30.05.18"; "FOLGELASTSCHRIFT"; "EREF + 006013016877MREF + 7001129416769001CRED + DE63ZZZ00000023667SVWZ + BELEG006013016877/VK001129416769/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDERABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "-158,00"; "EUR"; "Umsatzgebucht"
+2018-06-01 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "01.06.18"; "01.06.18"; "FOLGELASTSCHRIFT"; "EREF + 01-06-18KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2018-06-01 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "01.06.18"; "01.06.18"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG06/18"; "ZurichDeutscherHeroldLebensversicherungAG"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2018-06-01 : L3.V.WR : L3.B : 49400 :    Kredit Tilgung und Zins FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "01.06.18"; "01.06.18"; "FOLGELASTSCHRIFT"; "EREF + 05/182080452635494,00MREF + 220000077620CRED + DE92ZZZ00000032166SVWZ + 05/182080452635"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-494,00"; "EUR"; "Umsatzgebucht"
+2018-06-01 : L3.B : L3.F.HARGESHEIMER : 130000 :    Miet und NK Hargesheimer DAUERAUFTRAG   :  "DE32680501010012045802"; "01.06.18"; "01.06.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse3,1.OG"; "LenaHargesheimer"; "DE93500105175423163373"; "INGDDEFFXXX"; "1300,00"; "EUR"; "Umsatzgebucht"
+2018-06-01 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "DE32680501010012045802"; "01.06.18"; "01.06.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2018-06-01 : L3.B : L3.F.KIEFER : 40000 :    Miete und NK DAUERAUFTRAG   :  "DE32680501010012045802"; "01.06.18"; "01.06.18"; "DAUERAUFTRAG"; "SVWZ + Miete"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-06-01 : L3.B : L3.F.NUERNBERG : 40000 :    Miete und NK Victoria Nuernberg DAUERAUFTRAG   :  "DE32680501010012045802"; "01.06.18"; "01.06.18"; "DAUERAUFTRAG"; "SVWZ + Miete"; "VictoriaNuernberg"; "DE66680900000038114409"; "GENODE61FR1"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-06-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2018-06-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2018-06-01 : L3.F.HARGESHEIMER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Hargesheimer   :  None
+2018-06-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2018-06-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2018-06-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2018-06-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2018-06-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2018-06-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2018-06-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2018-06-01 : L3.F.HARGESHEIMER : L3.EK.ER.MIETE : 112000 :  Mietforderung Hargesheimer   :  None
+2018-06-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2018-06-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2018-06-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2018-06-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2018-06-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2018-06-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2018-06-04 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "DE32680501010012045802"; "04.06.18"; "04.06.18"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "DirkSchmidt"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2018-06-05 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "DE32680501010012045802"; "05.06.18"; "05.06.18"; "GUTSCHRIFT"; "EREF + CCB.156.UE.23525SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2018-06-05 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "DE32680501010012045802"; "05.06.18"; "05.06.18"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2018-06-11 : L3.EK.A.ST : L3.B : 365900 :    Steuer FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "11.06.18"; "11.06.18"; "FOLGELASTSCHRIFT"; "EREF + 024/351/62167-----L0706201800038433MREF + BE041277825590CRED + DE02HST00000026026SVWZ + STEUERNR024/351/62167EINK.ST2VJ.183.659,00EURABWA + BerlinerFinanzaemter"; "FinanzamtCharlottenburgi.A.d.BerlinerFinanzämter"; "DE94100500006600046463"; "BELADEBEXXX"; "-3659,00"; "EUR"; "Umsatzgebucht"
+2018-06-15 : L3.EK.A.NK.GARTEN : L3.B : 18280 :    Rabe DAUERAUFTRAG   :  "DE32680501010012045802"; "15.06.18"; "15.06.18"; "DAUERAUFTRAG"; "SVWZ + VorgartenpflegeLerchenstr."; "Rabe,Ladislav"; "DE50680501010012809062"; "FRSPDE66XXX"; "-182,80"; "EUR"; "Umsatzgebucht"
+2018-06-29 : L3.EK.A.NK.HZ.GAS : L3.B : 29000 :    Gasrechnung FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "29.06.18"; "29.06.18"; "FOLGELASTSCHRIFT"; "EREF + LS1020000556375MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag06/2018KD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-290,00"; "EUR"; "Umsatzgebucht"
+2018-06-29 : L3.B : L3.F.SELBACH : 40000 :    Miete und NK Selbach DAUERAUFTRAG   :  "DE32680501010012045802"; "29.06.18"; "29.06.18"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "Dr.JochenundSusanneSelbach"; "DE94673900000086317109"; "GENODE61WTH"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-06-29 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "DE32680501010012045802"; "29.06.18"; "29.06.18"; "ABSCHLUSS"; "10,9900v.H.fürKontoüberziehungenüberdieKreditliniehinausDieAnpassungdesÜberziehungszinssatzesrichtetsichnacheinerVeränderungdesReferenzzinssatzes(3-Monats-Euribor).MaßgeblichistderamletztenÜberprüfungsstichtagermittelteWertdesReferenzzinssatzes.DessenEntwicklungwirddieSparkasseregelmäßigam"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2018-06-29 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "DE32680501010012045802"; "29.06.18"; "29.06.18"; "ABSCHLUSS"; "25.03.,25.06.,25.09.und25.12.einesjedenJahresüberprüfen.HatsichderReferenzzinssatzummindestens0,2ProzentpunktegegenüberseinemmaßgeblichenWertbeiVertragsabschluss,bzw.derletztenZins-anpassungverändert,sinktodersteigtderÜberziehungszinssatzumebenso"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2018-06-29 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "DE32680501010012045802"; "29.06.18"; "29.06.18"; "ABSCHLUSS"; "Abrechnung29.06.2018InformationzurAbrechnungKontostandam29.06.2018115.830,28 + --------------Abrechnungszeitraumvom30.03.2018bis29.06.2018Abrechnung29.06.20180,00 + Sollzinssätzeam29.06.201810,9900v.H.fürDispositionskredit(aktuelleKreditlinie2.000,00)"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2018-06-29 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "DE32680501010012045802"; "29.06.18"; "29.06.18"; "ABSCHLUSS"; "vieleProzentpunktemitWirkungzum1.desFolgemonats.Kontostand/Rechnungsabschlussam29.06.2018115.830,28 + Rechnungsnummer.20180629-BW105-00013305238"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2018-06-29 : L3.EK.A.VER : L3.B : 650 :    Verwaltung ENTGELTABSCHLUSS   :  "DE32680501010012045802"; "29.06.18"; "29.06.18"; "ENTGELTABSCHLUSS"; "Abrechnung29.06.2018InformationzurAbrechnungEntgeltevom31.05.2018bis29.06.20186,50-Paketpreis1x6,506,50---------------Abrechnung29.06.20186,50-Rechnungsnummer.20180629-BW105-00013305239"; ""; ""; ""; "-6,50"; "EUR"; "Umsatzgebucht"
+2018-07-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2018-07-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2018-07-01 : L3.F.HARGESHEIMER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Hargesheimer   :  None
+2018-07-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2018-07-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2018-07-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2018-07-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2018-07-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2018-07-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2018-07-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2018-07-01 : L3.F.HARGESHEIMER : L3.EK.ER.MIETE : 112000 :  Mietforderung Hargesheimer   :  None
+2018-07-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2018-07-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2018-07-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2018-07-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2018-07-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2018-07-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2018-07-02 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "02.07.18"; "02.07.18"; "FOLGELASTSCHRIFT"; "EREF + 01-07-18KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2018-07-02 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "02.07.18"; "02.07.18"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG07/18"; "ZurichDeutscherHeroldLebensversicherungAG"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2018-07-02 : L3.V.WR : L3.B : 49400 :    Kredit Tilgung und Zins FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "02.07.18"; "02.07.18"; "FOLGELASTSCHRIFT"; "EREF + 06/182080452635494,00MREF + 220000077620CRED + DE92ZZZ00000032166SVWZ + 06/182080452635"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-494,00"; "EUR"; "Umsatzgebucht"
+2018-07-02 : L3.B : L3.F.HARGESHEIMER : 130000 :    Miet und NK Hargesheimer DAUERAUFTRAG   :  "DE32680501010012045802"; "02.07.18"; "02.07.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse3,1.OG"; "LenaHargesheimer"; "DE93500105175423163373"; "INGDDEFFXXX"; "1300,00"; "EUR"; "Umsatzgebucht"
+2018-07-02 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "DE32680501010012045802"; "02.07.18"; "02.07.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2018-07-02 : L3.B : L3.F.KIEFER : 40000 :    Miete und NK DAUERAUFTRAG   :  "DE32680501010012045802"; "02.07.18"; "02.07.18"; "DAUERAUFTRAG"; "SVWZ + Miete"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-07-02 : L3.B : L3.F.NUERNBERG : 40000 :    Miete und NK Victoria Nuernberg DAUERAUFTRAG   :  "DE32680501010012045802"; "02.07.18"; "02.07.18"; "DAUERAUFTRAG"; "SVWZ + Miete"; "VictoriaNuernberg"; "DE66680900000038114409"; "GENODE61FR1"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-07-02 : L3.EK.A.NK.STR : L3.B : 1700 :    Strom Badenova FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "02.07.18"; "02.07.18"; "FOLGELASTSCHRIFT"; "EREF + 006161943338MREF + 7001007509088001CRED + DE37ZZZ00000023650SVWZ + BELEG006161943338/VK001007509088/ABSCHLAGFAELLIG30062018FUERJUNI/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "-17,00"; "EUR"; "Umsatzgebucht"
+2018-07-02 : L3.EK.A.NK.WA : L3.B : 15800 :    Wasser bnNetze FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "02.07.18"; "02.07.18"; "FOLGELASTSCHRIFT"; "EREF + 006004446987MREF + 7001129416769001CRED + DE63ZZZ00000023667SVWZ + BELEG006004446987/VK001129416769/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDERABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "-158,00"; "EUR"; "Umsatzgebucht"
+2018-07-03 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "DE32680501010012045802"; "03.07.18"; "03.07.18"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "DirkSchmidt"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2018-07-04 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "DE32680501010012045802"; "04.07.18"; "04.07.18"; "GUTSCHRIFT"; "EREF + CCB.185.UE.22311SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2018-07-05 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "DE32680501010012045802"; "05.07.18"; "05.07.18"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2018-07-16 : L3.EK.A.NK.GARTEN : L3.B : 18280 :    Rabe DAUERAUFTRAG   :  "DE32680501010012045802"; "16.07.18"; "16.07.18"; "DAUERAUFTRAG"; "SVWZ + VorgartenpflegeLerchenstr."; "Rabe,Ladislav"; "DE50680501010012809062"; "FRSPDE66XXX"; "-182,80"; "EUR"; "Umsatzgebucht"
+2018-07-30 : L3.B : L3.F.SELBACH : 40000 :    Miete und NK Selbach DAUERAUFTRAG   :  "DE32680501010012045802"; "30.07.18"; "30.07.18"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "Dr.JochenundSusanneSelbach"; "DE94673900000086317109"; "GENODE61WTH"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-07-30 : L3.EK.A.NK.STR : L3.B : 1700 :    Strom Badenova FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "30.07.18"; "30.07.18"; "FOLGELASTSCHRIFT"; "EREF + 006013039252MREF + 7001007509088001CRED + DE37ZZZ00000023650SVWZ + BELEG006013039252/VK001007509088/ABSCHLAGFAELLIG30072018FUERJULI/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "-17,00"; "EUR"; "Umsatzgebucht"
+2018-07-30 : L3.EK.A.NK.HZ.ABR : L3.B : 43346 :    Techem Ablese Service FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "30.07.18"; "30.07.18"; "FOLGELASTSCHRIFT"; "EREF + 9031600585MREF + 0001000000001214CRED + DE31ZZZ00000236867SVWZ + RG008373478916.7.2018Glaeubiger-ID.DE31ZZZ00000236867IhreMandatsreferenzbeiuns.0001000000001214"; "TECHEMEnergyServices"; "DE16500400000582454500"; "COBADEFFXXX"; "-433,46"; "EUR"; "Umsatzgebucht"
+2018-07-30 : L3.EK.A.VER : L3.B : 650 :    Verwaltung ENTGELTABSCHLUSS   :  "DE32680501010012045802"; "31.07.18"; "30.07.18"; "ENTGELTABSCHLUSS"; "Abrechnung31.07.2018InformationzurAbrechnungEntgeltevom30.06.2018bis31.07.20186,50-Paketpreis1x6,506,50---------------Abrechnung31.07.20186,50-Rechnungsnummer.20180731-BW105-00013615745"; ""; ""; ""; "-6,50"; "EUR"; "Umsatzgebucht"
+2018-07-30 : L3.EK.A.NK.WA : L3.B : 15800 :    Wasser bnNetze FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "30.07.18"; "30.07.18"; "FOLGELASTSCHRIFT"; "EREF + 006171578249MREF + 7001129416769001CRED + DE63ZZZ00000023667SVWZ + BELEG006171578249/VK001129416769/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDERABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "-158,00"; "EUR"; "Umsatzgebucht"
+2018-07-31 : L3.EK.A.NK.HZ.GAS : L3.B : 29000 :    Gasrechnung FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "31.07.18"; "31.07.18"; "FOLGELASTSCHRIFT"; "EREF + LS1020000571657MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag07/2018KD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-290,00"; "EUR"; "Umsatzgebucht"
+2018-08-01 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "01.08.18"; "01.08.18"; "FOLGELASTSCHRIFT"; "EREF + 01-08-18KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2018-08-01 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "01.08.18"; "01.08.18"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG08/18"; "ZurichDeutscherHeroldLebensversicherungAG"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2018-08-01 : L3.V.WR : L3.B : 49400 :    Kredit Tilgung und Zins FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "01.08.18"; "01.08.18"; "FOLGELASTSCHRIFT"; "EREF + 07/182080452635494,00MREF + 220000077620CRED + DE92ZZZ00000032166SVWZ + 07/182080452635"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-494,00"; "EUR"; "Umsatzgebucht"
+2018-08-01 : L3.B : L3.F.HARGESHEIMER : 130000 :    Miet und NK Hargesheimer DAUERAUFTRAG   :  "DE32680501010012045802"; "01.08.18"; "01.08.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse3,1.OG"; "LenaHargesheimer"; "DE93500105175423163373"; "INGDDEFFXXX"; "1300,00"; "EUR"; "Umsatzgebucht"
+2018-08-01 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "DE32680501010012045802"; "01.08.18"; "01.08.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2018-08-01 : L3.B : L3.F.KIEFER : 40000 :    Miete und NK DAUERAUFTRAG   :  "DE32680501010012045802"; "01.08.18"; "01.08.18"; "DAUERAUFTRAG"; "SVWZ + Miete"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-08-01 : L3.B : L3.F.NUERNBERG : 40000 :    Miete und NK Victoria Nuernberg DAUERAUFTRAG   :  "DE32680501010012045802"; "01.08.18"; "01.08.18"; "DAUERAUFTRAG"; "SVWZ + Miete"; "VictoriaNuernberg"; "DE66680900000038114409"; "GENODE61FR1"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-08-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2018-08-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2018-08-01 : L3.F.HARGESHEIMER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Hargesheimer   :  None
+2018-08-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2018-08-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2018-08-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2018-08-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2018-08-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2018-08-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2018-08-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2018-08-01 : L3.F.HARGESHEIMER : L3.EK.ER.MIETE : 112000 :  Mietforderung Hargesheimer   :  None
+2018-08-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2018-08-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2018-08-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2018-08-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2018-08-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2018-08-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2018-08-02 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "DE32680501010012045802"; "02.08.18"; "02.08.18"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "DirkSchmidt"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2018-08-03 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "DE32680501010012045802"; "03.08.18"; "03.08.18"; "GUTSCHRIFT"; "EREF + CCB.214.UE.285452SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2018-08-03 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "DE32680501010012045802"; "03.08.18"; "03.08.18"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2018-08-15 : L3.EK.A.NK.GS : L3.B : 21957 :    Grundsteuer FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "15.08.18"; "15.08.18"; "FOLGELASTSCHRIFT"; "EREF + 140900147304MREF + 501002762799001CRED + DE69ZZZ00000055472SVWZ + 501002762799/GrundsteuerRate2018ABWA + StadtFreiburgStadtkasse"; "StadtFreiburg"; "DE63680501010002010012"; "FRSPDE66XXX"; "-219,57"; "EUR"; "Umsatzgebucht"
+2018-08-15 : L3.EK.A.NK.GARTEN : L3.B : 18280 :    Rabe DAUERAUFTRAG   :  "DE32680501010012045802"; "15.08.18"; "15.08.18"; "DAUERAUFTRAG"; "SVWZ + VorgartenpflegeLerchenstr."; "Rabe,Ladislav"; "DE50680501010012809062"; "FRSPDE66XXX"; "-182,80"; "EUR"; "Umsatzgebucht"
+2018-08-29 : L3.B : L3.F.SELBACH : 40000 :    Miete und NK Selbach DAUERAUFTRAG   :  "DE32680501010012045802"; "29.08.18"; "29.08.18"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "Dr.JochenundSusanneSelbach"; "DE94673900000086317109"; "GENODE61WTH"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-08-30 : L3.EK.A.NK.STR : L3.B : 1700 :    Strom Badenova FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "30.08.18"; "30.08.18"; "FOLGELASTSCHRIFT"; "EREF + 006181834791MREF + 7001007509088001CRED + DE37ZZZ00000023650SVWZ + BELEG006181834791/VK001007509088/ABSCHLAGFAELLIG30082018FUERAUGUST/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "-17,00"; "EUR"; "Umsatzgebucht"
+2018-08-30 : L3.EK.A.VER : L3.B : 720 :    Verwaltung ENTGELTABSCHLUSS   :  "DE32680501010012045802"; "31.08.18"; "30.08.18"; "ENTGELTABSCHLUSS"; "Abrechnung31.08.2018InformationzurAbrechnungEntgeltevom01.08.2018bis31.08.20187,20-Paketpreis1x6,506,50-Kontoauszüge1x0,700,70---------------Abrechnung31.08.20187,20-Rechnungsnummer.20180831-BW105-00013804931"; ""; ""; ""; "-7,20"; "EUR"; "Umsatzgebucht"
+2018-08-30 : L3.EK.A.NK.WA : L3.B : 15800 :    Wasser bnNetze FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "30.08.18"; "30.08.18"; "FOLGELASTSCHRIFT"; "EREF + 006063184462MREF + 7001129416769001CRED + DE63ZZZ00000023667SVWZ + BELEG006063184462/VK001129416769/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDERABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "-158,00"; "EUR"; "Umsatzgebucht"
+2018-08-31 : L3.EK.A.NK.HZ.GAS : L3.B : 29000 :    Gasrechnung FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "31.08.18"; "31.08.18"; "FOLGELASTSCHRIFT"; "EREF + LS1020000586922MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag08/2018KD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-290,00"; "EUR"; "Umsatzgebucht"
+2018-09-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2018-09-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2018-09-01 : L3.F.HARGESHEIMER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Hargesheimer   :  None
+2018-09-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2018-09-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2018-09-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2018-09-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2018-09-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2018-09-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2018-09-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2018-09-01 : L3.F.HARGESHEIMER : L3.EK.ER.MIETE : 112000 :  Mietforderung Hargesheimer   :  None
+2018-09-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2018-09-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2018-09-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2018-09-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2018-09-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2018-09-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2018-09-03 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "03.09.18"; "03.09.18"; "FOLGELASTSCHRIFT"; "EREF + 01-09-18KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2018-09-03 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "03.09.18"; "03.09.18"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG09/18"; "ZurichDeutscherHeroldLebensversicherungAG"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2018-09-03 : L3.V.WR : L3.B : 49400 :    Kredit Tilgung und Zins FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "03.09.18"; "03.09.18"; "FOLGELASTSCHRIFT"; "EREF + 08/182080452635494,00MREF + 220000077620CRED + DE92ZZZ00000032166SVWZ + 08/182080452635"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-494,00"; "EUR"; "Umsatzgebucht"
+2018-09-03 : L3.B : L3.F.HARGESHEIMER : 130000 :    Miet und NK Hargesheimer DAUERAUFTRAG   :  "DE32680501010012045802"; "03.09.18"; "03.09.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse3,1.OG"; "LenaHargesheimer"; "DE93500105175423163373"; "INGDDEFFXXX"; "1300,00"; "EUR"; "Umsatzgebucht"
+2018-09-03 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "DE32680501010012045802"; "03.09.18"; "03.09.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2018-09-03 : L3.B : L3.F.KIEFER : 40000 :    Miete und NK DAUERAUFTRAG   :  "DE32680501010012045802"; "03.09.18"; "03.09.18"; "DAUERAUFTRAG"; "SVWZ + Miete"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-09-03 : L3.B : L3.F.NUERNBERG : 40000 :    Miete und NK Victoria Nuernberg DAUERAUFTRAG   :  "DE32680501010012045802"; "03.09.18"; "03.09.18"; "DAUERAUFTRAG"; "SVWZ + Miete"; "VictoriaNuernberg"; "DE66680900000038114409"; "GENODE61FR1"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-09-04 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "DE32680501010012045802"; "04.09.18"; "04.09.18"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "DirkSchmidt"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2018-09-04 : L3.EK.A.NK.VER : L3.B : 41838 :    SV-Gebaeude FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "04.09.18"; "04.09.18"; "FOLGELASTSCHRIFT"; "EREF + HV0800074831120180903000012MREF + 00001805596CRED + DE28HV100000088608SVWZ + Gebaeude080.012.0074831.1Zeitraum01.09.2018-01.09.2019ABWA + HelvetiaSchweizerischeVersicherungsgesellschaftAG"; "Helvetiaschweiz.Versicherung"; "DE18500500000025192030"; "HELADEFFXXX"; "-418,38"; "EUR"; "Umsatzgebucht"
+2018-09-05 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "DE32680501010012045802"; "05.09.18"; "05.09.18"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2018-09-07 : L3.F.BRAENDLE : L3.B : 64000 :    Miet und NK ONLINE-UEBERWEISUNG   :  "DE32680501010012045802"; "07.09.18"; "07.09.18"; "ONLINE-UEBERWEISUNG"; "SVWZ + KautionLerchenstrasseDATUM06.09.2018,21.58UHR1.TAN614109ABWA + PROF.DR.MATTHIASHOLSCHNEIDER"; "DominikBraendle"; "DE02680642220000309508"; "GENODE61GUN"; "-640,00"; "EUR"; "Umsatzgebucht"
+2018-09-07 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "DE32680501010012045802"; "07.09.18"; "07.09.18"; "GUTSCHRIFT"; "EREF + CCB.249.UE.97980SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2018-09-10 : L3.EK.A.ST : L3.B : 365900 :    Steuer FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "10.09.18"; "10.09.18"; "FOLGELASTSCHRIFT"; "EREF + 024/351/62167-----L0609201800038734MREF + BE041277825590CRED + DE02HST00000026026SVWZ + STEUERNR024/351/62167EINK.ST3VJ.183.659,00EURABWA + BerlinerFinanzaemter"; "FinanzamtCharlottenburgi.A.d.BerlinerFinanzämter"; "DE94100500006600046463"; "BELADEBEXXX"; "-3659,00"; "EUR"; "Umsatzgebucht"
+2018-09-17 : L3.EK.A.NK.GARTEN : L3.B : 18280 :    Rabe DAUERAUFTRAG   :  "DE32680501010012045802"; "17.09.18"; "17.09.18"; "DAUERAUFTRAG"; "SVWZ + VorgartenpflegeLerchenstr."; "Rabe,Ladislav"; "DE50680501010012809062"; "FRSPDE66XXX"; "-182,80"; "EUR"; "Umsatzgebucht"
+2018-09-17 : L3.EK.A.NK.VER : L3.B : 7057 :    SV-Gebaeude FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "17.09.18"; "17.09.18"; "FOLGELASTSCHRIFT"; "EREF + HV0800390905420180917000010MREF + 00003301682CRED + DE28HV100000088608SVWZ + Privat080.010.0390905.4Zeitraum15.09.2018-15.09.2019ABWA + HelvetiaSchweizerischeVersicherungsgesellschaftAG"; "Helvetiaschweiz.Versicherung"; "DE18500500000025192030"; "HELADEFFXXX"; "-70,57"; "EUR"; "Umsatzgebucht"
+2018-09-28 : L3.EK.A.NK.HZ.GAS : L3.B : 29000 :    Gasrechnung FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "28.09.18"; "28.09.18"; "FOLGELASTSCHRIFT"; "EREF + LS1020000602213MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag09/2018KD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-290,00"; "EUR"; "Umsatzgebucht"
+2018-09-28 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "DE32680501010012045802"; "28.09.18"; "28.09.18"; "ABSCHLUSS"; "10,9900v.H.fürKontoüberziehungenüberdieKreditliniehinausDieAnpassungdesÜberziehungszinssatzesrichtetsichnacheinerVeränderungdesReferenzzinssatzes(3-Monats-Euribor).MaßgeblichistderamletztenÜberprüfungsstichtagermittelteWertdesReferenzzinssatzes.DessenEntwicklungwirddieSparkasseregelmäßigam"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2018-09-28 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "DE32680501010012045802"; "28.09.18"; "28.09.18"; "ABSCHLUSS"; "25.03.,25.06.,25.09.und25.12.einesjedenJahresüberprüfen.HatsichderReferenzzinssatzummindestens0,2ProzentpunktegegenüberseinemmaßgeblichenWertbeiVertragsabschluss,bzw.derletztenZins-anpassungverändert,sinktodersteigtderÜberziehungszinssatzumebenso"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2018-09-28 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "DE32680501010012045802"; "28.09.18"; "28.09.18"; "ABSCHLUSS"; "Abrechnung28.09.2018InformationzurAbrechnungKontostandam28.09.2018120.931,01 + --------------Abrechnungszeitraumvom30.06.2018bis28.09.2018Abrechnung28.09.20180,00 + Sollzinssätzeam28.09.201810,9900v.H.fürDispositionskredit(aktuelleKreditlinie2.000,00)"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2018-09-28 : L3.EK.A.VER : L3.B : 0 :    Verwaltung ABSCHLUSS   :  "DE32680501010012045802"; "28.09.18"; "28.09.18"; "ABSCHLUSS"; "vieleProzentpunktemitWirkungzum1.desFolgemonats.Kontostand/Rechnungsabschlussam28.09.2018120.931,01 + Rechnungsnummer.20180928-BW105-00014044657"; ""; ""; ""; "0,00"; "EUR"; "Umsatzgebucht"
+2018-09-28 : L3.EK.A.VER : L3.B : 650 :    Verwaltung ENTGELTABSCHLUSS   :  "DE32680501010012045802"; "28.09.18"; "28.09.18"; "ENTGELTABSCHLUSS"; "Abrechnung28.09.2018InformationzurAbrechnungEntgeltevom01.09.2018bis28.09.20186,50-Paketpreis1x6,506,50---------------Abrechnung28.09.20186,50-Rechnungsnummer.20180928-BW105-00014044658"; ""; ""; ""; "-6,50"; "EUR"; "Umsatzgebucht"
+2018-10-01 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "01.10.18"; "01.10.18"; "FOLGELASTSCHRIFT"; "EREF + 01-10-18KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2018-10-01 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "01.10.18"; "01.10.18"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG10/18"; "ZurichDeutscherHeroldLebensversicherungAG"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2018-10-01 : L3.V.WR : L3.B : 49400 :    Kredit Tilgung und Zins FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "01.10.18"; "01.10.18"; "FOLGELASTSCHRIFT"; "EREF + 09/182080452635494,00MREF + 220000077620CRED + DE92ZZZ00000032166SVWZ + 09/182080452635"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-494,00"; "EUR"; "Umsatzgebucht"
+2018-10-01 : L3.B : L3.F.HARGESHEIMER : 130000 :    Miet und NK Hargesheimer DAUERAUFTRAG   :  "DE32680501010012045802"; "01.10.18"; "01.10.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse3,1.OG"; "LenaHargesheimer"; "DE93500105175423163373"; "INGDDEFFXXX"; "1300,00"; "EUR"; "Umsatzgebucht"
+2018-10-01 : L3.B : L3.F.NEMETS : 42000 :    Miet und Nebenkosten GUTSCHRIFT   :  "DE32680501010012045802"; "01.10.18"; "01.10.18"; "GUTSCHRIFT"; "EREF + CCB.274.UE.178167SVWZ + Miete"; "YULIANEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatzgebucht"
+2018-10-01 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "DE32680501010012045802"; "01.10.18"; "01.10.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2018-10-01 : L3.B : L3.F.KIEFER : 40000 :    Miete und NK DAUERAUFTRAG   :  "DE32680501010012045802"; "01.10.18"; "01.10.18"; "DAUERAUFTRAG"; "SVWZ + Miete"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-10-01 : L3.B : L3.F.SELBACH : 40000 :    Miete und NK Selbach DAUERAUFTRAG   :  "DE32680501010012045802"; "01.10.18"; "01.10.18"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "Dr.JochenundSusanneSelbach"; "DE94673900000086317109"; "GENODE61WTH"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-10-01 : L3.B : L3.F.NUERNBERG : 40000 :    Miete und NK Victoria Nuernberg DAUERAUFTRAG   :  "DE32680501010012045802"; "01.10.18"; "01.10.18"; "DAUERAUFTRAG"; "SVWZ + Miete"; "VictoriaNuernberg"; "DE66680900000038114409"; "GENODE61FR1"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-10-01 : L3.EK.A.NK.STR : L3.B : 1700 :    Strom Badenova FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "01.10.18"; "01.10.18"; "FOLGELASTSCHRIFT"; "EREF + 006181866725MREF + 7001007509088001CRED + DE37ZZZ00000023650SVWZ + BELEG006181866725/VK001007509088/ABSCHLAGFAELLIG30092018FUERSEPTEMBER/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "-17,00"; "EUR"; "Umsatzgebucht"
+2018-10-01 : L3.EK.A.NK.WA : L3.B : 15800 :    Wasser bnNetze FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "01.10.18"; "01.10.18"; "FOLGELASTSCHRIFT"; "EREF + 006181876345MREF + 7001129416769001CRED + DE63ZZZ00000023667SVWZ + BELEG006181876345/VK001129416769/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDERABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "-158,00"; "EUR"; "Umsatzgebucht"
+2018-10-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2018-10-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2018-10-01 : L3.F.HARGESHEIMER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Hargesheimer   :  None
+2018-10-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2018-10-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2018-10-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2018-10-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2018-10-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2018-10-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2018-10-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2018-10-01 : L3.F.HARGESHEIMER : L3.EK.ER.MIETE : 112000 :  Mietforderung Hargesheimer   :  None
+2018-10-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2018-10-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2018-10-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2018-10-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2018-10-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2018-10-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2018-10-02 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "DE32680501010012045802"; "02.10.18"; "02.10.18"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "DirkSchmidt"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2018-10-05 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "DE32680501010012045802"; "05.10.18"; "05.10.18"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2018-10-15 : L3.EK.A.NK.GARTEN : L3.B : 18280 :    Rabe DAUERAUFTRAG   :  "DE32680501010012045802"; "15.10.18"; "15.10.18"; "DAUERAUFTRAG"; "SVWZ + VorgartenpflegeLerchenstr."; "Rabe,Ladislav"; "DE50680501010012809062"; "FRSPDE66XXX"; "-182,80"; "EUR"; "Umsatzgebucht"
+2018-10-29 : L3.B : L3.F.SELBACH : 40000 :    Miete und NK Selbach DAUERAUFTRAG   :  "DE32680501010012045802"; "29.10.18"; "29.10.18"; "DAUERAUFTRAG"; "SVWZ + MieteFriederikeSelbach,ZimmerEG,Lerchenstr.3,Freiburg"; "Dr.JochenundSusanneSelbach"; "DE94673900000086317109"; "GENODE61WTH"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-10-30 : L3.EK.A.NK.STR : L3.B : 1700 :    Strom Badenova FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "30.10.18"; "30.10.18"; "FOLGELASTSCHRIFT"; "EREF + 006072602788MREF + 7001007509088001CRED + DE37ZZZ00000023650SVWZ + BELEG006072602788/VK001007509088/ABSCHLAGFAELLIG30102018FUEROKTOBER/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDER"; "badenovaAGCO.KG"; "DE89680501010002010029"; "FRSPDE66XXX"; "-17,00"; "EUR"; "Umsatzgebucht"
+2018-10-30 : L3.EK.A.VER : L3.B : 650 :    Verwaltung ENTGELTABSCHLUSS   :  "DE32680501010012045802"; "31.10.18"; "30.10.18"; "ENTGELTABSCHLUSS"; "Abrechnung31.10.2018InformationzurAbrechnungEntgeltevom29.09.2018bis31.10.20186,50-KontoführungPaketpr.1x6,506,50---------------Abrechnung31.10.20186,50-Rechnungsnummer.20181031-BW105-00014361526"; ""; ""; ""; "-6,50"; "EUR"; "Umsatzgebucht"
+2018-10-30 : L3.EK.A.NK.WA : L3.B : 15800 :    Wasser bnNetze FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "30.10.18"; "30.10.18"; "FOLGELASTSCHRIFT"; "EREF + 006072613385MREF + 7001129416769001CRED + DE63ZZZ00000023667SVWZ + BELEG006072613385/VK001129416769/LERCHENSTRASSE3/PROF.DR.MATHIASHOLSCHNEIDERABWA + bnNETZEWasser(Hilfsbk.)"; "bnNETZEGmbH"; "DE23680501010013337519"; "FRSPDE66XXX"; "-158,00"; "EUR"; "Umsatzgebucht"
+2018-10-31 : L3.EK.A.NK.HZ.GAS : L3.B : 29000 :    Gasrechnung FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "31.10.18"; "31.10.18"; "FOLGELASTSCHRIFT"; "EREF + LS1020000617551MREF + W20D418613013366CRED + DE65ZZZ00000211132SVWZ + Abschlag10/2018KD418613Prof.Dr.MatthiasHolschneLerchenstr.379104Freiburg"; "STADTWERKEWALDKIRCHGMBH"; "DE94680501010021000405"; "FRSPDE66XXX"; "-290,00"; "EUR"; "Umsatzgebucht"
+2018-11-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2018-11-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2018-11-01 : L3.F.HARGESHEIMER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Hargesheimer   :  None
+2018-11-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2018-11-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2018-11-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2018-11-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2018-11-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2018-11-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2018-11-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2018-11-01 : L3.F.HARGESHEIMER : L3.EK.ER.MIETE : 112000 :  Mietforderung Hargesheimer   :  None
+2018-11-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2018-11-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2018-11-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2018-11-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2018-11-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2018-11-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2018-11-02 : L3.WR : L3.B : 20000 :    Bausparvertrag FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "02.11.18"; "02.11.18"; "FOLGELASTSCHRIFT"; "EREF + 01-11-18KG8667663733MREF + 200000435392CRED + DE92ZZZ00000032166SVWZ + 8/667663733200,00EUR"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-200,00"; "EUR"; "Umsatzgebucht"
+2018-11-02 : L3.EK.MATTHIAS : L3.B : 16423 :    Herold LV FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "02.11.18"; "02.11.18"; "FOLGELASTSCHRIFT"; "EREF + LV1290569102MREF + 03110164826CRED + DE60ZZZ00000023236SVWZ + LV1290569102BEITRAG11/18"; "ZurichDeutscherHeroldLebensversicherungAG"; "DE44500700100961353001"; "DEUTDEFFXXX"; "-164,23"; "EUR"; "Umsatzgebucht"
+2018-11-02 : L3.V.WR : L3.B : 40635 :    Kredit Tilgung und Zins FOLGELASTSCHRIFT   :  "DE32680501010012045802"; "02.11.18"; "02.11.18"; "FOLGELASTSCHRIFT"; "EREF + 10/182080452635406,35MREF + 220000077620CRED + DE92ZZZ00000032166SVWZ + 10/182080452635"; "WUESTENROTBAUSPARKASSEAG"; "DE53600501010001366705"; "SOLADEST600"; "-406,35"; "EUR"; "Umsatzgebucht"
+2018-11-02 : L3.B : L3.F.HARGESHEIMER : 130000 :    Miet und NK Hargesheimer DAUERAUFTRAG   :  "DE32680501010012045802"; "02.11.18"; "02.11.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse3,1.OG"; "LenaHargesheimer"; "DE93500105175423163373"; "INGDDEFFXXX"; "1300,00"; "EUR"; "Umsatzgebucht"
+2018-11-02 : L3.B : L3.F.ADELHEIM : 42000 :    Miete und NK Adelheim DAUERAUFTRAG   :  "DE32680501010012045802"; "02.11.18"; "02.11.18"; "DAUERAUFTRAG"; "SVWZ + MieteLerchenstrasse"; "JosefineAdelhelm"; "DE88690500010024799991"; "SOLADES1KNZ"; "420,00"; "EUR"; "Umsatzgebucht"
+2018-11-02 : L3.B : L3.F.SCHMIDT : 41000 :    Miete und NK DAUERAUFTRAG   :  "DE32680501010012045802"; "02.11.18"; "02.11.18"; "DAUERAUFTRAG"; "EREF + 000000009802SVWZ + Miete"; "DirkSchmidt"; "DE21680700240268962800"; "DEUTDEDBFRE"; "410,00"; "EUR"; "Umsatzgebucht"
+2018-11-02 : L3.B : L3.F.KIEFER : 40000 :    Miete und NK DAUERAUFTRAG   :  "DE32680501010012045802"; "02.11.18"; "02.11.18"; "DAUERAUFTRAG"; "SVWZ + Miete"; "PaulinaKiefer"; "DE80500105175414995625"; "INGDDEFFXXX"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-11-02 : L3.B : L3.F.NUERNBERG : 40000 :    Miete und NK Victoria Nuernberg DAUERAUFTRAG   :  "DE32680501010012045802"; "02.11.18"; "02.11.18"; "DAUERAUFTRAG"; "SVWZ + Miete"; "VictoriaNuernberg"; "DE66680900000038114409"; "GENODE61FR1"; "400,00"; "EUR"; "Umsatzgebucht"
+2018-11-05 : L3.B : L3.F.BARZ : 141000 :    Miete und NK Barz GUTSCHRIFT   :  "DE32680501010012045802"; "05.11.18"; "05.11.18"; "GUTSCHRIFT"; "SVWZ + MIETELERCHENSTR3,FR,2.OGBARZ"; "Barz,Maike"; "DE35600908000104668412"; "GENODEF1S02"; "1410,00"; "EUR"; "Umsatzgebucht"
+2018-11-07 : L3.B : L3.F.NEMETS : 42000 :   Miet und Nebenkosten GUTSCHR. UEBERWEISUNG  :  2018-11-7 : L3.B : L3.F.NEMETS : 42000 :  Miet und Nebenkosten GUTSCHR. UEBERWEISUNG : 2018-11-7 : L3.B : L3.F.NEMETS : 42000 :  Miet und Nebenkosten GUTSCHR. UEBERWEISUNG : "DE32680501010012045802"; "07.11.18"; "07.11.18"; "GUTSCHR. UEBERWEISUNG"; "EREF + CCB.311.UE.110552SVWZ + Miete"; "YULIA NEMETS"; "DE97680800300400803000"; "DRESDEFF680"; "420,00"; "EUR"; "Umsatz gebucht"
+2018-11-09 : L3.EK.A.NK.HZ.ABR : L3.B : 18132 :   Techem Ablese Service FOLGELASTSCHRIFT  :  2018-11-9 : L3.EK.A.NK.HZ.ABR : L3.B : 18132 :  Techem Ablese Service FOLGELASTSCHRIFT : 2018-11-9 : L3.EK.A.NK.HZ.ABR : L3.B : 18132 :  Techem Ablese Service FOLGELASTSCHRIFT : "DE32680501010012045802"; "09.11.18"; "09.11.18"; "FOLGELASTSCHRIFT"; "EREF + 9031640889MREF + 0001000000001214CRED + DE31ZZZ00000236867SVWZ + RG 0073852417 26.10.2018 Glaeubiger-ID. DE31ZZZ00000236867Ihre Mandatsreferenz bei uns. 0001000000001214"; "TECHEM Energy Services"; "DE16500400000582454500"; "COBADEFFXXX"; "-181,32"; "EUR"; "Umsatz gebucht"
+2018-11-15 : L3.EK.A.NK.GS : L3.B : 21957 :   Grundsteuer FOLGELASTSCHRIFT  :  2018-11-15 : L3.EK.A.NK.GS : L3.B : 21957 :  Grundsteuer FOLGELASTSCHRIFT : 2018-11-15 : L3.EK.A.NK.GS : L3.B : 21957 :  Grundsteuer FOLGELASTSCHRIFT : "DE32680501010012045802"; "15.11.18"; "15.11.18"; "FOLGELASTSCHRIFT"; "EREF + 140900197862MREF + 501002762799001CRED + DE69ZZZ00000055472SVWZ + 501002762799/Grundsteuer Rate 2018ABWA + Stadt Freiburg Stadtkasse"; "Stadt Freiburg"; "DE63680501010002010012"; "FRSPDE66XXX"; "-219,57"; "EUR"; "Umsatz gebucht"
+2018-11-15 : L3.EK.A.NK.GARTEN : L3.B : 18280 :   Rabe DAUERAUFTRAG  :  2018-11-15 : L3.EK.A.NK.GARTEN : L3.B : 18280 :  Rabe DAUERAUFTRAG : 2018-11-15 : L3.EK.A.NK.GARTEN : L3.B : 18280 :  Rabe DAUERAUFTRAG : "DE32680501010012045802"; "15.11.18"; "15.11.18"; "DAUERAUFTRAG"; "SVWZ + Vorgartenpflege Lerchenstr."; "Rabe, Ladislav"; "DE50680501010012809062"; "FRSPDE66XXX"; "-182,80"; "EUR"; "Umsatz gebucht"
+2018-11-26 : L3.EK.A.H.KADEL : L3.B : 19710 :   Kadel ONLINE-UEBERWEISUNG  :  2018-11-26 : L3.EK.A.H.KADEL : L3.B : 19710 :  Kadel ONLINE-UEBERWEISUNG : 2018-11-26 : L3.EK.A.H.KADEL : L3.B : 19710 :  Kadel ONLINE-UEBERWEISUNG : "DE32680501010012045802"; "26.11.18"; "26.11.18"; "ONLINE-UEBERWEISUNG"; "SVWZ + kunde 21583 rechnung 61850553DATUM 25.11.2018, 13.04 UHR1.TAN 881673ABWA + PROF.DR.MATTHIAS HOLSCHNEIDER"; "KADEL"; "DE80680501010002077024"; "FRSPDE66XXX"; "-197,10"; "EUR"; "Umsatz gebucht"
+2018-12-01 : L3.F.ADELHEIM : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Adelheim   :  None
+2018-12-01 : L3.F.BARZ : L3.EK.ER.NK : 16000 :   Nebenkostenforderung Barz   :  None
+2018-12-01 : L3.F.HARGESHEIMER : L3.EK.ER.NK : 18000 :   Nebenkostenforderung Hargesheimer   :  None
+2018-12-01 : L3.F.KIEFER : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Kiefer   :  None
+2018-12-01 : L3.F.NEMETS : L3.EK.ER.NK : 10000 :   Nebenkostenforderung Nemets   :  None
+2018-12-01 : L3.F.NUERNBERG : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Nuernberg   :  None
+2018-12-01 : L3.F.SCHMIDT : L3.EK.ER.NK : 9000 :   Nebenkostenforderung Schmidt   :  None
+2018-12-01 : L3.F.SELBACH : L3.EK.ER.NK : 6000 :   Nebenkostenforderung Selbach   :  None
+2018-12-01 : L3.F.ADELHEIM : L3.EK.ER.MIETE : 36000 :  Mietforderung Adelheim   :  None
+2018-12-01 : L3.F.BARZ : L3.EK.ER.MIETE : 125000 :  Mietforderung Barz   :  None
+2018-12-01 : L3.F.HARGESHEIMER : L3.EK.ER.MIETE : 112000 :  Mietforderung Hargesheimer   :  None
+2018-12-01 : L3.F.KIEFER : L3.EK.ER.MIETE : 34000 :  Mietforderung Kiefer   :  None
+2018-12-01 : L3.F.LAMIN : L3.EK.ER.MIETE : 3000 :  Mietforderung Lamin   :  None
+2018-12-01 : L3.F.NEMETS : L3.EK.ER.MIETE : 32000 :  Mietforderung Nemets   :  None
+2018-12-01 : L3.F.NUERNBERG : L3.EK.ER.MIETE : 34000 :  Mietforderung Nuernberg   :  None
+2018-12-01 : L3.F.SCHMIDT : L3.EK.ER.MIETE : 32000 :  Mietforderung Schmidt   :  None
+2018-12-01 : L3.F.SELBACH : L3.EK.ER.MIETE : 34000 :  Mietforderung Selbach   :  None
+2017-11-10 : L3.EK.ER.NK : L3.F.MINGIRULLI : 41509 : Nebenkosten 2016 : Abrechnung
+2017-12-13 : L3.EK.A.NK.HZ.WART : L3.EK.A.H.HERDEL :  38675 : Umbuchung auf Heizung : None
+2017-08-18 : L3.EK.A.NK.HZ.FL : L3.EK.A.H.SOREX :  7759 : Umbuchung auf Heizung : None
+2017-05-02 : L3.EK.A.NK.HZ.KAMIN : L3.EK.A.H.DITTRICH :  6515 : Umbuchung auf Heizung : None
+2017-05-02 : L3.EK.A.NK.DK : L3.EK.A.H.RUTTKOWSKI :  17029 : Umbuchung auf Dachkaenel : None
+2017-12-31 : L3.EK.A.NK.DK : L3.EK.A.H.RUTTKOWSKI :  17779 : Umbuchung auf Dachkaenel : In 2018 bezahlt aber in 2017 abgerechnet
+2017-12-31 : L3.EK.A.NK.HZ.STR : L3.EK.A.NK.STR  : 1216 : Anteil Betriebsstrom HZ : None
+2018-12-06 : L3.EK.ER.NK : L3.F.SCHMIDT : 37477 : Ausgleich NK 2017 : None
+2018-12-06 : L3.F.HARGESHEIMER : L3.EK.ER.NK : 2002 : Ausgleich NK 2017 : None
+2018-12-06 : L3.F.SELBACH : L3.EK.ER.NK : 21232 : Ausgleich NK 2017 : None
+2018-12-06 : L3.F.SIMMINGER : L3.EK.ER.NK : 6007 : Ausgleich NK 2017 : None
+2018-12-06 : L3.F.HAIMERL : L3.EK.ER.NK : 4872 : Ausgleich NK 2017 : None
+2018-12-06 : L3.F.KIEFER : L3.EK.ER.NK : 14360 : Ausgleich NK 2017 : None
+2018-12-06 : L3.F.NEMETS : L3.EK.ER.NK : 8055 : Ausgleich NK 2017 : None
+2018-12-06 : L3.F.ADELHEIM : L3.EK.ER.NK : 17232 : Ausgleich NK 2017 : None
+2018-12-06 : L3.F.NUERNBERG : L3.EK.ER.NK : 17232 : Ausgleich NK 2017 : None
+2018-12-06 : L3.EK.ER.NK : L3.F.BARZ : 906 : Ausgleich NK 2017 : None
+
+

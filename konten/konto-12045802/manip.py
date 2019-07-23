@@ -27,7 +27,7 @@ def read_files():
     """
     returns : list of file contents
     """
-    dirs = ['treated',] # 'tobetreated', 'utf8']
+    dirs = ['2018',] # 'tobetreated', 'utf8']
     encoding = 'iso-8859-1'
     basepath = [ Path(di) for di in dirs] 
     
@@ -103,7 +103,7 @@ def check_umsaetze():
 
 def sum_umsaetze():
     d0 = date(2018,1,1)
-    d1 = date(2018,12,31)
+    d1 = date(2019,7,1)
     
     sup, sum = 0, 0
     keys = []
@@ -124,7 +124,7 @@ def sum_umsaetze():
             if da < d0 or da > d1:
                 continue
             
-            key = ko+bu+be
+            key = ko+bu+':'+be
             key.replace('"','').replace(' ','')
             if key in keys:
                 continue
@@ -139,10 +139,10 @@ def sum_umsaetze():
             res.append( (da, be) )
         #keys.extend(new_keys)
     
-    #print ('\n'.join(['{0}'.format(s) for s in \
-    #                  (sorted( res, key=lambda d: d[0]))]))
     print ('\n'.join(['{0}'.format(s) for s in \
-                      (sorted( keys ))]))
+                      (sorted( res, key=lambda d: d[0]))]))
+    #print ('\n'.join(['{0}'.format(s) for s in \
+    #                  (sorted( keys ))]))
     
     
     print (sup, sum, sup-sum)

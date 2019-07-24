@@ -1,4 +1,5 @@
 import os
+import sys
 from pathlib import Path
 import django
 from django import db
@@ -14,6 +15,15 @@ from datetime import date
 
 #from models import *
 
+def parse_date(bu):
+    try:
+        d,m,y = bu.split('.')
+        da = date(int(y)+2000, int(m), int(d))
+    except:
+        da = date(1000,1,1)
+    return da
+                
+                
 def split_line(line):
     try:
        Auftragskonto, Buchungstag, Valutadatum, Buchungstext, \
@@ -27,7 +37,7 @@ def read_files():
     """
     returns : list of file contents
     """
-    dirs = ['2018',] # 'tobetreated', 'utf8']
+    dirs = ['2018','tobetreated', 'utf8']
     encoding = 'iso-8859-1'
     basepath = [ Path(di) for di in dirs] 
     
@@ -101,6 +111,19 @@ def check_umsaetze():
             if len(res[k])>1:
                 print ('\n'.join(res[k]),'\n-------------\n')
 
+def filter_umsaetze(name=None):
+    if name is None:
+        name = sys.argv[1]
+    res = {}
+    for f, s in read_all_lines():
+        if name.upper() in s.upper():
+            ko, bu, be = split_line(s)
+            bu = parse_date(bu)
+            res[bu] =  be, s
+            
+    for r in sorted( res, key = lambda x: x):
+        print (r, res[r])
+
 def sum_umsaetze():
     d0 = date(2018,1,1)
     d1 = date(2019,7,1)
@@ -149,4 +172,5 @@ def sum_umsaetze():
             
 #check_umsaetze()
 #check_interval()
-sum_umsaetze()
+#sum_umsaetze()
+filter_umsaetze()

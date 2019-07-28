@@ -27,4 +27,6 @@ urlpatterns = [
     #path('nk/<int:year>', NKView.as_view(), name = 'konten'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    path('H22', TemplateView.as_view(template_name='home_H22.html'), name='home_H22'),
+    path('L3', TemplateView.as_view(template_name='home_L3.html'), name='home_L3'),
 ]

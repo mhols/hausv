@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_tables2',
-   'django_extensions',
+    'django_extensions',
     'booking'
 ]
 

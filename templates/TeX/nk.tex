@@ -1,43 +1,82 @@
 \documentclass[12pt]{article}
 \usepackage[a4paper, portrait, margin=0.7in]{geometry}
+\usepackage{array}
 \usepackage{longtable} 
+\usepackage[utf8x]{inputenc}
+\usepackage{lmodern,textcomp}
+
+\newcommand{\euro}{Euro}
+
 %\usepackage{showframe}
 \parindent=0pt
 \begin{document}
 \hfill Berlin, den {{today}}
 
-{{liebermieter}},{
+{{liebermieter}},
 
 \bigskip
 
 Anbei die Abrechnung der Nebenkosten für die Periode {{periode}}.
-Die zu verteilenden Nebenkosten betrugen ${{toetalnk}} \euro$.
-Die anteilige Forderung beträgt ${{anteil}}$.
-Die pauschalen Forderungen betrugen ${{geznk}} \euro$. Somit besteht
+Ich habe die Abrechnungsperiode somit auf das Kalendar Jahr umgestellt.
+
+Die zu verteilenden Nebenkosten betrugen ${{totalnk}}$ \euro.
+
+Die anteilige Forderung beträgt ${{anteil}}$ \euro.
+
+Die pauschalen Forderungen betrugen ${{geznk}}$ \euro. 
+
+Somit besteht
 
 \bigskip
-\centerline{
-\bf {{esbesteht}} in Hoehe von ${{nachf}}$.
-}
-\bigskip
 
-Es liegen hierbei folgende Kennzahlen zugrunde:
 \begin{centering}
-{{keytable}}
+{ \bf {{esbesteht}} in Höhe von ${\mathbf {{nachf}} }$ \euro.}
 \end{centering}
 
-Im Anhang ist eine Tabelle der angefallenen Kosten, und eine Auszug des Mieterkontos
-das alle Forderungen und geleisteten Zahlungen enthaelt.
-Sollte es hier Unstimmigkeiten geben, bitte ich um eine kurze Information.
+\bigskip
 
-Alles Gute aus Berlin,
+Im Anhang ist eine Tabelle der angefallenen Kosten, und ein Auszug des 
+Mieterkontos
+das alle Forderungen und geleisteten Zahlungen enthält.
+Sollte es hier Unstimmigkeiten geben, 
+bitte ich um eine kurze Information.
+
+\bigskip
+\bigskip
+\bigskip
 
 {{mfg}}
 
-{\small
+\vfill
+\eject
+
+\section*{Verteilung der Kosten}. 
+
+Die Grundsteuer wird individuell von der Stadt Freiburg berechnet.
+
+Die Verteilung Heizung+Warmwasser und Kaltwasser erfolgt individuell durch RITTER. 
+
+Die ensprechenden 
+Schlüsselgrössen sind somit der Wert selber.
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+
+
+  {\small
 \begin{centering}
 {{ tabnk }}
 \end{centering}
 }
 
+\vfill\eject
+
+\section*{Mietkonto Übersicht}
+{\small
+\begin{centering}
+{{ kontoreport }}
+\end{centering}
+}
 \end{document}

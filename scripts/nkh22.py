@@ -8,6 +8,8 @@ import os
 import django
 from django import db
 from django.db.models import Sum
+from django.template.loader import render_to_string
+from django.shortcuts import render
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
@@ -15,6 +17,7 @@ site = 'HV.settings'
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", site)
 django.setup()
 from booking.models import *
+from booking.views import get_TeX_report
 from goodies.util import *
 
 from datetime import date
@@ -23,6 +26,7 @@ from datetime import date
 d0 = date(2018,4,1)
 d1 = date(2018,12,31)
 
+datetoday = date(2019,7,28)
 year = 2018
 
 nkkont  = Konto.objects.get(kurz = 'H22.EK.ER.NK')
@@ -64,10 +68,15 @@ anrede = {
     ROEDER : 'Sehr geehrter Herr Roder'
 }
 
+dein = {
+    PETER : 'dein',
+    HOLGER : 'dein',
+    ROEDER : 'Ihr'
+}
 signature = {
-    PETER : 'Kuss, \n\nDein Matthias',
-    HOLGER : 'alles Gute, \n\nMatthias',
-    ROEDER : 'mfG\n\nMatthias Holschneider'    
+    PETER : 'Kuss, \n\n \\bigskip \\bigskip \n \n Dein Matthias \n\n <matthias.holschneider@gmail.com>',
+    HOLGER : 'alles Gute aus Berlin, \n\n \\bigskip \\bigskip \n \n Matthias \n\n <matthias.holschneider@gmail.com>',
+    ROEDER : 'mfG\n\n \\bigskip \\bigskip \n \n  Matthias Holschneider \n\n <matthias.holschneider@gmail.com>'    
 }
 
 # Schluessel der NKs
@@ -102,12 +111,12 @@ keys = {
     'qm' : {
         PETER  : 124,
         HOLGER : 124,
-        ROEDER  : 78
+        ROEDER :  78
     },
     'pz' : {
         PETER  : 24,
         HOLGER : 36,
-        ROEDER  : 12
+        ROEDER : 12
     },
     'hz' : {
         PETER  : 74960,
@@ -121,7 +130,7 @@ keys = {
     },
     'gs' : {
         PETER  : 14895,
-        HOLGER : 0,
+        HOLGER : 24912,
         ROEDER : 14013 
     },
 
@@ -159,14 +168,15 @@ def verteile_nk():
         #    tot = sum( keys[k][m] for m in mieter)
         #else:
         #    tot = zvkosten[ko]
-        
+
+def verteile_in_db():    
     for ko in lok:
         k = key[ko]
         
-        tot = np.sum( vertnk[m][ko] for m in mieter)
+        tot = sum( vertnk[m][ko] for m in mieter)
         b = Buchung()
         b.buchungsnummer = 'to come'
-        b.datum = date.today()
+        b.datum = datetoday
         b.beschreibung = 'verrechung {0}'.format(kuerzel[ko])
         b.sollkonto = nkkonto
         b.habenkonto = ko
@@ -179,7 +189,7 @@ def verteile_nk():
             
             b = Buchung()
             b.buchungsnummer = 'to come'
-            b.datum = date.today()
+            b.datum = datetoday
             b.beschreibung = 'verrechung {0}'.format(kuerzel[ko])
             b.sollkonto = nkkonto
             b.habenkonto = nkkonto
@@ -190,7 +200,7 @@ def verteile_nk():
     for m in mieter:
         b = Buchung()
         b.buchungsnummer = 'to come'
-        b.datum = date.today()
+        b.datum = datetoday
         b.beschreibung = 'geforderte Pauschale'
         b.sollkonto = nkkont
         b.habenkonto = nkkonto
@@ -208,7 +218,7 @@ def verteile_nk():
             continue
         b = Buchung()
         b.buchungsnummer = 'to come'
-        b.datum = date.today()
+        b.datum = datetoday
         b.beschreibung = 'verrechung {0}'.format(kuerzel[ko])
         if bk > gk:
             b.sollkonto = m
@@ -228,36 +238,60 @@ def make_letter():
     for m in mieter:
         anteil = sum ( vertnk[m][kk] for kk in lok)
         geznk  = gefnk[m]
-        qm     = keys[m]['qm']
-        pz     = keys[m]['pz']
+        qm     = keys['qm'][m]
+        pz     = keys['pz'][m]
         if anteil > geznk:
             esbesteht = 'eine Nachforderung'
         else:
             esbesteht = 'ein Guthaben'
         
-        report = m.TeXreport(d0,d1)
+        kontoreport = get_TeX_report(m, d1=date(2018,1,1), d2=date(2019,7,29), withbeleg=False)
         
+        report = r"""
+            \begin{longtable}{|l | r | r| r | r |}
+            \hline
+            {\bf Kosten} & {\bf Haus} & {\bf Anteil} & {\bf Schl. Art} & {\bf Schl. Wert}  \\
+            \hline
+            \hline
+        """
+        for kk in lok:
+            totko = sum ( vertnk[m][kk] for mm in mieter)
+            report += """
+        {0} & {1:.2f} & {2:.2f} &{3} &{4} \\\\
+        """.format(kk.lang, totko/100, vertnk[m][kk]/100, key[kk], keys[key[kk]][m])
+        
+        report += r"""
+        \hline
+        \end{longtable}
+        """
         context = {
             'liebermieter' : anrede[m],
             'periode'      : "{0} bis {1}".format(d0,d1),
-            'totalnk'      : "{.2f}".format(totnk/100),
-            'anteil'       : "{.2f}".format(anteil/100),
-            'geznk'        : "{.2f}".format(geznk/100),
+            'totalnk'      : "{:.2f}".format(totnk/100),
+            'anteil'       : "{:.2f}".format(anteil/100),
+            'geznk'        : "{:.2f}".format(geznk/100),
             'esbesteht'    : esbesteht, 
-            'nachf'        : "{.2f}".format(abs(geznk-anteil)/100),
+            'nachf'        : "{:.2f}".format(abs(geznk-anteil)/100),
             'qm'           : qm,
             'pz'           : pz,
             'tabnk'        : report,
+            'kontoreport'  : kontoreport,
             'mfg'          : signature[m]
         }
-    
-
+        texresult = render_to_string(template_name='TeX/nk.tex', context=context)
+        texresult = texresult \
+               .replace('&amp;', '&')  \
+               .replace('&lt;', '$<$') \
+               .replace('&gt;', '$>$')
+        
+        with open('nk-{0}-{1}.tex'.format(year, kuerzel[m]), 'w') as f:
+            f.write(texresult)
 
 def transfer_gef_nk():
     for m in mieter:
         b = Buchung()
         b.buchungsnummer = 'to come'
-        b.datum = date.today()
+        b.datum = datetoday
         b.beschreibung = 'geforderte Pauschale'
         b.sollkonto = nkkont
         b.habenkonto = nkkonto
@@ -534,3 +568,5 @@ Summe & $%8.2f$ &$%8.2f$ \\
 
 if __name__ == '__main__':
     verteile_nk()
+    #verteile_in_db()
+    make_letter()

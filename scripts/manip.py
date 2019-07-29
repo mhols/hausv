@@ -4,20 +4,24 @@ Created on Oct 26, 2018
 @author: hols
 '''
 
-from booking.models import Konto, Buchung, Bilanz, Saldo, generate_buchung,\
-    make_bilanz, saldiere_buchungen
+import numpy as np
+import os
+import django
+from django import db
+from django.db.models import Sum
+
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+
+site = 'HV.settings'
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", site)
+django.setup()
+from booking.models import *
+from goodies.util import *
+
 from datetime import date
 
-oneday = date(2018,2,2)-date(2018,2,1)
-
-def run():
+for b in Buchung.objects.all():
+    b.beschreibung = b.beschreibung.replace(';',' ')
+    b.save()
     
-    d0 = date(2017,1,1)
-    B = Konto.objects.get(kurz='B')
-    for d in [date(2018,10,4)]:
-        salden = saldiere_buchungen(Buchung.objects.filter(datum__range=(d0,d)))
-        print ( d,  salden[B][0]-salden[B][1] )
-582654
-558585
-if __name__ == '__main__':
-    pass
+    

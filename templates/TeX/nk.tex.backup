@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, portrait, margin=0.7in]{geometry}
+\usepackage{longtable} 
+%\usepackage{showframe}
+\parindent=0pt
+\begin{document}
+\hfill Berlin, den {{today}}
+
+{{liebermieter}},{
+
+\bigskip
+
+Anbei die Abrechnung der Nebenkosten für die Periode {{periode}}.
+Die zu verteilenden Nebenkosten betrugen ${{toetalnk}} \euro$.
+Die anteilige Forderung beträgt ${{anteil}}$.
+Die pauschalen Forderungen betrugen ${{geznk}} \euro$. Somit besteht
+
+\bigskip
+\centerline{
+\bf {{esbesteht}} in Hoehe von ${{nachf}}$.
+}
+\bigskip
+
+Es liegen hierbei folgende Kennzahlen zugrunde:
+\begin{centering}
+{{keytable}}
+\end{centering}
+
+Im Anhang ist eine Tabelle der angefallenen Kosten, und eine Auszug des Mieterkontos
+das alle Forderungen und geleisteten Zahlungen enthaelt.
+Sollte es Unstimmigkeiten geben, bitte ich um eine kurze Information.
+
+Alles Gute aus Berlin,
+
+{{mfg}}
+
+{\small
+\begin{centering}
+{{ tabnk }}
+\end{centering}
+}
+
+\end{document}

@@ -100,9 +100,9 @@ dkonto = {
 # Schluessel und direkte kosten
 keys = {
     'qm' : {
-        PETER  : 124,
-        HOLGER : 124,
-        ROEDER  : 78
+        PETER  : 0.325,
+        HOLGER : 0.385,
+        ROEDER : 0.286
     },
     'pz' : {
         PETER  : 24,

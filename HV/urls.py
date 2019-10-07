@@ -22,7 +22,7 @@ from booking.views import *
 urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='index.html'), name='home'),
+    path('', TemplateView.as_view(template_name='base.html'), name='home'),
     path('booking/', include('booking.urls')),
 #    path('hv/', include('hv.urls')),
 ]

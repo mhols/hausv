@@ -20,13 +20,12 @@ from django.views.generic import TemplateView
 
 from booking.views import *
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('HV/', include( 'booking.urls')),
-    #path('konto/<str:d1>/<str:d2>/<str:pk>', KontoView.as_view(), name = 'konto'),
-    #path('konten/<str:d1>/<str:d2>', KontenView.as_view(), name = 'konten'),
-    #path('nk/<int:year>', NKView.as_view(), name = 'konten'),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
-    path('H22', TemplateView.as_view(template_name='home_H22.html'), name='home_H22'),
-    path('L3', TemplateView.as_view(template_name='home_L3.html'), name='home_L3'),
+    path('admin/', admin.site.urls),
+    path('', TemplateView.as_view(template_name='index.html'), name='home'),
+    path('booking/', include('booking.urls')),
+#    path('hv/', include('hv.urls')),
 ]
+
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+urlpatterns += staticfiles_urlpatterns()

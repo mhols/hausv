@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{# needs to define (from base.html) #}
+{# d1 #}
+{# d2 #}
+{# urlname string containing 1000-01-01 9999-12-31 as sentinel #}
+
+
+{# needs to define #}
+{# title #}
+{# tabletitle #}
+{# uplinkurl #}
+{# uplink #}
+
+{% block maincontentgeneral %}
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+<!-- Page Heading -->
+	<div class="d-sm-flex align-items-center justify-content-between mb-4">
+		<h1 class="h3 mb-0 text-gray-800">{{ pagetitle }}</h1>
+		<h1 class="h3 mb-0 text-gray-800">
+		</h1>
+	</div>
+	<div class="card shadow mb-4">
+		<div class="card-header py-3 d-sm-flex align-items-center justify-content-between mb-4">
+			<h6 class="m-0 font-weight-bold text-primary">{{title}}</h6>
+			<h6> {% block uplink %} {% endblock %}</h6>
+		</div>
+		<div class="card-body">
+			<div class="table-responsive">
+			{% block tablecontent %} 
+			
+			{% endblock %}
+			</div>
+		</div>
+	</div>
+	<!-- Content Row -->
+</div>
+<!-- /.container-fluid -->
+{% endblock %}

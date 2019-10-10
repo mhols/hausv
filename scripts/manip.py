@@ -20,8 +20,7 @@ from goodies.util import *
 
 from datetime import date
 
-for b in Buchung.objects.all():
-    b.beschreibung = b.beschreibung.replace(';',' ')
+for b in Konto.objects.get(kurz='H22.EK.A.VERW').soll_buchungen.filter(wert=4000).all():
+    b.sollkonto = Konto.objects.get(kurz='H22.EK.A.HVP')
     b.save()
-    
     

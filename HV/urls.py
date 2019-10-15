@@ -17,12 +17,20 @@ from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
 from django.views.generic import TemplateView
+from django.contrib.auth import views as auth_views
 
 from booking.views import *
+from goodies.util import date_to_str
 urlpatterns = [
+    path('accounts/login/', auth_views.LoginView.as_view(template_name='login.html')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='base.html'), name='home'),
+    path('', TemplateView.as_view(template_name='base.html'), {
+        'd1' : date_to_str(date.today()),
+        'd2' : date_to_str(date.today()),
+        'urlname' : '1000-01-01/9999-12-31/'}, name='home'),
+    path('<str:d1>/<str:d2>/', 
+         TemplateView.as_view(template_name='base.html')),
     path('booking/', include('booking.urls')),
 #    path('hv/', include('hv.urls')),
 ]

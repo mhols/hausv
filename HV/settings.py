@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_tables2',
-    'django_extensions',
+    #'django_extensions',
     'booking',
     'hv',
 ]
@@ -59,6 +59,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'HV.urls'
+
 
 TEMPLATES = [
     {
@@ -130,6 +131,6 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-    '/home/hols/hausv/static',
+    os.path.join(BASE_DIR, 'static_compiled'),
 ]
 

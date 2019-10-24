@@ -84,6 +84,9 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
           data-parent="#accordionSidebar">
           <div class="bg-white  py-2  collapse-inner  rounded">
+           <h6 class="collapse-header">links</h6>
+            <h6 class="collapse-header">externa links</h6>
+	    <a class="collapse-item" href="{% url 'admin:index' %}">admin</a>
             <h6 class="collapse-header">externa links</h6>
             <a class="collapse-item" href="https://www.sparkasse-freiburg.de">sparkasse</a>
             <a class="collapse-item" href="https://www.girrbach.de">Girrbach</a>
@@ -108,9 +111,9 @@
             <h6 class="collapse-header">Objecte</h6>
             <a class="collapse-item"
               href="{%  url  'konto'  d1=d1  d2=d2  pk='L3'  %}">L3</a>
-            <a class="collapse-item" href= href="{%  url  'konto'  d1=d1  d2=d2  pk='H22'  %}">H22</a> 
-            <a class="collapse-item" href= href="{%  url  'konto'  d1=d1  d2=d2  pk='PS'  %}">PS</a> 
-            <a class="collapse-item" href= href="{%  url  'konto'  d1=d1  d2=d2  pk='UL'  %}">UL</a> 
+            <a class="collapse-item" href="{%  url  'konto'  d1=d1  d2=d2  pk='H22'  %}">H22</a> 
+            <a class="collapse-item" href="{%  url  'konto'  d1=d1  d2=d2  pk='PS'  %}">PS</a> 
+            <a class="collapse-item" href="{%  url  'konto'  d1=d1  d2=d2  pk='UL'  %}">UL</a> 
             </div>
         </div></li>
 
@@ -385,12 +388,17 @@
                   class="fas  fa-user  fa-sm  fa-fw  mr-2  text-gray-400"></i> Profile
                 </a>  
                 <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/admin/"> <i
+                  class="fas  fa-sign-out-alt  fa-sm  fa-fw  mr-2  text-gray-400"></i>
+                  admin
+                </a>
                 <a class="dropdown-item" href="{% url 'logout' %}" data-toggle="modal"
                   data-target="#logoutModal"> <i
                   class="fas  fa-sign-out-alt  fa-sm  fa-fw  mr-2  text-gray-400"></i>
                   Logout
                 </a>
-              </div></li>
+              </div>
+              </li>
 
           </ul>
 

@@ -32,7 +32,8 @@ urlpatterns = [
     path('<str:d1>/<str:d2>/', 
          TemplateView.as_view(template_name='base.html')),
     path('booking/', include('booking.urls')),
-#    path('hv/', include('hv.urls')),
+    path('clubapp/', include('clubapp.urls')),
+    path('hv/', include('hv.urls')),
 ]
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns

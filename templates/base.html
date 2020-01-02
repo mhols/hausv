@@ -136,6 +136,24 @@
           </div>
         </div></li>
       <!--  Nav  Item  -  Pages  Collapse  Menu  -->
+      <li class="nav-item"><a class="nav-link  collapsed" href="#"
+        data-toggle="collapse" data-target="#collapsePages2"
+        aria-expanded="true" aria-controls="collapsePages"> <i
+          class="fas  fa-fw  fa-user-md"></i> <span>Verwaltung</span>
+      </a>
+        <div id="collapsePages2" class="collapse"
+          aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white  py-2  collapse-inner  rounded">
+            <h6 class="collapse-header">Upload</h6>
+            <a class="collapse-item" href="{% url 'upload_umsaetze' d1=d1 d2=d2 %}">Umsaeztze</a> 
+            <a class="collapse-item" href="{% url 'parse_umsaetze' d1=d1 d2=d2 %}">Parsing</a> 
+            <div class="collapse-divider"></div>
+            <h6 class="collapse-header">Einzug/Auszug</h6>
+            <a class="collapse-item" href="forgot-password.html">Mietvertraege</a>
+            <a class="collapse-item" href="forgot-password.html">Schrifwechsel</a>
+          </div>
+        </div></li>
+      <!--  Nav  Item  -  Pages  Collapse  Menu  -->
 <!--       <li class="nav-item">
       <a class="nav-link  collapsed" href="#"
         data-toggle="collapse" data-target="#collapsePages2"
@@ -377,8 +395,7 @@
               class="nav-link  dropdown-toggle" href="#" id="userDropdown"
               role="button" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false"> <span
-                class="mr-2  d-none  d-lg-inline  text-gray-600  small">Valerie
-                  Luna</span> <img class="img-profile  rounded-circle"
+                class="mr-2  d-none  d-lg-inline  text-gray-600  small">{{user}}</span> <img class="img-profile  rounded-circle"
                 src="" alt="">
             </a> <!--  Dropdown  -  User  Information  -->
               <div

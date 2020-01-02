@@ -45,7 +45,9 @@ INSTALLED_APPS = [
     'django_tables2',
     #'django_extensions',
     'booking',
+    'clubapp',
     'hv',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [

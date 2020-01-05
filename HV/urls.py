@@ -32,7 +32,7 @@ urlpatterns = [
     path('<str:d1>/<str:d2>/', 
          TemplateView.as_view(template_name='base.html')),
     path('booking/', include('booking.urls')),
-    path('clubapp/', include('clubapp.urls')),
+    #path('clubapp/', include('clubapp.urls')),
     path('hv/', include('hv.urls')),
 ]
 

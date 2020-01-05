@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'django_tables2',
     #'django_extensions',
     'booking',
-    'clubapp',
+    #'clubapp',
     'hv',
     'crispy_forms',
 ]

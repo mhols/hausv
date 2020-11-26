@@ -8,32 +8,23 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", site)
 django.setup()
 from booking.models import *
 from goodies.util import *
+from hv.models import *
 
 from datetime import date
 
-kb = Konto.objects.get(kurz='L3.B')
+for mf in MonthlyForderung.objects.all():
+    for y in [2017, 2018, 2019, 2020]:
+        for m in range (1,13):
+            d = date(y, m, 1)
+            try:
+                b = Buchung.objects.get(
+                    datum=d,
+                    wert=mf.betrag,
+                    sollkonto=mf.mfkonto,
+                    habenkonto=mf.gegenk
+                )
+                if mf.datum1 > d or mf.datum2 < d:
+                    b.delete()
+            except Exception as ex:
+                print(mf, d, ex)
 
-kurz = 'BONK'
-kk = Konto.objects.get(kurz='L3.F.{0}'.format(kurz))
-for i in range(5,13):
-	d = date(2019,i,1)
-	mf = Buchung()
-	mf.datum = d
-	mf.sollkonto = kk
-	mf.habenkonto = Konto.objects.get(kurz='L3.EK.ER.MIETE')
-	mf.sollkonto  = kk
-	mf.beschreibung = 'Mietforderung {0}'.format(kurz)
-	mf.beleg = 'None'
-	mf.wert = 31000
-	mf.save()
-	
-	mf = Buchung()
-	mf.datum = d
-	mf.sollkonto = kk
-	mf.habenkonto = Konto.objects.get(kurz='L3.EK.ER.NK')
-	mf.sollkonto  = kk
-	mf.beschreibung = 'Nebenkosten Pauschale {0}'.format(kurz)
-	mf.beleg = 'None'
-	mf.wert = 6000
-	mf.save()
-	

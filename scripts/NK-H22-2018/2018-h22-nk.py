@@ -71,7 +71,7 @@ def make_letter():
         b.wert = abs(nachf)
         b.save()
 
-        noffen = m.fkonto.saldiere_bis(datum_lb)
+        noffen = m.fkonto.saldiere((date(2018,1,1), datum_lb))
         nachftot = noffen[0]-noffen[1]
 
         if (nachftot > 0):
@@ -125,7 +125,12 @@ def transfer_gef_nk():
         b.wert = gefnk[m]
         b.save()
 
+
+def make_clean():
+    os.system('rm *.aux *.log *.tex')
+
 if __name__ == '__main__':
     # verteile_nk()
     # verteile_in_db()
     make_letter()
+    make_clean()
